@@ -1,0 +1,31 @@
+.header{
+    width: 100vw;
+    height: 150px;
+    background-color: transparent;
+    position: relative;
+}
+
+.navBar{
+    width: 100vw;
+    height: 75px;
+    background-color: #d5dce2;
+    border-bottom: 3px solid #2c506d;
+}
+
+.image{
+    position: absolute;
+    left: 50px;
+}
+
+.birmingham{
+    color: #2c506d;
+    padding-left: 205px;
+    font-size: 32px;
+    padding-top: 24px;
+}
+
+.business{
+    padding-left: 205px;
+    font-size: 32px;
+    color: #7E9FB8;
+}
