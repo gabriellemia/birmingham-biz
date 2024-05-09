@@ -8,28 +8,31 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
-    <div className={styles.footerContainer}>
+    <footer className={styles.footerContainer}>
       <ul className={styles.footerMenu}>
         <li className={styles.listItem}>Contact Us</li>
         <li className={styles.listItem}>Privacy policy</li>
       </ul>
       <small>
-        <p>© All Content Birmingham Business</p>
+        <p className={styles.copyright}>© All Content Birmingham Business</p>
       </small>
 
-      <div className={styles.footerSocial}>
-        <ul>
-          <li><FontAwesomeIcon icon={faLinkedin} /></li>
-          <li><FontAwesomeIcon icon={faInstagram}/> </li>
-          <li><FontAwesomeIcon icon={faXTwitter}/> </li>
-          <li><FontAwesomeIcon icon={faFacebook}/> </li>
-
+      <section className={styles.footerSocial}>
+        <ul className={styles.socialMenu}>
+          <li className={styles.socialItem}>
+            <FontAwesomeIcon icon={faLinkedin} />
+          </li>
+          <li className={styles.socialItem}>
+            <FontAwesomeIcon icon={faInstagram} />
+          </li>
+          <li className={styles.socialItem}>
+            <FontAwesomeIcon icon={faXTwitter} />
+          </li>
+          <li className={styles.socialItem}>
+            <FontAwesomeIcon icon={faFacebook} />
+          </li>
         </ul>
-
-      </div>
-
-      
-   
-    </div>
+      </section>
+    </footer>
   );
 }
