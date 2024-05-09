@@ -10,6 +10,8 @@
     height: 75px;
     background-color: #d5dce2;
     border-bottom: 3px solid #2c506d;
+    display: flex;
+    flex-direction: row;
 }
 
 .image{
@@ -22,10 +24,38 @@
     padding-left: 205px;
     font-size: 32px;
     padding-top: 24px;
+    margin-right: 70px;
 }
 
 .business{
     padding-left: 205px;
     font-size: 32px;
     color: #7E9FB8;
+}
+
+.navBarContainer{
+    width: 834px;
+    display: flex;
+    color: #2c506d;
+    flex-direction: row;
+    list-style: none;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    justify-content: space-between;
+}
+
+.magIcon{
+    color: #2c506d;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+    margin-left: 30px;
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
