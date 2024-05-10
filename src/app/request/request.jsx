@@ -1,6 +1,7 @@
 "use client";
+require("dotenv").config();
+
 const TOKEN = process.env.API_TOKEN;
-// import React, { useState, useEffect } from "react";
 
 async function getArticles() {
 	const response = await fetch(
@@ -12,8 +13,7 @@ async function getArticles() {
 		}
 	);
 	const data = await response.json();
-	console.log(data);
+	console.log(data.data[0].attributes);
 }
 
-// getArticles();
-console.log(`${process.env.EVIRO_VARIABLE}`);
+getArticles();
