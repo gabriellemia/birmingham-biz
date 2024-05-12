@@ -20,3 +20,7 @@
 .contactImage{
     position: relative;
 }
+
+.contactForm{
+    padding-top: 50px;
+}
