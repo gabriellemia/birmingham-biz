@@ -1,9 +1,7 @@
 .mainPage{
-    border: solid red;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    padding-left: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 240px;
     padding-right: 0;
 }
 
@@ -16,8 +14,9 @@
 }
 
 .contactText{
-    border: solid red;
     width: 100vw;
+}
 
-
+.contactImage{
+    position: relative;
 }
