@@ -1,0 +1,23 @@
+.imagecontainer {
+  width: 50%;
+  position: unset !important;
+}
+
+.image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+.adcontainer {
+  width: 300px;
+  position: unset !important;
+}
+
+.adimage {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
