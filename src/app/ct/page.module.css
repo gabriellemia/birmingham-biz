@@ -59,3 +59,15 @@
 	width: 100%;
 	height: auto;
 }
+
+@media (min-width: 379px) {
+	.contactForm {
+		max-width: 380px;
+		margin: 0 auto;
+	}
+
+	.contactImage {
+		margin: 0 auto;
+		max-width: 1000px;
+	}
+}
