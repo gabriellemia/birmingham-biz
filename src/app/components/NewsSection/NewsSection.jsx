@@ -1,7 +1,10 @@
+"use client"
+
 import NewsCard from "./NewsCard/NewsCard";
 import styles from "./NewsSection.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {useState} from 'react';
 
 const dummyData = [
   {
@@ -78,6 +81,14 @@ const dummyData = [
 ];
 
 const NewsSection = () => {
+const [scroll, setScroll] = useState(0);
+
+const handleClick = ()=>{
+    setScroll(scroll + 1);
+    console.log('this is from handle click is clicked')
+   
+}
+
   return (
     <section className={styles.newsContainer}>
       <h1 className={styles.h1}>News</h1>
@@ -91,8 +102,9 @@ const NewsSection = () => {
           />
         ))}
       </section>
-      <div className={styles.arrowDiv}>
+      <div className={styles.arrowDiv} onClick={handleClick}>
         <FontAwesomeIcon icon={faArrowRight} className={styles.arrowIcon} />
+        
       </div>
     </section>
   );
