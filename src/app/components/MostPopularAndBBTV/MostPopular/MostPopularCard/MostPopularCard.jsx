@@ -11,4 +11,4 @@ export default function MostPopularCard({ imgUrl, headline, description }) {
       </div>
     </div>
   );
-}
+} 
