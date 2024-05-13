@@ -46,7 +46,8 @@ export default function Contact() {
               cols="50"
             ></textarea>
           </label>
-          <input className={styles.submitButton} type="submit" value="Submit" />
+          <button className={styles.submitButton}>Submit</button>
+          {/* <input className={styles.submitButton} type="submit" value="Submit" /> */}
         </form>
         <div className={styles.imageContainer}>
           <Image
@@ -55,13 +56,6 @@ export default function Contact() {
             className={styles.contactImage}
           />
         </div>
-        {/* <Image
-          className={styles.contactImage}
-          src="/birgminham_color 1.jpg"
-          width={1440}
-          height={556}
-          alt="Birmingham Cityscape"
-        /> */}
       </main>
     </div>
   );
