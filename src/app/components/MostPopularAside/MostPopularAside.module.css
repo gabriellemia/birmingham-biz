@@ -1,0 +1,11 @@
+.mostpopularcontainer {
+  width: 300px;
+  position: unset !important;
+}
+
+.mostpopularimage {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
