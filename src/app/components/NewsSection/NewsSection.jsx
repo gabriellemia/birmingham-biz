@@ -1,19 +1,18 @@
-import NewsCard from './NewsCard/NewsCard';
-import styles from './NewsSection.css';
+import NewsCard from "./NewsCard/NewsCard";
+import styles from "./NewsSection.css";
 
 const NewsSection = () => {
   return (
     <section className={styles.newsContainer}>
-    
       <h1>News</h1>
       <section className={styles.newsCardWrapper}>
-      <NewsCard />
-      <NewsCard />
-      <NewsCard />
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
       </section>
-
+      {/* <div className={styles.divider}></div> */}
     </section>
-  )
-}
+  );
+};
 
 export default NewsSection;
