@@ -8,7 +8,6 @@ export default function Home() {
     <main className={styles.main}>
       {/* <h1>Hello World!</h1> */}
       <NewsSection />
-      <Story/>
     </main>
   );
 }
