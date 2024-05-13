@@ -1,8 +1,9 @@
 .mainPage{
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 240px;
-    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100vh;
 }
 
 .mainTitle{
@@ -13,14 +14,31 @@
     padding-left: 50px;
 }
 
+
 .contactText{
     width: 100vw;
 }
 
 .contactImage{
-    position: relative;
+    z-index: -3;
+    position: absolute;
+    bottom: 0;
+    padding: 0;
 }
 
 .contactForm{
     padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.input{
+    width: 374px;
+}
+
+.submitButton{
+    width: 106px;
 }
