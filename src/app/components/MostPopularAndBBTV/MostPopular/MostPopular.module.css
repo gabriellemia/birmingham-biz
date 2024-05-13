@@ -1,5 +1,18 @@
 .MostPopularContainer {
   width: 675px;
   height: 588px;
-  border: solid;
+}
+
+.h1 {
+  color: #2c506d;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
 }
