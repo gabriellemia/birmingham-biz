@@ -34,10 +34,11 @@ export default function ContactPage() {
 				hear from you, though the inclusion of articles or comment columns
 				cannot be guaranteed and is always at the Editor’s discretion.
 			</p>
-			<form className={styles.formElement}>
+			<form onSubmit={handleSubmit} className={styles.formElement}>
 				<label className={styles.labelField} htmlFor="name">
 					Name
 					<input
+						onChange={handleChange}
 						className={styles.inputField}
 						type="text"
 						id="name"
@@ -47,6 +48,7 @@ export default function ContactPage() {
 				<label className={styles.labelField} htmlFor="email">
 					Email
 					<input
+						onChange={handleChange}
 						className={styles.inputField}
 						type="email"
 						id="email"
@@ -72,6 +74,7 @@ export default function ContactPage() {
 				<label className={styles.labelField} from="message">
 					Message
 					<textarea
+						onChange={handleChange}
 						className={styles.inputField}
 						name="message"
 						rows="10"
