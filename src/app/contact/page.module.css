@@ -19,9 +19,17 @@
     width: 100vw;
 }
 
+.imageContainer{
+    height: 100%;
+
+        position: unset;
+    }
+
 .contactImage{
+    width: 100%;
+    height: unset;
     z-index: -3;
-    position: absolute;
+    position: relative;
     bottom: 0;
     padding: 0;
 }
