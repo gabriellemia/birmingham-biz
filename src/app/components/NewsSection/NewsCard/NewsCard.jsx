@@ -6,8 +6,8 @@ const NewsCard = ({ imgUrl, headline, description }) => {
     <section className={styles.cardContainer}>
       <Image src={imgUrl} alt={headline} width={390} height={292} />
       <div className={styles.newsCardText}>
-        <h2 className={styles.headline}>{headline} headline title</h2>
-        <p className={styles.description}>{description} description/content </p>
+        <h2 className={styles.headline}>{headline}</h2>
+        <p className={styles.description}>{description}</p>
       </div>
     </section>
   );
