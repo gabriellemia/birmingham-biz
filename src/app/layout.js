@@ -4,9 +4,10 @@ import "./globals.css";
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
-const poppins = Poppins({ 
-  weight: ["300", "400", "700"],
-  subsets: ["latin"] });
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Create Next App",
