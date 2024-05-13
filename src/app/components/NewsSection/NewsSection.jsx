@@ -3,17 +3,16 @@ import styles from './NewsSection.css';
 
 const NewsSection = () => {
   return (
-    <div>
+    <section className={styles.newsContainer}>
     
       <h1>News</h1>
-      <section className={styles.newsContainer}>
+      <section className={styles.newsCardWrapper}>
       <NewsCard />
       <NewsCard />
       <NewsCard />
-             
       </section>
-     
-    </div>
+
+    </section>
   )
 }
 

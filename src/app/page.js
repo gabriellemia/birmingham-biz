@@ -5,8 +5,9 @@ import NewsSection from "./components/NewsSection/NewsSection";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1>Hello World!</h1>
+      {/* <h1>Hello World!</h1> */}
       <NewsSection/>
+      <div className={styles.divider}></div>
     </main>
   );
 }

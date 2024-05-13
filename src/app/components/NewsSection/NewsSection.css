@@ -1,6 +1,18 @@
-.newsContainer {
+.newsCardWrapper {
     display: flex; 
     flex-direction: row;
   }
+
+.newsContainer{
+  margin-left: 35px;
+ 
+}
   
+ h1{
+  color: #2c506d;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
  
