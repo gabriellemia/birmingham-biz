@@ -1,6 +1,6 @@
 .maincontainer {
   display: flex;
-  margin: 20px 197px 20px 197px;
+  margin: 20px 197px 30px 197px;
   gap: 50px;
 }
 
@@ -27,6 +27,7 @@
   width: 100% !important;
   position: relative !important;
   height: unset !important;
+  margin-bottom: 10px;
 }
 
 .articlehead {
@@ -57,4 +58,16 @@
 .mostpopularhr {
   border: 2px solid #2c506d;
   margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .maincontainer {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px 20px 50px;
+  }
+
+  .mostpopularsection {
+    display: none;
+  }
 }

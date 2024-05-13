@@ -74,23 +74,26 @@ export default function Story() {
           <div className={styles.adcontainer}>
             <Image src="/1663_2.jpg" fill={true} className={styles.adimage} alt="Advertisement" />
           </div>
-          <h2 className={styles.mostpopularhead}>Most Popular</h2>
-          <hr className={styles.mostpopularhr}></hr>
-          <MostPopularAside
-            image="/mostpopular1.png"
-            heading="New face joins corporate finance team"
-            subheading="Claire has 25 years of experience"
-          />
-          <MostPopularAside
-            image="/mostpopular2.png"
-            heading="Disputes partner joins team"
-            subheading="More than a decade of experience"
-          />
-          <MostPopularAside
-            image="/mostpopular3.png"
-            heading="City council lots under the hammer"
-            subheading="Auction set for May 16"
-          />
+          <div className={styles.mostpopularsection}>
+            <h2 className={styles.mostpopularhead}>Most Popular</h2>
+            <hr className={styles.mostpopularhr}></hr>
+
+            <MostPopularAside
+              image="/mostpopular1.png"
+              heading="New face joins corporate finance team"
+              subheading="Claire has 25 years of experience"
+            />
+            <MostPopularAside
+              image="/mostpopular2.png"
+              heading="Disputes partner joins team"
+              subheading="More than a decade of experience"
+            />
+            <MostPopularAside
+              image="/mostpopular3.png"
+              heading="City council lots under the hammer"
+              subheading="Auction set for May 16"
+            />
+          </div>
         </aside>
       </main>
     </>
