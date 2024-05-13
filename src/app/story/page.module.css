@@ -6,7 +6,7 @@
 
 .imagecontainer {
   width: 100%;
-  position: unset !important;
+  position: relative;
   padding: 20px 0;
 }
 
@@ -15,19 +15,6 @@
   width: 100% !important;
   position: relative !important;
   height: unset !important;
-}
-
-.adcontainer {
-  width: 300px;
-  position: unset !important;
-}
-
-.adimage {
-  object-fit: contain;
-  width: 100% !important;
-  position: relative !important;
-  height: unset !important;
-  margin-bottom: 10px;
 }
 
 .articlehead {

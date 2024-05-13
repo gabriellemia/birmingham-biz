@@ -1,13 +1,12 @@
 .mostpopularcontainer {
   width: 300px;
-  position: unset !important;
+  position: relative;
 }
 
 .mostpopularimage {
   object-fit: contain;
   width: 100% !important;
   position: relative !important;
-  height: unset !important;
 }
 
 .articlehead {

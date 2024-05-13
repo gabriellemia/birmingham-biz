@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import MostPopularAside from "../components/MostPopularAside/MostPopularAside";
+import ChangingAd from "../components/ChangingAd/ChangingAd";
 
 export default function Story() {
   // Create array of images
@@ -17,7 +18,7 @@ export default function Story() {
             of building homes across the Midlands.
           </p>
           <div className={styles.imagecontainer}>
-            <Image src="/ianburns.png" fill={true} className={styles.image} alt="Picture of Ian Burns" />
+            <Image src="/ianburns.png" fill={true} className={styles.image} sizes="max-width: 100%" alt="Picture of Ian Burns" priority={true} />
           </div>
           <p>
             Cameron Homes was set up by Ian Burns in 1994, with the backing of Tara Group owner Noel Sweeney, with its
@@ -71,9 +72,12 @@ export default function Story() {
           </p>
         </article>
         <aside>
-          <div className={styles.adcontainer}>
-            <Image src="/1663_2.jpg" fill={true} className={styles.adimage} alt="Advertisement" />
-          </div>
+          <ChangingAd images={[
+            {src: "/1663_1.jpg", url: "https://www.efgha.com/"}, 
+            {src: "/1663_2.jpg", url: "https://www.lokiwine.co.uk/"}, 
+            {src: "/1663_4.gif", url: "https://ecapital.com/en-gb/"}
+            ]} 
+          />
           <div className={styles.mostpopularsection}>
             <h2 className={styles.mostpopularhead}>Most Popular</h2>
             <hr className={styles.mostpopularhr}></hr>
