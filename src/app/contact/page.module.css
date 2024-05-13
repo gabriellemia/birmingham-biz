@@ -1,8 +1,26 @@
+.mainPage{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 240px;
+    padding-right: 0;
+}
+
 .mainTitle{
     color: #2c506d;
-    font-size: 72px;
+    font-weight: bold;
+    font-size: 48px;
+    padding-top: 25px;
+    padding-left: 50px;
 }
 
 .contactText{
+    width: 100vw;
+}
 
+.contactImage{
+    position: relative;
+}
+
+.contactForm{
+    padding-top: 50px;
 }

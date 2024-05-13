@@ -9,7 +9,7 @@
 }
 
 html {
-  color-scheme: dark light; /* Default dark */
+  color-scheme: light; /* Default dark */
   hanging-punctuation: first last; /* Not supported in Chrome */
 }
 
@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  max-width: 75ch;
+  max-width: 100ch;
   text-wrap: pretty; /* Prevents orphans on lines */
 }
 
