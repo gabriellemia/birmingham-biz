@@ -40,26 +40,26 @@ export default function Story() {
           operates in.
         </p>
         <p>
-          Ian Burns, founder and director at Cameron Homes, said: “Its been a fantastic 30 years during which weve seen
+          Ian Burns, founder and director at Cameron Homes, said: Its been a fantastic 30 years during which weve seen
           remarkable growth at Cameron Homes. Im proud of everything that weve achieved the ambitious projects weve
           delivered, the team weve grown and the culture weve created in the business.
         </p>
         <p>
-          “Weve experienced and seen so many changes in the housing market including the introduction of new technology,
+          Weve experienced and seen so many changes in the housing market including the introduction of new technology,
           the evolving wants and needs of customers and the increasing demand for sustainable and environmentally
           friendly properties, but one thing has remained the same for us our aim to deliver high-quality homes for our
-          customers in beautiful and desirable locations.”
+          customers in beautiful and desirable locations.
         </p>
         <p>
-          Guy Bebbington, managing director at Cameron Homes, said: “At Cameron Homes, our values family, pride, passion
+          Guy Bebbington, managing director at Cameron Homes, said: At Cameron Homes, our values family, pride, passion
           and ambition - are at the heart of everything we do. This incredible milestone provides a great opportunity to
           reflect on the achievements of the whole team at Cameron Homes, past and present, and weve got a big programme
           in place to celebrate our 30th year.
         </p>
         <p>
-          "It also presents the opportunity to look ahead to the future and with many projects in the pipeline across
-          the East and West Midlands, we look forward to continuing to deliver quality homes for our customers for many
-          years to come.”
+          It also presents the opportunity to look ahead to the future and with many projects in the pipeline across the
+          East and West Midlands, we look forward to continuing to deliver quality homes for our customers for many
+          years to come.
         </p>
       </article>
       <aside>
