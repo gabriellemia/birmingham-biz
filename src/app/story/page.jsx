@@ -74,8 +74,8 @@ export default function Story() {
           <div className={styles.adcontainer}>
             <Image src="/1663_2.jpg" fill={true} className={styles.adimage} alt="Advertisement" />
           </div>
-          <h2>Most Popular</h2>
-          <hr></hr>
+          <h2 className={styles.mostpopularhead}>Most Popular</h2>
+          <hr className={styles.mostpopularhr}></hr>
           <MostPopularAside
             image="/mostpopular1.png"
             heading="New face joins corporate finance team"

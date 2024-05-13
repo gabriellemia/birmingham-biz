@@ -11,8 +11,8 @@ export default function MostPopularAside(props) {
           className={styles.mostpopularimage}
           alt="Advertisement"
         />
-        <h3>{props.heading}</h3>
-        <p>{props.subheading}</p>
+        <h3 className={styles.articlehead}>{props.heading}</h3>
+        <p className={styles.articlesubhead}>{props.subheading}</p>
       </div>
     </>
   )
