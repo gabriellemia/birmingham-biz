@@ -8,7 +8,7 @@ export default function Contact() {
       <main className={styles.mainPage}>
         <p className={styles.contactText}>
           Birmingham Business is an editorially-led magazine and we are keen to
-          hear from you, though the inclusion or articles or comment columns
+          hear from you, though the inclusion of articles or comment columns
           cannot be guaranteed and is always at the Editor’s discretion.
         </p>
 
@@ -48,13 +48,20 @@ export default function Contact() {
           </label>
           <input className={styles.submitButton} type="submit" value="Submit" />
         </form>
-        <Image
+        <div className={styles.imageContainer}>
+          <Image
+            src={"/birmingham_background.svg"}
+            layout="fill"
+            className={styles.contactImage}
+          />
+        </div>
+        {/* <Image
           className={styles.contactImage}
           src="/birgminham_color 1.jpg"
           width={1440}
           height={556}
           alt="Birmingham Cityscape"
-        />
+        /> */}
       </main>
     </div>
   );
