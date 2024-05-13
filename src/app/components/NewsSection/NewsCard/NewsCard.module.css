@@ -1,0 +1,22 @@
+.cardContainer {
+  border: 2px red solid;
+  width: 390px;
+  height: 373px;
+  flex: 0 0 auto;
+}
+
+.headline {
+  color: #2c506d;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.description {
+  color: #2c506d;
+  font-size: 14px;
+}
+
+.newsCardText {
+  padding: 0px;
+  margin: 12px;
+}
