@@ -9,3 +9,20 @@
   position: relative !important;
   height: unset !important;
 }
+
+.articlehead {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2c506d;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: underline;
+  text-wrap: wrap;
+}
+
+.articlesubhead {
+  font-size: 14px;
+  font-weight: 400;
+  color: #2c506d;
+  padding-bottom: 20px;
+}

@@ -1,6 +1,13 @@
+.maincontainer {
+  display: flex;
+  margin: 20px 197px 20px 197px;
+  gap: 50px;
+}
+
 .imagecontainer {
-  width: 50%;
+  width: 100%;
   position: unset !important;
+  padding: 20px 0;
 }
 
 .image {
@@ -20,4 +27,34 @@
   width: 100% !important;
   position: relative !important;
   height: unset !important;
+}
+
+.articlehead {
+  font-size: 55px;
+  font-weight: 600;
+  color: #7e9fb8;
+  line-height: 1.3;
+  padding-bottom: 20px;
+  text-wrap: wrap;
+}
+
+.mainhr {
+  border: 2px solid #7e9fb8;
+  margin-bottom: 20px;
+}
+
+.maindescription {
+  font-weight: 600;
+}
+
+.mostpopularhead {
+  font-size: 45px;
+  font-weight: 600;
+  color: #2c506d;
+  padding-bottom: 10px;
+}
+
+.mostpopularhr {
+  border: 2px solid #2c506d;
+  margin-bottom: 20px;
 }
