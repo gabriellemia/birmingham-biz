@@ -28,7 +28,7 @@ const dummyData = [
 export default function FiveMinsWith() {
   return (
     <div className={styles.FiveMinsWithContainer}>
-      <h1 className={styles.h1}>Most Popular</h1>
+      <h1 className={styles.h1}>Five Minutes With</h1>
       <div className={styles.cardContainer}>
         {dummyData.map((data) => {
           return (
