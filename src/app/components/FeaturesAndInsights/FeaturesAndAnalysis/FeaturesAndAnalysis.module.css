@@ -1,5 +1,33 @@
 .featuresAndAnalysisContainer {
   width: 675px;
   height: 588px;
+  color: #2c506d;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: .5fr 1fr 1fr .5fr;
+  grid-template-areas: "featureTitle ", 
+  "featureCard, featureCard, featureCardAsideTop",
+  "featureCard, featureCard, featureCardAsideBottom",
+  "readMore";
   border: solid;
 }
+
+.featureCard{
+  grid-area: featureTitle;
+
+}
+.featureCardAsideTop{
+  grid-area: featureCardAsideTop;
+
+
+}
+.featureCardAsideBottom{
+  grid-area: featureCardAsideBottom;
+
+}
+.readMore{
+  grid-area: readMore;
+
+}
+
+

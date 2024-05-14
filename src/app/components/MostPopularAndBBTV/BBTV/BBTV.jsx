@@ -5,10 +5,6 @@ import styles from "./BBTV.module.css";
 const videoUrl =
   "https://player.vimeo.com/video/889425912?color&autopause=0&loop=0&muted=0&title=1&portrait=1&byline=1&h=88c00148cf#t=";
 
-const handleWatch = ()=>{
-  <a href="https://bbtv.live/"></a>
-}
-
 
 export default function BBTV({ episodeNumber, date, description, videoTitle  }) {
 
@@ -32,7 +28,7 @@ export default function BBTV({ episodeNumber, date, description, videoTitle  }) 
           {description} Some information about the episode, key stories, key
           guests and things.
         </p>
-        <p className={styles.watchNow} onClick={handleWatch}>
+        <p className={styles.watchNow}>
           Watch now{" "}
           <FontAwesomeIcon
             icon={faArrowRight}
