@@ -1,11 +1,28 @@
+"use client";
 import styles from "./page.module.css";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import MostPopularAside from "../components/MostPopularAside/MostPopularAside";
 import ChangingAd from "../components/ChangingAd/ChangingAd";
+import getArticles from "../request/request";
 
 export default function Story() {
-  // Create array of images
-  // Map over the array and add timer functionality
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getArticles();
+        if (data) {
+          console.log("Fetched articles:", data);
+          setArticles(data);
+        }
+      } catch (error) {
+        console.error("Error fetching articles:", error);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -18,7 +35,14 @@ export default function Story() {
             of building homes across the Midlands.
           </p>
           <div className={styles.imagecontainer}>
-            <Image src="/ianburns.png" fill={true} className={styles.image} sizes="max-width: 100%" alt="Picture of Ian Burns" priority={true} />
+            <Image
+              src="/ianburns.png"
+              fill={true}
+              className={styles.image}
+              sizes="max-width: 100%"
+              alt="Picture of Ian Burns"
+              priority={true}
+            />
           </div>
           <p>
             Cameron Homes was set up by Ian Burns in 1994, with the backing of Tara Group owner Noel Sweeney, with its
@@ -71,12 +95,13 @@ export default function Story() {
             many years to come.
           </p>
         </article>
-        <aside>
-          <ChangingAd images={[
-            {src: "/1663_1.jpg", url: "https://www.efgha.com/"}, 
-            {src: "/1663_2.jpg", url: "https://www.lokiwine.co.uk/"}, 
-            {src: "/1663_4.gif", url: "https://ecapital.com/en-gb/"}
-            ]} 
+        <aside className={styles.aside}>
+          <ChangingAd
+            images={[
+              { src: "/1663_1.jpg", url: "https://www.efgha.com/" },
+              { src: "/1663_2.jpg", url: "https://www.lokiwine.co.uk/" },
+              { src: "/1663_4.gif", url: "https://ecapital.com/en-gb/" },
+            ]}
           />
           <div className={styles.mostpopularsection}>
             <h2 className={styles.mostpopularhead}>Most Popular</h2>
