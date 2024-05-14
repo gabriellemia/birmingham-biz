@@ -1,63 +1,78 @@
-.mainPage {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	position: relative;
-	/* height: 100vh; */
+.contactForm {
+	--footer-height: 67px;
+	/* 223px is header + footer height should switch for constant in those components*/
+	--viewport-height: calc(100vh - 223px);
+	padding: 16px;
+	font-size: 12px;
+	height: var(--viewport-height);
+	background-image: url("/public/birgminham_color 1.jpg");
 }
 
-.mainTitle {
+.pageHeading {
 	color: #2c506d;
 	font-weight: bold;
-	font-size: 48px;
-	padding-top: 25px;
-	padding-left: 50px;
+	font-size: 3em;
 }
 
-.contactText {
-	width: 100vw;
-}
-
-.imageContainer {
-	height: 100%;
-
-	position: unset;
-}
-
-.contactImage {
-	width: 100%;
-	height: unset;
-	z-index: -3;
-	position: relative;
-	bottom: 0;
-	padding: 0;
-}
-
-.contactForm {
-	padding-top: 50px;
-	padding-bottom: 50px;
+.formElement {
+	margin-top: 25px;
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
-	align-items: center;
 }
 
-.input {
-	width: 390px;
+.labelField {
+	margin-top: 20px;
+}
+
+.inputField {
+	width: 100%;
+	padding: 0.3em;
 	border: 1px solid #7e9fb8;
 	border-radius: 4px;
-	padding: 10px;
 }
 
-.submitButton {
+.buttonContainer {
+	display: flex;
+	justify-content: center;
+	margin-top: 35px;
+}
+
+.button {
 	color: white;
 	background-color: #7e9fb8;
 	border: none;
 	border-radius: 4px;
-	padding: 10px 25px;
+	padding: 5px 26px;
 	font-weight: bolder;
+	transition: background-color 0.1s ease;
 }
 
-.submitButton:hover {
-	background: #d4a20d;
+.button:hover {
+	background-color: #d4a20d;
+}
+
+.imageContainer {
+	position: fixed;
+	bottom: 73px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	z-index: -300;
+}
+
+.contactImage {
+	width: 100%;
+	height: auto;
+}
+
+@media (min-width: 379px) {
+	.contactForm {
+		max-width: 380px;
+		margin: 0 auto;
+	}
+
+	.contactImage {
+		margin: 0 auto;
+		max-width: 1000px;
+	}
 }
