@@ -6,7 +6,7 @@
 
 .imagecontainer {
   width: 100%;
-  position: unset !important;
+  position: relative;
   padding: 20px 0;
 }
 
@@ -15,19 +15,6 @@
   width: 100% !important;
   position: relative !important;
   height: unset !important;
-}
-
-.adcontainer {
-  width: 300px;
-  position: unset !important;
-}
-
-.adimage {
-  object-fit: contain;
-  width: 100% !important;
-  position: relative !important;
-  height: unset !important;
-  margin-bottom: 10px;
 }
 
 .articlehead {
@@ -55,6 +42,10 @@
   padding-bottom: 10px;
 }
 
+.para {
+  padding-bottom: 10px;
+}
+
 .mostpopularhr {
   border: 2px solid #2c506d;
   margin-bottom: 20px;
@@ -67,7 +58,10 @@
     margin: 20px 50px 20px 50px;
   }
 
-  .mostpopularsection {
-    display: none;
-  }
+  /* .mostpopularsection {
+      display: none;
+  } */
+
+  /* .aside {
+  } */
 }
