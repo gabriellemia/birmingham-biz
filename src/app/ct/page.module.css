@@ -44,6 +44,11 @@
 	border-radius: 4px;
 	padding: 5px 26px;
 	font-weight: bolder;
+	transition: background-color 0.1s ease;
+}
+
+.button:hover {
+	background-color: #d4a20d;
 }
 
 .imageContainer {
