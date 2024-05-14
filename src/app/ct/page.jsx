@@ -92,6 +92,7 @@ export default function ContactPage() {
 					height={100}
 					layout="fixed"
 					className={styles.contactImage}
+					alt="Birmingham skyline background image"
 				/>
 			</div>
 		</div>
