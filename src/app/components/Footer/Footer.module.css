@@ -7,6 +7,7 @@
   align-items: center;
   padding: 1rem;
   height: 67px;
+  color: #2c506d;
 }
 
 .footerMenu {
@@ -29,7 +30,9 @@
   text-decoration: none;
 }
 
-.link:visited {
+
+.link:visited,
+.link:link {
   color: #2c506d;
 }
 
@@ -55,7 +58,8 @@
   color: #2c506d;
 
 }
-.icon:visited {
+.socialItem:visited,
+.socialItem:active {
   color: #2c506d;
 }
 
