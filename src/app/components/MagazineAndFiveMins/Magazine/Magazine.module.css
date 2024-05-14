@@ -3,10 +3,10 @@
   height: 580px;
   position: relative;
   color: #2c506d;
+  border-bottom: solid 2px;
 }
 
 .h1 {
- 
   font-size: 2rem;
   font-weight: 700;
   margin-top: 0;
@@ -26,23 +26,21 @@
 .archive {
   position: absolute;
   right: 0;
-  bottom: 10px;
+  top: 525px;
   font-size: 24px;
-  font-weight: 700;
-  
+  font-weight: 600;
+  text-decoration: underline;
 }
-.topStoriesHead{
+.topStoriesHead {
   font-size: 24px;
   font-weight: 600;
   margin: 8px 0 8px 0;
 }
 
-.h3{
+.h3 {
   font-size: 16px;
   font-weight: 500;
-
-
 }
-.storyDescription{
+.storyDescription {
   font-size: 14px;
 }
