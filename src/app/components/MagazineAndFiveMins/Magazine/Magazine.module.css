@@ -1,12 +1,12 @@
 .MagazineContainer {
   width: 675px;
   height: 580px;
-  border: solid;
   position: relative;
+  color: #2c506d;
+  border-bottom: solid 2px;
 }
 
 .h1 {
-  color: #2c506d;
   font-size: 2rem;
   font-weight: 700;
   margin-top: 0;
@@ -26,5 +26,21 @@
 .archive {
   position: absolute;
   right: 0;
-  bottom: 25px;
+  top: 525px;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.topStoriesHead {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 8px 0 8px 0;
+}
+
+.h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.storyDescription {
+  font-size: 14px;
 }
