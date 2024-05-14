@@ -5,14 +5,17 @@ dotenv.config({ path: ".env.local" });
 
 const TOKEN = process.env.NEXT_PUBLIC_API_TOKEN;
 
-async function getArticles() {
+export async function getArticles() {
   try {
-    const response = await fetch("https://strapi-production-9d37.up.railway.app/api/articles", {
-      headers: {
-        Authorization: `Bearer ${TOKEN}`,
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "https://strapi-production-9d37.up.railway.app/api/articles",
+      {
+        headers: {
+          Authorization: `Bearer ${TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -31,4 +34,28 @@ async function getArticles() {
 
 // getArticles();
 
-export default getArticles;
+export async function getArticleById(id) {
+  try {
+    const response = await fetch(
+      `https://strapi-production-9d37.up.railway.app/api/articles/${id}`,
+      {
+        headers: {
+          Authorization: `Bearer ${TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.data;
+  } catch (error) {
+    console.error("Error fetching articles:", error.message);
+    return null;
+  }
+}
+
+// getArticleById();

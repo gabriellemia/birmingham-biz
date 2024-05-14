@@ -4,21 +4,37 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import MostPopularAside from "../components/MostPopularAside/MostPopularAside";
 import ChangingAd from "../components/ChangingAd/ChangingAd";
-import getArticles from "../request/request";
+import { getArticles, getArticleById } from "../request/request";
 
 export default function Story() {
-  const [articles, setArticles] = useState([]);
+  // const [articles, setArticles] = useState([]);
+  const [article, setArticle] = useState({});
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const data = await getArticles();
+  //       if (data) {
+  //         console.log("Fetched articles:", data);
+  //         setArticles(data);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching articles:", error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getArticles();
+        const data = await getArticleById(1);
         if (data) {
-          console.log("Fetched articles:", data);
-          setArticles(data);
+          console.log("Fetched article:", data);
+          setArticle(data);
         }
       } catch (error) {
-        console.error("Error fetching articles:", error);
+        console.error("Error fetching article:", error);
       }
     };
     fetchData();
