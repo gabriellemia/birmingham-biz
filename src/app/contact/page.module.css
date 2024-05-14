@@ -4,8 +4,7 @@
 	--viewport-height: calc(100vh - 223px);
 	padding: 16px;
 	font-size: 12px;
-	height: var(--viewport-height);
-	background-image: url("/public/birgminham_color 1.jpg");
+	/* height: var(--viewport-height); */
 }
 
 .pageHeading {
