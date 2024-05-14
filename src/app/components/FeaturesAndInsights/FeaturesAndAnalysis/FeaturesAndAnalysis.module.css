@@ -2,32 +2,57 @@
   width: 675px;
   height: 588px;
   color: #2c506d;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: .5fr 1fr 1fr .5fr;
-  grid-template-areas: "featureTitle ", 
-  "featureCard, featureCard, featureCardAsideTop",
-  "featureCard, featureCard, featureCardAsideBottom",
-  "readMore";
-  border: solid;
+  border-bottom: 2px solid #2c506d;
+  /* display: flex;
+  flex-direction: column; */
+  
+}
+.featAndAnalysis{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+ 
+}
+.featureHeadline{
+  font-weight: 600;
+  text-decoration: underline;
+  margin-top: 15px;
+   font-size: 20px;
+}
+.featureDescription{
+  font-size: 14px;
+}
+
+.featureCardContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .featureCard{
-  grid-area: featureTitle;
+width: 415px;
+position: relative;
 
 }
-.featureCardAsideTop{
-  grid-area: featureCardAsideTop;
-
-
+.featureAsideContainer{
+  display: flex;
+  flex-direction: column;
+  width: 215px;
+  gap: 20px;
+  
 }
-.featureCardAsideBottom{
-  grid-area: featureCardAsideBottom;
+.featureCardAside{
 
 }
 .readMore{
-  grid-area: readMore;
-
+  position:absolute;
+  left: 0;
+  top: 490px;
+  /* text-decoration: underline; */
 }
 
+.readMoreText{
+  text-decoration: underline;
+}
 

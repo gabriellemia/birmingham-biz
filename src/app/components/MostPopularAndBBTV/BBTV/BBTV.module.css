@@ -20,17 +20,20 @@
   font-weight: 600;
 }
 
-.arrowIcon {
+/* .arrowIcon {
   width: 10px;
   height: 10px;
   margin-left: 10px;
-}
+} */
 
 .watchNow {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   font-size: 14px;
   font-weight: 400;
   margin-top: 20px;
+}
+.watchNowText{
+  text-decoration: underline;
 }
 .date {
   font-size: 12px;

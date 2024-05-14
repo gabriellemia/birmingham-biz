@@ -29,7 +29,7 @@ export default function BBTV({ episodeNumber, date, description, videoTitle  }) 
           guests and things.
         </p>
         <p className={styles.watchNow}>
-          Watch now{" "}
+        <span className={styles.watchNowText}>Watch Now</span>&nbsp;&nbsp;&nbsp;
           <FontAwesomeIcon
             icon={faArrowRight}
             className={styles.arrowIcon}

@@ -20,44 +20,62 @@ export default function FeaturesAndAnalysis({
               {featureHeadline} title goes here
             </h2>
             <p className={styles.featureDescription}>
-              {featureDescription} description here
+              {featureDescription} description here 
             </p>
           </section>
-        </section>
-        <section className={styles.featureCardAsideTop}>
-          <Image src={imgUrl} alt={featureHeadline} width={215} height={160} />
-          <section className={styles.featureCardText}>
-            <h2 className={styles.featureHeadline}>
-              {featureHeadline} title goes here
-            </h2>
-            <p className={styles.featureDescription}>
-              {featureDescription} description here
-            </p>
-          </section>
-        </section>
-        <section className={styles.featureCardAsideBottom}>
-          <Image src={imgUrl} alt={featureHeadline} width={215} height={160} />
-          <section className={styles.featureCardText}>
-            <h2 className={styles.featureHeadline}>
-              {featureHeadline} title goes here
-            </h2>
-            <p className={styles.featureDescription}>
-              {featureDescription} description here
-            </p>
-          </section>
-        </section>
-
-
-      </section>
-
-      <p className={styles.readMore}>
-        Read More{" "}
+          <p className={styles.readMore}>
+        <span className={styles.readMoreText}>Read More</span>&nbsp;&nbsp;&nbsp;
         <FontAwesomeIcon
           icon={faArrowRight}
           className={styles.arrowIcon}
           aria-hidden="true" // Hide decorative icons from screen readers
         ></FontAwesomeIcon>
       </p>
+        </section>
+        <section className={styles.featureAsideContainer}>
+          <section className={styles.featureCardAside}>
+            <Image
+              src={imgUrl}
+              alt={featureHeadline}
+              width={215}
+              height={160}
+            />
+            <section className={styles.featureCardText}>
+              <h2 className={styles.featureHeadline}>
+                {featureHeadline} title goes here
+              </h2>
+              <p className={styles.featureDescription}>
+                {featureDescription} description here  
+              </p>
+            </section>
+          </section>
+          <section className={styles.featureCardAside}>
+            <Image
+              src={imgUrl}
+              alt={featureHeadline}
+              width={215}
+              height={160}
+            />
+            <section className={styles.featureCardText}>
+              <h2 className={styles.featureHeadline}>
+                {featureHeadline} title goes here
+              </h2>
+              <p className={styles.featureDescription}>
+                {featureDescription} description here 
+              </p>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      {/* <p className={styles.readMore}>
+        Read More{" "}
+        <FontAwesomeIcon
+          icon={faArrowRight}
+          className={styles.arrowIcon}
+          aria-hidden="true" // Hide decorative icons from screen readers
+        ></FontAwesomeIcon>
+      </p> */}
     </section>
   );
 }
