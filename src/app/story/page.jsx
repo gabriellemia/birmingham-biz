@@ -1,10 +1,44 @@
+"use client";
 import styles from "./page.module.css";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import MostPopularAside from "../components/MostPopularAside/MostPopularAside";
+import ChangingAd from "../components/ChangingAd/ChangingAd";
+import { getArticles, getArticleById } from "../request/request";
 
 export default function Story() {
-  // Create array of images
-  // Map over the array and add timer functionality
+  // const [articles, setArticles] = useState([]);
+  const [article, setArticle] = useState({});
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const data = await getArticles();
+  //       if (data) {
+  //         console.log("Fetched articles:", data);
+  //         setArticles(data);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching articles:", error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getArticleById(1);
+        if (data) {
+          console.log("Fetched article:", data);
+          setArticle(data);
+        }
+      } catch (error) {
+        console.error("Error fetching article:", error);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -17,7 +51,14 @@ export default function Story() {
             of building homes across the Midlands.
           </p>
           <div className={styles.imagecontainer}>
-            <Image src="/ianburns.png" fill={true} className={styles.image} alt="Picture of Ian Burns" />
+            <Image
+              src="/ianburns.png"
+              fill={true}
+              className={styles.image}
+              sizes="max-width: 100%"
+              alt="Picture of Ian Burns"
+              priority={true}
+            />
           </div>
           <p>
             Cameron Homes was set up by Ian Burns in 1994, with the backing of Tara Group owner Noel Sweeney, with its
@@ -70,27 +111,34 @@ export default function Story() {
             many years to come.
           </p>
         </article>
-        <aside>
-          <div className={styles.adcontainer}>
-            <Image src="/1663_2.jpg" fill={true} className={styles.adimage} alt="Advertisement" />
+        <aside className={styles.aside}>
+          <ChangingAd
+            images={[
+              { src: "/1663_1.jpg", url: "https://www.efgha.com/" },
+              { src: "/1663_2.jpg", url: "https://www.lokiwine.co.uk/" },
+              { src: "/1663_4.gif", url: "https://ecapital.com/en-gb/" },
+            ]}
+          />
+          <div className={styles.mostpopularsection}>
+            <h2 className={styles.mostpopularhead}>Most Popular</h2>
+            <hr className={styles.mostpopularhr}></hr>
+
+            <MostPopularAside
+              image="/mostpopular1.png"
+              heading="New face joins corporate finance team"
+              subheading="Claire has 25 years of experience"
+            />
+            <MostPopularAside
+              image="/mostpopular2.png"
+              heading="Disputes partner joins team"
+              subheading="More than a decade of experience"
+            />
+            <MostPopularAside
+              image="/mostpopular3.png"
+              heading="City council lots under the hammer"
+              subheading="Auction set for May 16"
+            />
           </div>
-          <h2 className={styles.mostpopularhead}>Most Popular</h2>
-          <hr className={styles.mostpopularhr}></hr>
-          <MostPopularAside
-            image="/mostpopular1.png"
-            heading="New face joins corporate finance team"
-            subheading="Claire has 25 years of experience"
-          />
-          <MostPopularAside
-            image="/mostpopular2.png"
-            heading="Disputes partner joins team"
-            subheading="More than a decade of experience"
-          />
-          <MostPopularAside
-            image="/mostpopular3.png"
-            heading="City council lots under the hammer"
-            subheading="Auction set for May 16"
-          />
         </aside>
       </main>
     </>
