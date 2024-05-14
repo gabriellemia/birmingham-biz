@@ -31,6 +31,11 @@
 	border-radius: 4px;
 }
 
+.popupContainer {
+	display: flex;
+	justify-content: center;
+}
+
 .buttonContainer {
 	display: flex;
 	justify-content: center;

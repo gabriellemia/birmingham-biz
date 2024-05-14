@@ -6,14 +6,18 @@ dotenv.config({ path: ".env.local" });
 const TOKEN = process.env.NEXT_PUBLIC_API_TOKEN;
 
 async function getArticles() {
-  const response = await fetch("https://strapi-production-9d37.up.railway.app/api/articles", {
-    headers: {
-      Authorization: `Bearer ${TOKEN}`,
-      "Content-Type": "application/json",
-    },
-  });
-  const data = await response.json();
-  console.log(data.data[1].attributes.copy);
+	const response = await fetch(
+		"https://strapi-production-9d37.up.railway.app/api/articles",
+		{
+			headers: {
+				Authorization: `Bearer ${TOKEN}`,
+				"Content-Type": "application/json",
+			},
+		}
+	);
+	const data = await response.json();
+	// console.log(data.data[1].attributes.copy);
+	console.log(data);
 }
 
 getArticles();
