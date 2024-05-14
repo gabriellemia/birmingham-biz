@@ -1,0 +1,48 @@
+.MagazineContainer {
+  width: 675px;
+  height: 580px;
+  position: relative;
+  color: #2c506d;
+}
+
+.h1 {
+ 
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.stories {
+  width: 188px;
+}
+
+.archive {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  
+}
+.topStoriesHead{
+  font-size: 24px;
+  font-weight: 600;
+  margin: 8px 0 8px 0;
+}
+
+.h3{
+  font-size: 16px;
+  font-weight: 500;
+
+
+}
+.storyDescription{
+  font-size: 14px;
+}
