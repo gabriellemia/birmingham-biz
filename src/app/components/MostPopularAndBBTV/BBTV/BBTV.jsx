@@ -15,15 +15,10 @@ export default function BBTV({ episodeNumber, date, description }) {
         width="675"
         height="365"
         frameborder="0"
-        allow="autoplay; fullscreen"
+        allow="fullscreen"
         allowfullscreen
       ></iframe>
 
-      {/* <video width="675" height="365" controls>
-        <source src={videoUrl} type="video/mp4" />
-        <track kind="descriptions" label="English" srcLang="en" />
-      </video> */}
-      
       <section className={styles.content}>
         <h2 className={styles.episodeTitle}>Episode 10{episodeNumber}</h2>
         <p className={styles.date}>{date}Friday 1st December, 2023</p>
