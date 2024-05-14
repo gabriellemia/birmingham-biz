@@ -11,11 +11,11 @@
   margin-top: 0;
   margin-bottom: 20px;
 }
-.content{
+.content {
   margin-top: 10px;
 }
 
-.episodeTitle{
+.episodeTitle {
   font-size: 20px;
   font-weight: 600;
 }
@@ -26,14 +26,13 @@
   margin-left: 10px;
 }
 
-.watchNow{
+.watchNow {
   text-decoration: underline;
   font-size: 14px;
   font-weight: 400;
   margin-top: 20px;
-
 }
-.date{
+.date {
   font-size: 12px;
   font-weight: 200;
 }

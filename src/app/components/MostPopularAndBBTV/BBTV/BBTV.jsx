@@ -2,14 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import styles from "./BBTV.module.css";
 
-const videoUrl = "https://player.vimeo.com/video/889425912?color&autopause=0&loop=0&muted=0&title=1&portrait=1&byline=1&h=88c00148cf#t=";
+const videoUrl =
+  "https://player.vimeo.com/video/889425912?color&autopause=0&loop=0&muted=0&title=1&portrait=1&byline=1&h=88c00148cf#t=";
 
 export default function BBTV({ episodeNumber, date, description }) {
-
   return (
     <section className={styles.BBTVContainer}>
       <h1 className={styles.bbtv}>BBTV</h1>
-      
+
       <iframe
         src={videoUrl}
         width="675"
