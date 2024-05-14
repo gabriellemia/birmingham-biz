@@ -21,22 +21,30 @@
   font-weight: 600;
 }
 
-
 .watchNow {
   font-size: 14px;
   font-weight: 400;
   position: absolute;
   bottom: 10px;
-
 }
-.watchNowText{
+.watchNowText {
   text-decoration: underline;
+  margin-right: 8px;
 }
 .date {
   font-size: 12px;
   font-weight: 200;
 }
+
 .description {
   font-size: 14px;
   margin-top: 10px;
+}
+
+.watchNowLink:visited {
+  color: #2c506d;
+}
+
+.watchNowLink:hover {
+  color: #d4a20d;
 }
