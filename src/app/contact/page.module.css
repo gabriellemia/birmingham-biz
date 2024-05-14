@@ -1,61 +1,63 @@
-.mainPage{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    /* height: 100vh; */
+.mainPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	/* height: 100vh; */
 }
 
-.mainTitle{
-    color: #2c506d;
-    font-weight: bold;
-    font-size: 48px;
-    padding-top: 25px;
-    padding-left: 50px;
+.mainTitle {
+	color: #2c506d;
+	font-weight: bold;
+	font-size: 48px;
+	padding-top: 25px;
+	padding-left: 50px;
 }
 
-
-.contactText{
-    width: 100vw;
+.contactText {
+	width: 100vw;
 }
 
-.imageContainer{
-    height: 100%;
+.imageContainer {
+	height: 100%;
 
-        position: unset;
-    }
-
-.contactImage{
-    width: 100%;
-    height: unset;
-    z-index: -3;
-    position: relative;
-    bottom: 0;
-    padding: 0;
+	position: unset;
 }
 
-.contactForm{
-    padding-top: 50px;
-    padding-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
+.contactImage {
+	width: 100%;
+	height: unset;
+	z-index: -3;
+	position: relative;
+	bottom: 0;
+	padding: 0;
 }
 
-.input{
-    width: 390px;
-    border: 1px solid #7e9fb8;
-    border-radius: 4px;
-    padding: 10px;
+.contactForm {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	align-items: center;
 }
 
-.submitButton{
-    color: white;
-    background-color: #7e9fb8;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 25px;
-    font-weight: bolder;
+.input {
+	width: 390px;
+	border: 1px solid #7e9fb8;
+	border-radius: 4px;
+	padding: 10px;
+}
 
+.submitButton {
+	color: white;
+	background-color: #7e9fb8;
+	border: none;
+	border-radius: 4px;
+	padding: 10px 25px;
+	font-weight: bolder;
+}
+
+.submitButton:hover {
+	background: #d4a20d;
 }
