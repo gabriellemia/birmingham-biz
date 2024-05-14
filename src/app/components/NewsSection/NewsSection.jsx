@@ -4,6 +4,7 @@ import NewsCard from "./NewsCard/NewsCard";
 import styles from "./NewsSection.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 const dummyData = [
@@ -83,11 +84,18 @@ const dummyData = [
 const NewsSection = () => {
   const [scroll, setScroll] = useState(0);
 
-  const handleClick = () => {
+  const handleClickRight = () => {
     setScroll(scroll + 1);
     let firstItem = dummyData[0];
     dummyData.shift();
     dummyData.push(firstItem);
+  };
+
+  const handleClickLeft = () => {
+    setScroll(scroll - 1);
+    let lastItem = dummyData[dummyData.length - 1];
+    dummyData.pop();
+    dummyData.unshift(lastItem);
   };
 
   return (
@@ -103,8 +111,11 @@ const NewsSection = () => {
           />
         ))}
       </section>
-      <div className={styles.arrowDiv} onClick={handleClick}>
-        <FontAwesomeIcon icon={faArrowRight} className={styles.arrowIcon} />
+      <div className={styles.arrowDiv} onClick={handleClickRight}>
+        <FontAwesomeIcon icon={faArrowRight} className={styles.arrowIcon1} />
+      </div>
+      <div className={styles.arrowDiv} onClick={handleClickLeft}>
+        <FontAwesomeIcon icon={faArrowLeft} className={styles.arrowIcon2} />
       </div>
     </section>
   );
