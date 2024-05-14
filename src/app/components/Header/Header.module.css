@@ -33,7 +33,7 @@
   color: #7e9fb8;
 }
 
-.navBarContainer {
+/* .navBarContainer {
   width: 834px;
   display: flex;
   color: #2c506d;
@@ -48,6 +48,30 @@
   margin-right: 10px;
   margin-bottom: 0;
   justify-content: space-between;
+} */
+
+.navBarContainer {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 16px;
+  list-style: none;
+}
+
+.navBarContainer > li {
+  margin: 0;
+  padding: 0;
+
+}
+
+.navLinks {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.1s ease;
+}
+
+.navLinks:hover {
+  color: #D4A20D;
+  cursor: pointer;
 }
 
 .magIcon {
