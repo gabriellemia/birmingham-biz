@@ -2,4 +2,29 @@
   width: 675px;
   height: 580px;
   border: solid;
+  position: relative;
+}
+
+.h1 {
+  color: #2c506d;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.stories {
+  width: 188px;
+}
+
+.archive {
+  position: absolute;
+  right: 0;
+  bottom: 25px;
 }
