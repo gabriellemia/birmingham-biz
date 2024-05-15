@@ -44,7 +44,7 @@ const Story = ({ params: { slug } }) => {
       }
     };
     fetchData();
-  }, [slug]);
+  }, []);
 
   // Call the getArticles function to retrieve all articles
   // Find the article with the ID number that matches the array length
