@@ -34,9 +34,7 @@ const Story = ({ params: { slug } }) => {
         if (data) {
           console.log("Fetched articles:", data);
           setArticles(data);
-          const recentArticleFirst = data.filter(
-            (obj) => obj.id === data.length
-          );
+          const recentArticleFirst = data.filter((obj) => obj.id === data.length);
           setRecentArticleOne(recentArticleFirst);
         }
       } catch (error) {
@@ -63,9 +61,9 @@ const Story = ({ params: { slug } }) => {
   // console.log("Most recent article", recentArticle);
   // console.log("Recent article content", recentArticle[0]["attributes"]);
 
-  console.log("Recent Article:", recentArticleOne);
-  console.log("Recent article content:", recentArticleOne[0]);
-  // console.log("Recent article attributes:", recentArticleOne[0].attributes);
+  // console.log("Recent Article:", recentArticleOne);
+  // console.log("Recent article content:", recentArticleOne[0]);
+  // console.log("Recent article attributes:", recentArticleOne);
   // console.log(
   //   "Recent article headline:",
   //   recentArticleOne[0].attributes.headline
@@ -109,10 +107,21 @@ const Story = ({ params: { slug } }) => {
             <hr className={styles.mostpopularhr}></hr>
 
             <MostPopularAside
-              image={"/mostpopular1.png"}
-              heading=""
-              subheading="Claire has 25 years of experience"
+              image={
+                recentArticleOne.length > 0 &&
+                recentArticleOne[0].attributes &&
+                recentArticleOne[0].attributes.image.data.attributes.url
+              }
+              heading={
+                recentArticleOne.length > 0 && recentArticleOne[0].attributes && recentArticleOne[0].attributes.headline
+              }
+              subheading={
+                recentArticleOne.length > 0 &&
+                recentArticleOne[0].attributes &&
+                recentArticleOne[0].attributes.subheading
+              }
             />
+
             <MostPopularAside
               image="/mostpopular2.png"
               heading="Disputes partner joins team"
