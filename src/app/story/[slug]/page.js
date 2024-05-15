@@ -11,6 +11,8 @@ const Story = ({ params: { slug } }) => {
   const [article, setArticle] = useState(null);
   const [articles, setArticles] = useState([]);
   const [recentArticleOne, setRecentArticleOne] = useState({});
+  const [recentArticleTwo, setRecentArticleTwo] = useState({});
+  const [recentArticleThree, setRecentArticleThree] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,8 +36,13 @@ const Story = ({ params: { slug } }) => {
         if (data) {
           console.log("Fetched articles:", data);
           setArticles(data);
+
           const recentArticleFirst = data.filter((obj) => obj.id === data.length);
+          const recentArticleSecond = data.filter((obj) => obj.id === data.length - 1);
+          const recentArticleThird = data.filter((obj) => obj.id === data.length - 2);
           setRecentArticleOne(recentArticleFirst);
+          setRecentArticleTwo(recentArticleSecond);
+          setRecentArticleThree(recentArticleThird);
         }
       } catch (error) {
         console.error("Error fetching articles:", error);
@@ -63,7 +70,7 @@ const Story = ({ params: { slug } }) => {
 
   // console.log("Recent Article:", recentArticleOne);
   // console.log("Recent article content:", recentArticleOne[0]);
-  // console.log("Recent article attributes:", recentArticleOne);
+  // console.log("Second article attributes:", recentArticleTwo);
   // console.log(
   //   "Recent article headline:",
   //   recentArticleOne[0].attributes.headline
@@ -123,14 +130,36 @@ const Story = ({ params: { slug } }) => {
             />
 
             <MostPopularAside
-              image="/mostpopular2.png"
-              heading="Disputes partner joins team"
-              subheading="More than a decade of experience"
+              image={
+                recentArticleTwo.length > 0 &&
+                recentArticleTwo[0].attributes &&
+                recentArticleTwo[0].attributes.image.data.attributes.url
+              }
+              heading={
+                recentArticleTwo.length > 0 && recentArticleTwo[0].attributes && recentArticleTwo[0].attributes.headline
+              }
+              subheading={
+                recentArticleTwo.length > 0 &&
+                recentArticleTwo[0].attributes &&
+                recentArticleTwo[0].attributes.subheading
+              }
             />
             <MostPopularAside
-              image="/mostpopular3.png"
-              heading="City council lots under the hammer"
-              subheading="Auction set for May 16"
+              image={
+                recentArticleThree.length > 0 &&
+                recentArticleThree[0].attributes &&
+                recentArticleThree[0].attributes.image.data.attributes.url
+              }
+              heading={
+                recentArticleThree.length > 0 &&
+                recentArticleThree[0].attributes &&
+                recentArticleThree[0].attributes.headline
+              }
+              subheading={
+                recentArticleThree.length > 0 &&
+                recentArticleThree[0].attributes &&
+                recentArticleThree[0].attributes.subheading
+              }
             />
           </div>
         </aside>
