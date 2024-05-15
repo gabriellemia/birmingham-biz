@@ -1,5 +1,5 @@
 .dateDiv {
-  width: 188px;
+  width: 155px;
   background-color: #7e9fb8;
   display: flex;
   flex-direction: row;
@@ -13,11 +13,14 @@
 }
 
 .MagazineCardContainer {
-  width: 188px;
+  width: 155px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .faDownload{
   margin-top: 3px;
+}
+.imgStyle{
+  object-fit: cover;
 }

@@ -14,7 +14,7 @@ export default function FeaturesAndAnalysis({
 
       <section className={styles.featureCardContainer}>
         <section className={styles.featureCard}>
-          <Image src={imgUrl} alt={featureHeadline} width={415} height={310} />
+          <Image src={imgUrl} alt={featureHeadline} width={320} height={270}  className={styles.imgStyle}/>
           <section className={styles.featureCardText}>
             <h2 className={styles.featureHeadline}>
               {featureHeadline} title goes here
@@ -37,8 +37,8 @@ export default function FeaturesAndAnalysis({
             <Image
               src={imgUrl}
               alt={featureHeadline}
-              width={215}
-              height={160}
+              width={180}
+              height={140} className={styles.imgStyle}
             />
             <section className={styles.featureCardText}>
               <h2 className={styles.featureHeadline}>
@@ -53,8 +53,8 @@ export default function FeaturesAndAnalysis({
             <Image
               src={imgUrl}
               alt={featureHeadline}
-              width={215}
-              height={160}
+              width={180}
+              height={140} className={styles.imgStyle}
             />
             <section className={styles.featureCardText}>
               <h2 className={styles.featureHeadline}>

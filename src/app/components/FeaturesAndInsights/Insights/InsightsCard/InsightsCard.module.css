@@ -16,9 +16,12 @@
   color: #2c506d;
   font-size: 14px;
   border-bottom: solid 2px;
-  height: 105.6px;
+  height: 96px;
 }
 
 .cardText {
   width: 453px;
+}
+.imgStyle{
+  object-fit: cover;
 }

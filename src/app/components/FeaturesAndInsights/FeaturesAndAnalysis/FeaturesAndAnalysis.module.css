@@ -1,11 +1,9 @@
 .featuresAndAnalysisContainer {
-  width: 675px;
-  height: 588px;
+  width: 530px;
+  height: 539px;
   color: #2c506d;
   border-bottom: 2px solid #2c506d;
-  /* display: flex;
-  flex-direction: column; */
-  
+
 }
 .featAndAnalysis{
   font-size: 2rem;
@@ -48,11 +46,13 @@ position: relative;
 .readMore{
   position:absolute;
   left: 0;
-  top: 490px;
-  /* text-decoration: underline; */
+  top: 425px;
 }
 
 .readMoreText{
   text-decoration: underline;
+}
+.imgStyle{
+  object-fit: cover;
 }
 
