@@ -1,6 +1,8 @@
 .MostPopularContainer {
-  width: 675px;
-  height: 588px;
+  width: 530px;
+  height: 539px;
+  margin-bottom: 0;
+
 }
 
 .h1 {
@@ -14,5 +16,6 @@
 .cardContainer {
   display: flex;
   flex-direction: column;
-  gap: 31px;
+  justify-content: space-between;
+  height: 470px
 }

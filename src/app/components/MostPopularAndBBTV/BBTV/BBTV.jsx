@@ -18,8 +18,8 @@ export default function BBTV({ episodeNumber, date, description, videoTitle }) {
 
         src={videoUrl}
         title={videoTitle}
-        width="675"
-        height="365"
+        width="525"
+        height="315"
         frameborder="0"
         allowfullscreen
       ></iframe>

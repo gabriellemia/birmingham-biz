@@ -44,6 +44,7 @@ p {
   text-wrap: pretty; /* Prevents orphans on lines */
 }
 
+
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
     scroll-behavior: smooth;
