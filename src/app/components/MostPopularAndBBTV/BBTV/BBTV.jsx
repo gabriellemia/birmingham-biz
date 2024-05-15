@@ -7,6 +7,7 @@ const videoUrl =
 
 //fetch the current/latest/index[0] episode from bbtv website
 //get properties/value of episode number, date, description, video title
+//add keystroke functionality
 
 export default function BBTV({ episodeNumber, date, description, videoTitle }) {
   return (
@@ -14,6 +15,7 @@ export default function BBTV({ episodeNumber, date, description, videoTitle }) {
       <h1 className={styles.bbtv}>BBTV</h1>
 
       <iframe
+
         src={videoUrl}
         title={videoTitle}
         width="675"
