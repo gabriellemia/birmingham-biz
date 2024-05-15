@@ -8,8 +8,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
+    
     <footer className={styles.footerContainer} role="contentinfo">
-      <nav aria-label="Footer navigation">
+      <div className={styles.footerContent}>
+      <nav aria-label="Footer navigation" >
         <ul className={styles.footerMenu}>
           <li className={styles.listItem}>
             <Link href="/contact" className={styles.link}>
@@ -56,6 +58,7 @@ export default function Footer() {
           </li>
         </ul>
       </section>
+    </div>
     </footer>
   );
 }
