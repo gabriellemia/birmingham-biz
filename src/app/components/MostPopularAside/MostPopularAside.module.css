@@ -1,0 +1,27 @@
+.mostpopularcontainer {
+  width: 300px;
+  position: relative;
+}
+
+.mostpopularimage {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+}
+
+.articlehead {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2c506d;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: underline;
+  text-wrap: wrap;
+}
+
+.articlesubhead {
+  font-size: 14px;
+  font-weight: 400;
+  color: #2c506d;
+  padding-bottom: 20px;
+}

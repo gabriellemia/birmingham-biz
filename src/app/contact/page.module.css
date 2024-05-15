@@ -1,8 +1,77 @@
-.mainTitle{
-    color: #2c506d;
-    font-size: 72px;
+.contactForm {
+	--footer-height: 67px;
+	/* 223px is header + footer height should switch for constant in those components*/
+	--viewport-height: calc(100vh - 223px);
+	padding: 16px;
+	font-size: 12px;
+	/* height: var(--viewport-height); */
 }
 
-.contactText{
+.pageHeading {
+	color: #2c506d;
+	font-weight: bold;
+	font-size: 3em;
+}
 
+.formElement {
+	margin-top: 25px;
+	display: flex;
+	flex-direction: column;
+}
+
+.labelField {
+	margin-top: 20px;
+}
+
+.inputField {
+	width: 100%;
+	padding: 0.3em;
+	border: 1px solid #7e9fb8;
+	border-radius: 4px;
+}
+
+.buttonContainer {
+	display: flex;
+	justify-content: center;
+	margin-top: 35px;
+}
+
+.button {
+	color: white;
+	background-color: #7e9fb8;
+	border: none;
+	border-radius: 4px;
+	padding: 5px 26px;
+	font-weight: bolder;
+	transition: background-color 0.1s ease;
+}
+
+.button:hover {
+	background-color: #d4a20d;
+}
+
+.imageContainer {
+	position: fixed;
+	bottom: 73px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	z-index: -300;
+}
+
+.contactImage {
+	width: 100%;
+	height: auto;
+}
+
+@media (min-width: 379px) {
+	.contactForm {
+		max-width: 380px;
+		margin: 0 auto;
+	}
+
+	.contactImage {
+		margin: 0 auto;
+		max-width: 1000px;
+	}
 }
