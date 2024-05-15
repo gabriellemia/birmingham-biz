@@ -7,7 +7,8 @@ export default function MostPopularAside(props) {
       <div className={styles.mostpopularcontainer}>
         <Image 
           src={props.image}
-          layout="fill"
+          fill={true}
+          sizes={"max-width: 100%"}
           className={styles.mostpopularimage}
           alt="Advertisement"
         />

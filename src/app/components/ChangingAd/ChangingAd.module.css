@@ -1,0 +1,13 @@
+.imagecontainer {
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+  margin-bottom: 10px;
+}
