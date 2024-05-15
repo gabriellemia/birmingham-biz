@@ -11,29 +11,31 @@
   margin-top: 0;
   margin-bottom: 20px;
 }
-.content{
+.content {
   margin-top: 10px;
 }
 
-.episodeTitle{
+.episodeTitle {
   font-size: 20px;
   font-weight: 600;
 }
 
-.arrowIcon {
+/* .arrowIcon {
   width: 10px;
   height: 10px;
   margin-left: 10px;
-}
+} */
 
-.watchNow{
-  text-decoration: underline;
+.watchNow {
+  /* text-decoration: underline; */
   font-size: 14px;
   font-weight: 400;
   margin-top: 20px;
-
 }
-.date{
+.watchNowText{
+  text-decoration: underline;
+}
+.date {
   font-size: 12px;
   font-weight: 200;
 }
