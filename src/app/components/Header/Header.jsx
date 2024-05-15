@@ -7,13 +7,13 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Image
-        className={styles.image}
+        className={styles.logoBB}
         src="/BBLogo.png"
         width={147}
         height={150}
         alt="Birmingham Business logo"
       />
-      <nav className={styles.navBar}>
+      <nav className={styles.topNavBar}>
         <h1 className={styles.birmingham}>Birmingham</h1>
         <ul className={styles.navBarContainer}>
           <li>
@@ -47,9 +47,11 @@ export default function Header() {
             </a>
           </li>
         </ul>
-        <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.magIcon} />
+        {/* <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.magIcon} /> */}
       </nav>
-      <h1 className={styles.business}>Business</h1>
+      <nav className={styles.bottomNavBar}>
+        <h1 className={styles.business}>Business</h1>
+      </nav>
     </header>
   );
 }
