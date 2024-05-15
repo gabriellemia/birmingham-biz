@@ -5,10 +5,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import MostPopularAside from "../../components/MostPopularAside/MostPopularAside";
 import ChangingAd from "../../components/ChangingAd/ChangingAd";
-import { getArticleById } from "../../request/request";
+import { getArticles, getArticleById } from "../../request/request";
 
 const Story = ({ params: { slug } }) => {
   const [article, setArticle] = useState(null);
+  const [articles, setArticles] = useState([]);
+  const [recentArticleOne, setRecentArticleOne] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,11 +27,49 @@ const Story = ({ params: { slug } }) => {
     fetchData();
   }, [slug]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getArticles();
+        if (data) {
+          console.log("Fetched articles:", data);
+          setArticles(data);
+          const recentArticleFirst = data.filter(
+            (obj) => obj.id === data.length
+          );
+          setRecentArticleOne(recentArticleFirst);
+        }
+      } catch (error) {
+        console.error("Error fetching articles:", error);
+      }
+    };
+    fetchData();
+  }, [slug]);
+
+  // Call the getArticles function to retrieve all articles
+  // Find the article with the ID number that matches the array length
+  // Find the article with the ID number that matches the array length -1
+  // Find the article with the ID number that matches the array length -2
+  // Locate the image, headline, and subheading
+
   if (!article) {
     return <p>Loading...</p>;
   }
 
   const content = article.attributes;
+
+  // console.log("All the articles:", articles);
+  // const recentArticle = articles.filter((obj) => obj.id === articles.length);
+  // console.log("Most recent article", recentArticle);
+  // console.log("Recent article content", recentArticle[0]["attributes"]);
+
+  console.log("Recent Article:", recentArticleOne);
+  console.log("Recent article content:", recentArticleOne[0]);
+  // console.log("Recent article attributes:", recentArticleOne[0].attributes);
+  // console.log(
+  //   "Recent article headline:",
+  //   recentArticleOne[0].attributes.headline
+  // );
 
   return (
     <>
@@ -69,8 +109,8 @@ const Story = ({ params: { slug } }) => {
             <hr className={styles.mostpopularhr}></hr>
 
             <MostPopularAside
-              image="/mostpopular1.png"
-              heading="New face joins corporate finance team"
+              image={"/mostpopular1.png"}
+              heading=""
               subheading="Claire has 25 years of experience"
             />
             <MostPopularAside
