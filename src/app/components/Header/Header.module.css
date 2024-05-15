@@ -20,10 +20,12 @@
 
 .navBarContainer {
   display: flex;
+  column-gap: 20px;
   padding: 0;
   margin: 0;
   list-style: none;
   color: #2c506d;
+  align-items: end;
   
 }
 
@@ -33,7 +35,20 @@
   transition: all 0.1s ease;
 }
 
+.navLinks:hover {
+  color: #D4A20D;
+  cursor: pointer;
+}
 
+.birmingham {
+  color: #2c506d;
+  font-size: 32px;
+}
+
+.business {
+  color: #7e9fb8;
+  font-size: 32px;
+}
 
 
 
