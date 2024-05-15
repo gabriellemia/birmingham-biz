@@ -3,6 +3,7 @@
   height: 580px;
   color: #2c506d;
   border-bottom: 2px solid #2c506d;
+  position: relative;
 }
 
 .bbtv {
@@ -20,26 +21,30 @@
   font-weight: 600;
 }
 
-/* .arrowIcon {
-  width: 10px;
-  height: 10px;
-  margin-left: 10px;
-} */
-
 .watchNow {
-  /* text-decoration: underline; */
   font-size: 14px;
   font-weight: 400;
-  margin-top: 20px;
+  position: absolute;
+  bottom: 10px;
 }
-.watchNowText{
+.watchNowText {
   text-decoration: underline;
+  margin-right: 8px;
 }
 .date {
   font-size: 12px;
   font-weight: 200;
 }
+
 .description {
   font-size: 14px;
   margin-top: 10px;
+}
+
+.watchNowLink:visited {
+  color: #2c506d;
+}
+
+.watchNowLink:hover {
+  color: #d4a20d;
 }
