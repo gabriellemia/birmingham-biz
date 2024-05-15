@@ -49,7 +49,12 @@ export default function Header() {
               </a>
             </li>
           </ul>
-          {/* <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.magIcon} /> */}
+          <div className={styles.magContainer}>
+            <FontAwesomeIcon
+              icon={faMagnifyingGlass}
+              className={styles.magIcon}
+            />
+          </div>
         </nav>
         <nav className={styles.bottomNavBar}>
           <h1 className={styles.business}>Business</h1>
