@@ -6,7 +6,13 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 export default function MagazineCard({ imgUrl, date }) {
   return (
     <div className={styles.MagazineCardContainer}>
-      <Image src={imgUrl} alt={date} width={155} height={215} className={styles.imgStyle} />
+      <Image
+        src={imgUrl}
+        alt={date}
+        width={243}
+        height={336}
+        className={styles.imgStyle}
+      />
       <div className={styles.dateDiv}>
         <p className={styles.dateText}>{date}</p>
         <FontAwesomeIcon
