@@ -8,15 +8,11 @@ import MagazineAndFiveMins from "./components/MagazineAndFiveMins/MagazineAndFiv
 
 export default function Home() {
   return (
-    <div className={styles.pageContainer}>
-
     <main className={styles.main}>
-      {/* <h1>Hello World!</h1> */}
       <NewsSection />
       <MostPopularAndBBTV />
       <FeaturesAndInsights />
       <MagazineAndFiveMins />
     </main>
-    </div>
   );
 }
