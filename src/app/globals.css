@@ -13,6 +13,18 @@ html {
   hanging-punctuation: first last; /* Not supported in Chrome */
 }
 
+input{
+  display: block;
+}
+
+select{
+  display: block;
+}
+
+textarea{
+  display: block;
+}
+
 body {
   min-height: 100vh;
 }
@@ -31,6 +43,7 @@ p {
   max-width: 100ch;
   text-wrap: pretty; /* Prevents orphans on lines */
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {

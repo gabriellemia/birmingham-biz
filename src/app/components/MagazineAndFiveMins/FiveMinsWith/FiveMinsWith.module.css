@@ -1,0 +1,19 @@
+.FiveMinsWithContainer {
+  width: 530px;
+  height: 539px;
+}
+
+.h1 {
+  color: #2c506d;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 470px
+}

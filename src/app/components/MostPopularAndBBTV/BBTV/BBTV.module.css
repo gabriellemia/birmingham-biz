@@ -1,0 +1,49 @@
+.BBTVContainer {
+  width: 530px;
+  height: 539px;
+  color: #2c506d;
+  border-bottom: 2px solid #2c506d;
+  position: relative;
+
+
+
+}
+
+.bbtv {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.episodeTitle {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.watchNow {
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 10px;
+}
+.watchNowText {
+  text-decoration: underline;
+  margin-right: 8px;
+}
+.date {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.description {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.watchNowLink:visited {
+  color: #2c506d;
+}
+
+.watchNowLink:hover {
+  color: #d4a20d;
+}
