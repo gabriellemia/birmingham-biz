@@ -1,4 +1,4 @@
-import styles from "./MostPopularCard.module.css";
+import styles from "./FiveMinsWithCard.module.css";
 import Image from "next/image";
 
 export default function MostPopularCard({ imgUrl, headline, description }) {
@@ -11,4 +11,4 @@ export default function MostPopularCard({ imgUrl, headline, description }) {
       </div>
     </div>
   );
-} 
+}

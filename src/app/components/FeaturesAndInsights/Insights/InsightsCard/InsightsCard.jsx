@@ -1,7 +1,7 @@
-import styles from "./MostPopularCard.module.css";
+import styles from "./InsightsCard.module.css";
 import Image from "next/image";
 
-export default function MostPopularCard({ imgUrl, headline, description }) {
+export default function InsightsCard({ imgUrl, headline, description }) {
   return (
     <div className={styles.card}>
       <Image src={imgUrl} alt={headline} width={190} height={140} className={styles.imgStyle} />
