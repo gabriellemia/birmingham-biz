@@ -8,11 +8,13 @@ export default function ContactPage() {
 	const defaultState = {
 		name: "",
 		email: "",
-		subject: "Select...",
+		subject: "",
 		message: "",
 	};
 
 	const [formData, setFormData] = useState(defaultState);
+
+	// const [popupVisibility, setPopupVisibility] = useState(false);
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -22,8 +24,12 @@ export default function ContactPage() {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		// Add submit logic here
+
 		console.log(formData);
 		setFormData(defaultState);
+		console.log(formData);
+
+		// setPopupVisibility(true);
 	};
 
 	return (
@@ -81,6 +87,9 @@ export default function ContactPage() {
 						cols="40"
 					></textarea>
 				</label>
+				{/* <div className={styles.popupContainer}>
+					{popupVisibility && <h1>Message sent</h1>}
+				</div> */}
 				<div className={styles.buttonContainer}>
 					<button className={styles.button}>Send</button>
 				</div>
