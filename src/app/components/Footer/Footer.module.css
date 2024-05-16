@@ -123,8 +123,8 @@
 @media (max-width: 510px) {
   .footerContainer{
     padding: 10px 0 10px 10px;
-    height: 100px;
-    background-color: yellow;
+    width: 100vw;
+   
 
 
   }
@@ -137,7 +137,10 @@
     height: 100%;
     justify-items: center;
     align-items: center; 
-    width: 424;
+    width: 425px;
+  }
+  .footerMenuContainer{
+    width: 200px;
   }
  
   .footerMenu{
@@ -153,8 +156,9 @@
     grid-area: socialMenu;
     display: flex;
     flex-direction: row;
-    align-content: center;
+    /* align-content: center; */
     justify-content: flex-start;
+
   
   }
   .listItem{

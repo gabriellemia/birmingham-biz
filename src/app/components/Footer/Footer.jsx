@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className={styles.footerContainer} role="contentinfo">
       <section className={styles.footerContent}>
-        <nav aria-label="Footer navigation">
+        <nav aria-label="Footer navigation" className={styles.footerMenuContainer} >
           <ul className={styles.footerMenu}>
             <li className={styles.listItem}>
               <Link href="/contact" className={styles.link}>
