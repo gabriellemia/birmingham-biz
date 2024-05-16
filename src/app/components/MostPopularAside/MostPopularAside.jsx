@@ -1,11 +1,11 @@
-import styles from './MostPopularAside.module.css';
-import Image from 'next/image';
+import styles from "./MostPopularAside.module.css";
+import Image from "next/image";
 
 export default function MostPopularAside(props) {
   return (
     <>
       <div className={styles.mostpopularcontainer}>
-        <Image 
+        <Image
           src={props.src}
           fill={true}
           sizes={"max-width: 100%"}
@@ -16,5 +16,5 @@ export default function MostPopularAside(props) {
         <p className={styles.articlesubhead}>{props.subheading}</p>
       </div>
     </>
-  )
+  );
 }
