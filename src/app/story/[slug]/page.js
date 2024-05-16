@@ -37,9 +37,15 @@ const Story = ({ params: { slug } }) => {
           console.log("Fetched articles:", data);
           setArticles(data);
 
-          const recentArticleFirst = data.filter((obj) => obj.id === data.length);
-          const recentArticleSecond = data.filter((obj) => obj.id === data.length - 1);
-          const recentArticleThird = data.filter((obj) => obj.id === data.length - 2);
+          const recentArticleFirst = data.filter(
+            (obj) => obj.id === data.length
+          );
+          const recentArticleSecond = data.filter(
+            (obj) => obj.id === data.length - 1
+          );
+          const recentArticleThird = data.filter(
+            (obj) => obj.id === data.length - 2
+          );
           setRecentArticleOne(recentArticleFirst);
           setRecentArticleTwo(recentArticleSecond);
           setRecentArticleThree(recentArticleThird);
@@ -104,23 +110,37 @@ const Story = ({ params: { slug } }) => {
         <aside className={styles.aside}>
           <ChangingAd
             images={[
-              { src: "/1663_1.jpg", url: "https://www.efgha.com/" },
-              { src: "/1663_2.jpg", url: "https://www.lokiwine.co.uk/" },
-              { src: "/1663_4.gif", url: "https://ecapital.com/en-gb/" },
-            ]}
+              content.ad1 && content.ad1.data && content.ad1.data.attributes
+                ? { src: content.ad1.data.attributes.url, url: content.ad1Link }
+                : null,
+              content.ad2 && content.ad2.data && content.ad2.data.attributes
+                ? { src: content.ad2.data.attributes.url, url: content.ad2Link }
+                : null,
+              content.ad3 && content.ad3.data && content.ad3.data.attributes
+                ? { src: content.ad3.data.attributes.url, url: content.ad3Link }
+                : null,
+              content.ad4 && content.ad4.data && content.ad4.data.attributes
+                ? { src: content.ad4.data.attributes.url, url: content.ad4Link }
+                : null,
+              content.ad5 && content.ad5.data && content.ad5.data.attributes
+                ? { src: content.ad5.data.attributes.url, url: content.ad5Link }
+                : null,
+            ].filter((ad) => ad !== null)}
           />
           <div className={styles.mostpopularsection}>
             <h2 className={styles.mostpopularhead}>Most Popular</h2>
             <hr className={styles.mostpopularhr}></hr>
 
             <MostPopularAside
-              image={
+              src={
                 recentArticleOne.length > 0 &&
                 recentArticleOne[0].attributes &&
                 recentArticleOne[0].attributes.image.data.attributes.url
               }
               heading={
-                recentArticleOne.length > 0 && recentArticleOne[0].attributes && recentArticleOne[0].attributes.headline
+                recentArticleOne.length > 0 &&
+                recentArticleOne[0].attributes &&
+                recentArticleOne[0].attributes.headline
               }
               subheading={
                 recentArticleOne.length > 0 &&
@@ -130,13 +150,15 @@ const Story = ({ params: { slug } }) => {
             />
 
             <MostPopularAside
-              image={
+              src={
                 recentArticleTwo.length > 0 &&
                 recentArticleTwo[0].attributes &&
                 recentArticleTwo[0].attributes.image.data.attributes.url
               }
               heading={
-                recentArticleTwo.length > 0 && recentArticleTwo[0].attributes && recentArticleTwo[0].attributes.headline
+                recentArticleTwo.length > 0 &&
+                recentArticleTwo[0].attributes &&
+                recentArticleTwo[0].attributes.headline
               }
               subheading={
                 recentArticleTwo.length > 0 &&
@@ -145,7 +167,7 @@ const Story = ({ params: { slug } }) => {
               }
             />
             <MostPopularAside
-              image={
+              src={
                 recentArticleThree.length > 0 &&
                 recentArticleThree[0].attributes &&
                 recentArticleThree[0].attributes.image.data.attributes.url
