@@ -7,12 +7,15 @@ const TOKEN = process.env.NEXT_PUBLIC_API_TOKEN;
 
 export async function getArticles() {
   try {
-    const response = await fetch("https://strapi-production-9d37.up.railway.app/api/articles", {
-      headers: {
-        Authorization: `Bearer ${TOKEN}`,
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "https://strapi-production-9d37.up.railway.app/api/articles/?populate=image",
+      {
+        headers: {
+          Authorization: `Bearer ${TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -33,12 +36,15 @@ export async function getArticles() {
 
 export async function getArticleById(id) {
   try {
-    const response = await fetch(`https://strapi-production-9d37.up.railway.app/api/articles/${id}?populate=image`, {
-      headers: {
-        Authorization: `Bearer ${TOKEN}`,
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      `https://strapi-production-9d37.up.railway.app/api/articles/${id}?populate[0]=image&populate[1]=ad1&populate[2]=ad2&populate[3]=ad3&populate[4]=ad4&populate[5]=ad5`,
+      {
+        headers: {
+          Authorization: `Bearer ${TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);

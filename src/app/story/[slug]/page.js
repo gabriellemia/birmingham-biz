@@ -5,19 +5,28 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import MostPopularAside from "../../components/MostPopularAside/MostPopularAside";
 import ChangingAd from "../../components/ChangingAd/ChangingAd";
-import { getArticleById } from "../../request/request";
+import { getArticles, getArticleById } from "../../request/request";
 
 const Story = ({ params: { slug } }) => {
   const [article, setArticle] = useState(null);
+  const [articles, setArticles] = useState([]);
+  const [recentArticleOne, setRecentArticleOne] = useState({});
+  const [recentArticleTwo, setRecentArticleTwo] = useState({});
+  const [recentArticleThree, setRecentArticleThree] = useState({});
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getArticleById(slug);
-        if (data) {
-          console.log("Fetched article:", data);
-          setArticle(data);
-        }
+        const timer = setTimeout(async () => {
+          const data = await getArticleById(slug);
+          if (data) {
+            console.log("Fetched article:", data);
+            setArticle(data);
+            setLoading(false);
+          }
+        }, 1500);
+        return () => clearTimeout(timer);
       } catch (error) {
         console.error("Error fetching article:", error);
       }
@@ -25,8 +34,40 @@ const Story = ({ params: { slug } }) => {
     fetchData();
   }, [slug]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getArticles();
+        if (data) {
+          console.log("Fetched articles:", data);
+          setArticles(data);
+
+          const recentArticleFirst = data.filter((obj) => obj.id === data.length);
+          const recentArticleSecond = data.filter((obj) => obj.id === data.length - 1);
+          const recentArticleThird = data.filter((obj) => obj.id === data.length - 2);
+          setRecentArticleOne(recentArticleFirst);
+          setRecentArticleTwo(recentArticleSecond);
+          setRecentArticleThree(recentArticleThird);
+        }
+      } catch (error) {
+        console.error("Error fetching articles:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  // Call the getArticles function to retrieve all articles
+  // Find the article with the ID number that matches the array length
+  // Find the article with the ID number that matches the array length -1
+  // Find the article with the ID number that matches the array length -2
+  // Locate the image, headline, and subheading
+
   if (!article) {
-    return <p>Loading...</p>;
+    return (
+      <section className={styles.loadingscreen}>
+        <div className={styles.loader}></div>
+      </section>
+    );
   }
 
   const content = article.attributes;
@@ -59,29 +100,74 @@ const Story = ({ params: { slug } }) => {
         <aside className={styles.aside}>
           <ChangingAd
             images={[
-              { src: "/1663_1.jpg", url: "https://www.efgha.com/" },
-              { src: "/1663_2.jpg", url: "https://www.lokiwine.co.uk/" },
-              { src: "/1663_4.gif", url: "https://ecapital.com/en-gb/" },
-            ]}
+              content.ad1 && content.ad1.data && content.ad1.data.attributes
+                ? { src: content.ad1.data.attributes.url, url: content.ad1Link }
+                : null,
+              content.ad2 && content.ad2.data && content.ad2.data.attributes
+                ? { src: content.ad2.data.attributes.url, url: content.ad2Link }
+                : null,
+              content.ad3 && content.ad3.data && content.ad3.data.attributes
+                ? { src: content.ad3.data.attributes.url, url: content.ad3Link }
+                : null,
+              content.ad4 && content.ad4.data && content.ad4.data.attributes
+                ? { src: content.ad4.data.attributes.url, url: content.ad4Link }
+                : null,
+              content.ad5 && content.ad5.data && content.ad5.data.attributes
+                ? { src: content.ad5.data.attributes.url, url: content.ad5Link }
+                : null,
+            ].filter((ad) => ad !== null)}
           />
           <div className={styles.mostpopularsection}>
             <h2 className={styles.mostpopularhead}>Most Popular</h2>
             <hr className={styles.mostpopularhr}></hr>
 
             <MostPopularAside
-              image="/mostpopular1.png"
-              heading="New face joins corporate finance team"
-              subheading="Claire has 25 years of experience"
+              src={
+                recentArticleOne.length > 0 &&
+                recentArticleOne[0].attributes &&
+                recentArticleOne[0].attributes.image.data.attributes.url
+              }
+              heading={
+                recentArticleOne.length > 0 && recentArticleOne[0].attributes && recentArticleOne[0].attributes.headline
+              }
+              subheading={
+                recentArticleOne.length > 0 &&
+                recentArticleOne[0].attributes &&
+                recentArticleOne[0].attributes.subheading
+              }
+            />
+
+            <MostPopularAside
+              src={
+                recentArticleTwo.length > 0 &&
+                recentArticleTwo[0].attributes &&
+                recentArticleTwo[0].attributes.image.data.attributes.url
+              }
+              heading={
+                recentArticleTwo.length > 0 && recentArticleTwo[0].attributes && recentArticleTwo[0].attributes.headline
+              }
+              subheading={
+                recentArticleTwo.length > 0 &&
+                recentArticleTwo[0].attributes &&
+                recentArticleTwo[0].attributes.subheading
+              }
             />
             <MostPopularAside
-              image="/mostpopular2.png"
-              heading="Disputes partner joins team"
-              subheading="More than a decade of experience"
-            />
-            <MostPopularAside
-              image="/mostpopular3.png"
-              heading="City council lots under the hammer"
-              subheading="Auction set for May 16"
+              src={
+                recentArticleThree.length > 0 &&
+                recentArticleThree[0].attributes &&
+                recentArticleThree[0].attributes.image.data.attributes.url
+              }
+              heading={
+                recentArticleThree.length > 0 &&
+                recentArticleThree[0].attributes &&
+                recentArticleThree[0].attributes.headline
+              }
+              subheading={
+                recentArticleThree.length > 0 &&
+                recentArticleThree[0].attributes &&
+                recentArticleThree[0].attributes.subheading
+              }
             />
           </div>
         </aside>
