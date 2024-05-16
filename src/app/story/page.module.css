@@ -84,9 +84,13 @@
   font-size: 30px;
   padding-bottom: 8px;
   background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
-  animation: l2 1s ease;
+  animation: l2 3s ease;
 }
 .loader:before {
-  content:"Loading..."
+  content: "Loading...";
 }
-@keyframes l2 {to{background-size: 100% 3px}}
+@keyframes l2 {
+  to {
+    background-size: 100% 3px;
+  }
+}

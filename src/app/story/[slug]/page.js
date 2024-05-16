@@ -13,15 +13,20 @@ const Story = ({ params: { slug } }) => {
   const [recentArticleOne, setRecentArticleOne] = useState({});
   const [recentArticleTwo, setRecentArticleTwo] = useState({});
   const [recentArticleThree, setRecentArticleThree] = useState({});
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getArticleById(slug);
-        if (data) {
-          console.log("Fetched article:", data);
-          setArticle(data);
-        }
+        const timer = setTimeout(async () => {
+          const data = await getArticleById(slug);
+          if (data) {
+            console.log("Fetched article:", data);
+            setArticle(data);
+            setLoading(false);
+          }
+        }, 1500);
+        return () => clearTimeout(timer);
       } catch (error) {
         console.error("Error fetching article:", error);
       }
@@ -37,15 +42,9 @@ const Story = ({ params: { slug } }) => {
           console.log("Fetched articles:", data);
           setArticles(data);
 
-          const recentArticleFirst = data.filter(
-            (obj) => obj.id === data.length
-          );
-          const recentArticleSecond = data.filter(
-            (obj) => obj.id === data.length - 1
-          );
-          const recentArticleThird = data.filter(
-            (obj) => obj.id === data.length - 2
-          );
+          const recentArticleFirst = data.filter((obj) => obj.id === data.length);
+          const recentArticleSecond = data.filter((obj) => obj.id === data.length - 1);
+          const recentArticleThird = data.filter((obj) => obj.id === data.length - 2);
           setRecentArticleOne(recentArticleFirst);
           setRecentArticleTwo(recentArticleSecond);
           setRecentArticleThree(recentArticleThird);
@@ -129,9 +128,7 @@ const Story = ({ params: { slug } }) => {
                 recentArticleOne[0].attributes.image.data.attributes.url
               }
               heading={
-                recentArticleOne.length > 0 &&
-                recentArticleOne[0].attributes &&
-                recentArticleOne[0].attributes.headline
+                recentArticleOne.length > 0 && recentArticleOne[0].attributes && recentArticleOne[0].attributes.headline
               }
               subheading={
                 recentArticleOne.length > 0 &&
@@ -147,9 +144,7 @@ const Story = ({ params: { slug } }) => {
                 recentArticleTwo[0].attributes.image.data.attributes.url
               }
               heading={
-                recentArticleTwo.length > 0 &&
-                recentArticleTwo[0].attributes &&
-                recentArticleTwo[0].attributes.headline
+                recentArticleTwo.length > 0 && recentArticleTwo[0].attributes && recentArticleTwo[0].attributes.headline
               }
               subheading={
                 recentArticleTwo.length > 0 &&
