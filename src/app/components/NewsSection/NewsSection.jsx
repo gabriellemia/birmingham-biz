@@ -5,7 +5,7 @@ import styles from "./NewsSection.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const dummyData = [
   {
@@ -83,6 +83,7 @@ const dummyData = [
 
 const NewsSection = () => {
   const [scroll, setScroll] = useState(0);
+  const [itemCount, setItemCount] = useState(dummyData.length);
 
   const handleClickRight = () => {
     setScroll(scroll + 1);
@@ -98,11 +99,27 @@ const NewsSection = () => {
     dummyData.unshift(lastItem);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 510) {
+        setItemCount(1);
+      } else {
+        setItemCount(dummyData.length);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className={styles.newsContainer}>
       <h1 className={styles.h1}>News</h1>
       <section className={styles.newsCardWrapper}>
-        {dummyData.map((data) => (
+        {dummyData.slice(0, itemCount).map((data) => (
           <NewsCard
             imgUrl={data.image}
             headline={data.headline}

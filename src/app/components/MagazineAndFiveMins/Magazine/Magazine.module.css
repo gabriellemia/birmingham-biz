@@ -16,32 +16,21 @@
 .cardContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 530px;
 }
 
-.stories {
-  width: 315px;
-}
-
 .archive {
-  position: absolute;
-  right: 0;
-  top: 500px;
   font-size: 24px;
   font-weight: 600;
   text-decoration: underline;
-}
-.topStoriesHead {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 8px 0 8px 0;
+  justify-content: center;
 }
 
-.h3 {
-  font-size: 12px;
-  font-weight: 500;
-}
-.storyDescription {
-  font-size: 12px;
+.archiveDiv {
+  width: 530px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
