@@ -44,7 +44,7 @@ export default function Header() {
             </li>
             <li>
               <a className={styles.navLinks} href="/story">
-                Five Mintues With
+                Five Minutes With
               </a>
             </li>
             <li>
