@@ -25,6 +25,7 @@
   font-size: 1.2rem;
   width: 260px;
   padding: 0;
+  
 }
 
 .listItem {
@@ -119,7 +120,7 @@
 }
 
 
-@media (max-width: 426px) {
+@media (max-width: 510px) {
   .footerContainer{
     padding: 10px 0 10px 10px;
     height: 100px;
@@ -144,6 +145,7 @@
     flex-direction: column;
     justify-content: center;
     font-size: 15px;
+    margin-left: 5px;
   }
 
   .socialMenu{
