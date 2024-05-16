@@ -64,23 +64,14 @@ const Story = ({ params: { slug } }) => {
   // Locate the image, headline, and subheading
 
   if (!article) {
-    return <p>Loading...</p>;
+    return (
+      <section className={styles.loadingscreen}>
+        <div className={styles.loader}></div>
+      </section>
+    );
   }
 
   const content = article.attributes;
-
-  // console.log("All the articles:", articles);
-  // const recentArticle = articles.filter((obj) => obj.id === articles.length);
-  // console.log("Most recent article", recentArticle);
-  // console.log("Recent article content", recentArticle[0]["attributes"]);
-
-  // console.log("Recent Article:", recentArticleOne);
-  // console.log("Recent article content:", recentArticleOne[0]);
-  // console.log("Second article attributes:", recentArticleTwo);
-  // console.log(
-  //   "Recent article headline:",
-  //   recentArticleOne[0].attributes.headline
-  // );
 
   return (
     <>
