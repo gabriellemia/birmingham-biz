@@ -10,7 +10,7 @@ export default function MostPopularAside(props) {
           fill={true}
           sizes={"max-width: 100%"}
           className={styles.mostpopularimage}
-          alt="Advertisement"
+          alt="News story thumbnail"
         />
         <h3 className={styles.articlehead}>{props.heading}</h3>
         <p className={styles.articlesubhead}>{props.subheading}</p>
