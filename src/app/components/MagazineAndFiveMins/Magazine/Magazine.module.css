@@ -25,6 +25,8 @@
   font-weight: 600;
   text-decoration: underline;
   justify-content: center;
+  color: #2c506d;
+
 }
 
 .archiveDiv {
@@ -33,4 +35,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.archive:visited,
+.archive:active {
+  color: #2c506d;
+}
+
+.archive:hover {
+  color: #D4A20D;
 }
