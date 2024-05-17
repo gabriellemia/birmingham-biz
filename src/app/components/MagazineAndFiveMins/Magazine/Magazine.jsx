@@ -36,7 +36,7 @@ export default function Magazine() {
           );
         })}
       </section>
-      <section className={styles.archiveDiv}>
+      <section className={styles.archiveDiv} aria-label="View the archive">
         <Link href={'/story'}>
         <h2 className={styles.archive}>View the archive</h2>
       </Link></section>

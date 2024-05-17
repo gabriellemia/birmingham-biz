@@ -3,9 +3,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import FeaturesCardAside from "./FeaturesCardAside";
-
-
-
+import Link from "next/link";
 
 export default function FeaturesAndAnalysis({
   imgUrl,
@@ -13,12 +11,16 @@ export default function FeaturesAndAnalysis({
   featureDescription,
 }) {
   return (
-    <section className={styles.featuresAndAnalysisContainer}>
-      <h1 className={styles.featAndAnalysis}>Features & Analysis</h1>
+    <section
+      className={styles.featuresAndAnalysisContainer}
+      aria-labelledby="features-heading"
+    >
+      <h1 id="features-heading" className={styles.featAndAnalysis}>
+        Features & Analysis
+      </h1>
 
       <section className={styles.featureCardContainer}>
-        <section className={styles.featureCard}>
-         
+        <article className={styles.featureCard} aria-labelledby="feature-title">
           <Image
             src={imgUrl}
             alt={featureHeadline}
@@ -34,21 +36,24 @@ export default function FeaturesAndAnalysis({
               {featureDescription} description here
             </p>
           </section>
-          <p className={styles.readMore}>
-            <span className={styles.readMoreText}>Read More</span>
-            &nbsp;&nbsp;&nbsp;
-            <FontAwesomeIcon
-              icon={faArrowRight}
-              className={styles.arrowIcon}
-              aria-hidden="true" // Hide decorative icons from screen readers
-            ></FontAwesomeIcon>
+          <p className={styles.readMore}
+            aria-label="Read more about this feature"
+          >
+            <Link href={"/story"}className={styles.readMoreLink} >
+              <span className={styles.readMoreText}>Read More</span>
+              &nbsp;&nbsp;&nbsp;
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className={styles.arrowIcon}
+                aria-hidden="true"
+              ></FontAwesomeIcon>
+            </Link>
           </p>
-        </section>
-        <section className={styles.featureAsideContainer}>
-          
+        </article>
+        <aside className={styles.featureAsideContainer}>
           <FeaturesCardAside />
           <FeaturesCardAside />
-        </section>
+        </aside>
       </section>
     </section>
   );
