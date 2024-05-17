@@ -8,6 +8,7 @@
   align-items: center;
   padding: 3px;
   margin-top: 15px;
+  border: none;
 }
 
 .dateText {
@@ -22,6 +23,24 @@
 }
 .faDownload {
   margin-top: 3px;
+}
+
+.faDownload:visited {
+  color: #2c506d;
+  background-color: #7e9fb8;
+}
+
+.faDownload:hover {
+  color: #fff;
+}
+
+.dateDiv:visited {
+  color: #2c506d;
+  background-color: #7e9fb8;
+}
+
+.dateDiv:hover {
+  background-color: #d4a20d;
 }
 .imgStyle {
   object-fit: cover;
