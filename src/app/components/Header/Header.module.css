@@ -21,6 +21,12 @@
 	display: flex;
 	justify-content: space-between;
 	align-self: end;
+  font-size: 0.9em;
+}
+
+.bottomNavBar {
+  display: flex;
+  justify-content: space-between;
 }
 
 .logoBB {
@@ -69,6 +75,7 @@
 .magIcon {
 	color: #2c506d;
 }
+
 
 .navBtn {
 	padding: 5px;
