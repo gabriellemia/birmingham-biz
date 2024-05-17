@@ -70,12 +70,15 @@ export default function Header() {
             </button>
           </ul>
 
-          <div className={styles.magContainer}>
+          <button
+            className={`${styles.magContainer} ${styles.searchBtn} ${styles.searchCloseBtn}`}
+            onClick={showSearchBox}
+          >
             <FontAwesomeIcon
               icon={faMagnifyingGlass}
               className={styles.magIcon}
             />
-          </div>
+          </button>
           <button
             className={`${styles.navBtn} ${styles.navCloseBtn} ${styles.burgerIcon}`}
             onClick={showNavbar}

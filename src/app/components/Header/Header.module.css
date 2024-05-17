@@ -41,7 +41,7 @@
 	margin: 0;
 	list-style: none;
 	color: #2c506d;
-	align-items: end;
+	align-items: flex-end;
 }
 
 .navLinks {
@@ -87,6 +87,17 @@
 	visibility: hidden;
 	opacity: 0;
 	color: #2c506d;
+}
+
+.searchBtn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+	outline: none;
+}
+
+.responsive_search {
+  color: red;
 }
 
 .burgerIcon {
