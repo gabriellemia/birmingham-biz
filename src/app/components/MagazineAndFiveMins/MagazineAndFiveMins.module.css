@@ -11,7 +11,8 @@
   .MagazineAndFiveMinsContainer {
     display: flex;
     flex-direction: column;
-    width: 425px;
+    align-items: space-between;
+    width: 100%;
 
 }
 }
