@@ -45,3 +45,20 @@
 .imgStyle {
   object-fit: cover;
 }
+
+@media (max-width:510px) {
+  .MagazineCardContainer {
+    width: 200px;
+
+  }
+  .dateDiv {
+    width: 200px;
+    height: 35px;
+    border: none;
+  }
+
+.imgStyle{
+  object-fit: fill;
+}
+
+}
