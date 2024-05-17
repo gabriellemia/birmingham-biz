@@ -44,3 +44,26 @@
 .archive:hover {
   color: #D4A20D;
 }
+
+@media (max-width:510px) {
+  .MagazineContainer {
+    width: 422px;
+    height: 100%;
+    position: relative;
+  }
+  
+  .cardContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 415px;
+}
+.archiveDiv {
+  width: 415px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+}

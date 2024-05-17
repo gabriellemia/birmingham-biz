@@ -8,7 +8,7 @@ export default function MagazineCard({ imgUrl, date }) {
     <article className={styles.MagazineCardContainer}>
       <Image
         src={imgUrl}
-        alt={date}
+        alt={`Magazine Cover - ${date}`}
         width={243}
         height={336}
         className={styles.imgStyle}
