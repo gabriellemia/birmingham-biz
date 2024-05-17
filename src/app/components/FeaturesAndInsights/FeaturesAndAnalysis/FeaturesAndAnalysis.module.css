@@ -40,9 +40,7 @@ position: relative;
   gap: 20px;
   
 }
-.featureCardAside{
 
-}
 .readMore{
   position:absolute;
   left: 0;
@@ -54,5 +52,13 @@ position: relative;
 }
 .imgStyle{
   object-fit: cover;
+}
+.readMoreLink:visited,
+.readMoreLink:active {
+  color: #2c506d;
+}
+
+.readMoreLink:hover {
+  color: #D4A20D;
 }
 
