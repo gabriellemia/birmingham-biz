@@ -4,13 +4,15 @@ import styles from "./NewsCard.module.css";
 const NewsCard = ({ imgUrl, headline, description }) => {
   return (
     <section className={styles.cardContainer}>
-      <Image
-        src={imgUrl}
-        alt={headline}
-        width={290}
-        height={272}
-        className={styles.imgStyle}
-      />
+      <div className={styles.imgDiv}>
+        <Image
+          src={imgUrl}
+          alt={headline}
+          size="max-width: 100%"
+          fill={true}
+          className={styles.imgStyle}
+        />
+      </div>
       <div className={styles.newsCardText}>
         <h2 className={styles.headline}>{headline}</h2>
         <p className={styles.description}>{description}</p>
