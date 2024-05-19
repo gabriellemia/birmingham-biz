@@ -12,6 +12,6 @@
     flex-direction: column;
     align-items: space-between;
     width: 100%;
-    border: red;
+    margin-top: 15px;
   }
 }
