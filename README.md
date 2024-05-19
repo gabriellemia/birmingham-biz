@@ -1,9 +1,8 @@
 # Birmingham Business Magazine
 
-![Untitled design (4)](https://github.com/gabriellemia/birmingham-biz/assets/78322726/74d61260-b181-475b-8d03-2d2855ac2487)
+<img width="132" alt="Screenshot 2024-05-19 at 17 59 31" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/674ec3d1-d19c-494c-9dee-65c95e42be67">
 
-
-Team CodeyMcCodeface: 
+### **Team CodeyMcCodeface:** 
 
 Chari Cruz, Erin Smith, Gaby Mia, Josh Foston, Pete Faretra, Ravi Kataria
 
