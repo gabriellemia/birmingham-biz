@@ -7,7 +7,7 @@ Team CodeyMcCodeface:
 
 Chari Cruz, Erin Smith, Gaby Mia, Josh Foston, Pete Faretra, Ravi Kataria
 
-As part of our final project at School of Code, Codey McCodeface have been partnered with Birmingham Business Magazine to help them find a solution to a problem they are having with their website.
+As part of our final project at School of Code, Codey McCodeface have been partnered with Birmingham Business Magazine to help them find a solution to optimising their online presence.
 
 ## Initial brief
 <img width="587" alt="Screenshot 2024-05-19 at 12 50 55" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/dda71ffb-da65-4d43-870f-634fa10f0284">
