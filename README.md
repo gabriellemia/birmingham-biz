@@ -25,4 +25,8 @@ A revamped platform that prioritises user engagement,  accessibility, and conten
 ## MVP 1
 <img width="428" alt="Screenshot 2024-05-19 at 13 59 25" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/1a9a9652-99ae-4035-b7f3-50af183d6703">
 
+## User flow 
+<img width="618" alt="Screenshot 2024-05-19 at 14 26 17" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/e0571e87-108c-48b9-9ff6-9d4d319da803">
+
+
 
