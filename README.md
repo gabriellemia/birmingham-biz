@@ -15,10 +15,10 @@ As part of our final project at School of Code, Codey McCodeface have been partn
 ## The problem
 <img width="1200" alt="Screenshot 2024-05-19 at 12 51 35" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/6e730310-cb98-4f80-83b5-96075f35a87d">
 
-## Refined problem statement
+### Refined problem statement
 Birmingham Business magazine’s website is outdated and not engaging, which means they are not maximising traffic to their site and stories. It is also difficult to manage from the editors’ side.
 
-## The solution
+### The solution
 A revamped platform that prioritises user engagement,  accessibility, and content management efficiency while also optimising SEO to drive more traffic, transforming the digital experience.
 
 ## MVP 1
