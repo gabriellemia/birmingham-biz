@@ -35,7 +35,8 @@ We created a user flow diagram to help visualise how a user would navigate the d
 
 After initial ideation and user research stages we began work on the design of the website using the research we had gathered.  We created wireframes in Figma for the three pages of our first MVP.
 
-<img width="619" alt="Screenshot 2024-05-19 at 14 12 32" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/68a30067-b62f-48a5-8bb8-8d885aadac19"><img width="615" alt="Screenshot 2024-05-19 at 14 12 52" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/37ddf322-50b9-4de6-84bd-c2a14ec66108"><img width="1047" alt="Screenshot 2024-05-19 at 14 13 30" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/d363103f-e500-4e95-873e-d051da64b0f3">
+<img width="991" alt="Screenshot 2024-05-19 at 15 19 28" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/2c089d12-a167-4fd0-9f43-2f4b1269737e">
+
 
 ## Tech stack
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
