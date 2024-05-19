@@ -35,7 +35,7 @@ We created a user flow diagram to help visualise how a user would navigate the d
 
 After initial ideation and user research stages we began work on the design of the website using the research we had gathered.  We created wireframes in Figma for the three pages of our first MVP.
 
-<img width="991" alt="Screenshot 2024-05-19 at 15 19 28" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/2c089d12-a167-4fd0-9f43-2f4b1269737e">
+<img width="673" alt="Screenshot 2024-05-19 at 15 20 10" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/d941240a-b5d8-4e32-bfa5-fbf607e821b7">
 
 
 ## Tech stack
