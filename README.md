@@ -49,6 +49,18 @@ After initial ideation and user research stages we began work on the design of t
 
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
+## How we worked
+
+We created a ticketing system in GitHub projects to assign jobs to team members.  We also split off into smaller groups of either 2 or 3 in order to cover more ground.  We rotated our pairs regularly so that each of us was able to work with every other member and also to get a holistic understanding of the project and broaden our skillset in all areas of the software development process.
+
+![Screenshot 2024-05-16 at 13 23 29](https://github.com/gabriellemia/birmingham-biz/assets/78322726/52010aca-86e7-4fe8-9d83-0a62411b5be1)
+
+<img width="1154" alt="Screenshot 2024-05-19 at 15 36 02" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/82fd4b46-7e25-40ec-9b6b-2a38aa38d3d2">
+
+
+
+
+
 
 
 
