@@ -26,3 +26,9 @@
 .imgStyle {
   object-fit: cover;
 }
+
+@media (max-width: 510px) {
+  .MagazineCardContainer {
+    width: 100%;
+  }
+}

@@ -3,7 +3,7 @@
   height: 539px;
   position: relative;
   color: #2c506d;
-  border-bottom: solid 2px;
+  border-bottom: solid 1.5px;
 }
 
 .h1 {
@@ -33,4 +33,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 510px) {
+  .h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .MagazineContainer {
+    width: 100%;
+    height: unset;
+    margin-bottom: 15px;
+  }
+
+  .cardContainer {
+    width: 100%;
+  }
+
+  .archiveDiv {
+    width: 100%;
+    height: 50px;
+  }
 }

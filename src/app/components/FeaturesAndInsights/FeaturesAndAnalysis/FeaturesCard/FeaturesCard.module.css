@@ -22,6 +22,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  /* max-width: 300px; */
 }
 
 .hr {
@@ -35,7 +36,6 @@
   justify-content: space-between;
   height: 140px;
 }
-
 .imgStyle {
   object-fit: cover;
 }
