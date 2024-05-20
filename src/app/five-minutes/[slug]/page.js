@@ -1,6 +1,6 @@
 "use client";
 import { v4 as uuidv4 } from "uuid";
-import styles from "../page.module.css";
+import styles from "../../news/page.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import MostPopularAside from "../../components/MostPopularAside/MostPopularAside";
@@ -127,38 +127,18 @@ const Five = ({ params: { slug } }) => {
 
             <MostPopularAside
               src={
-                recentArticleOne &&
-                recentArticleOne.attributes &&
-                recentArticleOne.attributes.image.data.attributes.url
+                recentArticleOne && recentArticleOne.attributes && recentArticleOne.attributes.image.data.attributes.url
               }
-              heading={
-                recentArticleOne &&
-                recentArticleOne.attributes &&
-                recentArticleOne.attributes.headline
-              }
-              subheading={
-                recentArticleOne &&
-                recentArticleOne.attributes &&
-                recentArticleOne.attributes.subheading
-              }
+              heading={recentArticleOne && recentArticleOne.attributes && recentArticleOne.attributes.headline}
+              subheading={recentArticleOne && recentArticleOne.attributes && recentArticleOne.attributes.subheading}
             />
 
             <MostPopularAside
               src={
-                recentArticleTwo &&
-                recentArticleTwo.attributes &&
-                recentArticleTwo.attributes.image.data.attributes.url
+                recentArticleTwo && recentArticleTwo.attributes && recentArticleTwo.attributes.image.data.attributes.url
               }
-              heading={
-                recentArticleTwo &&
-                recentArticleTwo.attributes &&
-                recentArticleTwo.attributes.headline
-              }
-              subheading={
-                recentArticleTwo &&
-                recentArticleTwo.attributes &&
-                recentArticleTwo.attributes.subheading
-              }
+              heading={recentArticleTwo && recentArticleTwo.attributes && recentArticleTwo.attributes.headline}
+              subheading={recentArticleTwo && recentArticleTwo.attributes && recentArticleTwo.attributes.subheading}
             />
             <MostPopularAside
               src={
@@ -166,15 +146,9 @@ const Five = ({ params: { slug } }) => {
                 recentArticleThree.attributes &&
                 recentArticleThree.attributes.image.data.attributes.url
               }
-              heading={
-                recentArticleThree &&
-                recentArticleThree.attributes &&
-                recentArticleThree.attributes.headline
-              }
+              heading={recentArticleThree && recentArticleThree.attributes && recentArticleThree.attributes.headline}
               subheading={
-                recentArticleThree &&
-                recentArticleThree.attributes &&
-                recentArticleThree.attributes.subheading
+                recentArticleThree && recentArticleThree.attributes && recentArticleThree.attributes.subheading
               }
             />
           </div>
