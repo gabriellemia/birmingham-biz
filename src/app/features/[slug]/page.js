@@ -126,30 +126,20 @@ const Features = ({ params: { slug } }) => {
             <hr className={styles.mostpopularhr}></hr>
 
             <MostPopularAside
-              src={
-                recentArticleOne && recentArticleOne.attributes && recentArticleOne.attributes.image.data.attributes.url
-              }
-              heading={recentArticleOne && recentArticleOne.attributes && recentArticleOne.attributes.headline}
-              subheading={recentArticleOne && recentArticleOne.attributes && recentArticleOne.attributes.subheading}
+              src={recentArticleOne?.attributes?.image?.data?.attributes?.url}
+              heading={recentArticleOne?.attributes?.headline}
+              subheading={recentArticleOne?.attributes?.subheading}
             />
 
             <MostPopularAside
-              src={
-                recentArticleTwo && recentArticleTwo.attributes && recentArticleTwo.attributes.image.data.attributes.url
-              }
-              heading={recentArticleTwo && recentArticleTwo.attributes && recentArticleTwo.attributes.headline}
-              subheading={recentArticleTwo && recentArticleTwo.attributes && recentArticleTwo.attributes.subheading}
+              src={recentArticleTwo?.attributes?.image?.data?.attributes?.url}
+              heading={recentArticleTwo?.attributes?.headline}
+              subheading={recentArticleTwo?.attributes?.subheading}
             />
             <MostPopularAside
-              src={
-                recentArticleThree &&
-                recentArticleThree.attributes &&
-                recentArticleThree.attributes.image.data.attributes.url
-              }
-              heading={recentArticleThree && recentArticleThree.attributes && recentArticleThree.attributes.headline}
-              subheading={
-                recentArticleThree && recentArticleThree.attributes && recentArticleThree.attributes.subheading
-              }
+              src={recentArticleThree?.attributes?.image?.data?.attributes?.url}
+              heading={recentArticleThree?.attributes?.headline}
+              subheading={recentArticleThree?.attributes?.subheading}
             />
           </div>
         </aside>
