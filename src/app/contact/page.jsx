@@ -2,101 +2,170 @@
 "use client";
 import Image from "next/image";
 import styles from "./page.module.css";
-import { useState } from "react";
-// import { SMTPClient } from "emailjs";
-// import emailjs from "@emailjs/browser";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 
 export default function ContactPage() {
-	const defaultState = {
-		name: "",
-		email: "",
-		subject: "Select...",
-		message: "",
-	};
+  const form = useRef();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "Select...",
+    message: "",
+  });
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errors, setErrors] = useState({});
 
-	const [formData, setFormData] = useState(defaultState);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
 
-	const handleChange = (e) => {
-		const { name, value } = e.target;
-		setFormData({ ...formData, [name]: value });
-	};
+    setErrors((prevErrors) => {
+      const newErrors = { ...prevErrors };
+      if (name === "email" && value) {
+        if (!/\S+@\S+\.\S+/.test(value)) {
+          newErrors[name] = "Email address is invalid";
+        } else {
+          delete newErrors[name];
+        }
+      } else if (value) {
+        delete newErrors[name];
+      }
+      return newErrors;
+    });
+  };
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		// Add submit logic here
-		console.log(formData);
-		setFormData(defaultState);
-	};
+  const validateForm = () => {
+    let formErrors = {};
+    if (!formData.name) formErrors.name = "Name is required";
+    if (!formData.email) {
+      formErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      formErrors.email = "Email address is invalid";
+    }
+    if (formData.subject === "Select...") formErrors.subject = "Subject is required";
+    if (!formData.message) formErrors.message = "Message is required";
+    return formErrors;
+  };
 
-	return (
-		<div className={styles.contactForm}>
-			<h1 className={styles.pageHeading}>Contact Us</h1>
-			<p>
-				Birmingham Business is an editorially-led magazine and we are keen to
-				hear from you, though the inclusion of articles or comment columns
-				cannot be guaranteed and is always at the Editor’s discretion.
-			</p>
-			<form onSubmit={handleSubmit} className={styles.formElement}>
-				<label className={styles.labelField} htmlFor="name">
-					Name
-					<input
-						onChange={handleChange}
-						className={styles.inputField}
-						type="text"
-						id="name"
-						name="name"
-					/>
-				</label>
-				<label className={styles.labelField} htmlFor="email">
-					Email
-					<input
-						onChange={handleChange}
-						className={styles.inputField}
-						type="email"
-						id="email"
-						name="email"
-					></input>
-				</label>
-				<label className={styles.labelField} htmlFor="subject">
-					Subject
-					<select
-						className={styles.inputField}
-						name="subject"
-						id="subject"
-						onChange={handleChange}
-					>
-						<option value="dropdown">Select...</option>
-						<option value="editor">Editor</option>
-						<option value="webContent">Website Content</option>
-						<option value="advert">Advertising</option>
-						<option value="general">General Enquiries</option>
-						<option value="other">Other</option>
-					</select>
-				</label>
-				<label className={styles.labelField} from="message">
-					Message
-					<textarea
-						onChange={handleChange}
-						className={styles.inputField}
-						name="message"
-						rows="10"
-						cols="40"
-					></textarea>
-				</label>
-				<div className={styles.buttonContainer}>
-					<button className={styles.button}>Send</button>
-				</div>
-			</form>
-			<div className={styles.imageContainer}>
-				<Image
-					src={"/birmingham_background.svg"}
-					width={100}
-					height={100}
-					layout="fixed"
-					className={styles.contactImage}
-					alt="Birmingham skyline background image"
-				/>
-			</div>
-		</div>
-	);
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const formErrors = validateForm();
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+      return;
+    }
+
+    emailjs
+      .sendForm("service_0dsfnbb", "contact_form", form.current, {
+        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          setSuccessMessage(
+            <div className={styles.successMessage}>
+              <Image src="/icons8-tick-48.png" alt="Success" width={24} height={24} />
+              <span>Message sent successfully!</span>
+            </div>
+          );
+          setFormData({
+            name: "",
+            email: "",
+            subject: "Select...",
+            message: "",
+          });
+          setErrors({});
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
+  return (
+    <div className={styles.contactForm}>
+      <h1 className={styles.pageHeading}>Contact Us</h1>
+      <p>
+        Birmingham Business is an editorially-led magazine and we are keen to hear from you, though the inclusion of
+        articles or comment columns cannot be guaranteed and is always at the Editor’s discretion.
+      </p>
+      {successMessage}
+      <form ref={form} onSubmit={sendEmail} className={styles.formElement}>
+        <label className={styles.labelField} htmlFor="name">
+          Name
+          <input
+            className={styles.inputField}
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleInputChange}
+          />
+          {errors.name && <span className={styles.errorMessage}>{errors.name}</span>}
+        </label>
+        <label className={styles.labelField} htmlFor="email">
+          Email
+          <input
+            className={styles.inputField}
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+          />
+          {errors.email && <span className={styles.errorMessage}>{errors.email}</span>}
+        </label>
+        <label className={styles.labelField} htmlFor="subject">
+          Subject
+          <select
+            className={styles.inputField}
+            name="subject"
+            id="subject"
+            value={formData.subject}
+            onChange={handleInputChange}
+          >
+            <option value="dropdown">Select...</option>
+            <option value="editor">Editor</option>
+            <option value="webContent">Website Content</option>
+            <option value="advert">Advertising</option>
+            <option value="general">General Enquiries</option>
+            <option value="other">Other</option>
+          </select>
+          {errors.subject && <span className={styles.errorMessage}>{errors.subject}</span>}
+        </label>
+        <label className={styles.labelField} from="message">
+          Message
+          <textarea
+            className={styles.inputField}
+            name="message"
+            rows="10"
+            cols="40"
+            value={formData.message}
+            onChange={handleInputChange}
+          ></textarea>
+          {errors.message && <span className={styles.errorMessage}>{errors.message}</span>}
+        </label>
+        <div className={styles.buttonContainer}>
+          <button className={styles.button} onClick={sendEmail} type="submit">
+            Send
+          </button>
+        </div>
+      </form>
+      <div className={styles.imageContainer}>
+        <Image
+          src={"/birmingham_background.svg"}
+          width={100}
+          height={100}
+          layout="fixed"
+          className={styles.contactImage}
+          alt="Birmingham skyline background image"
+        />
+      </div>
+    </div>
+  );
 }
