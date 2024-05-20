@@ -50,7 +50,7 @@ const NewsSection = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 510) {
-        setItemCount(1);
+        setItemCount(10);
       } else {
         setItemCount(10);
       }
