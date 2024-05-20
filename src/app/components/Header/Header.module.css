@@ -35,7 +35,7 @@
 
 .navBarContainer {
 	display: flex;
-	column-gap: 20px;
+	column-gap: 15px;
 	padding: 0;
 	padding-bottom: 3px;
 	margin: 0;
@@ -65,15 +65,26 @@
 	font-size: 32px;
 }
 
+.buttonsContainer {
+	align-self: flex-end;
+	padding-bottom: 3px;
+}
+
 .magContainer {
 	height: 20px;
 	width: 20px;
-	align-self: end;
-	margin-bottom: 6px;
+}
+
+.magContainer:hover {
+	cursor: pointer;
 }
 
 .magIcon {
 	color: #2c506d;
+}
+
+.magIcon:hover {
+	color: #d4a20d;
 }
 
 .navBtn {
@@ -138,5 +149,18 @@
 
 	.responsive_nav {
 		transform: none;
+	}
+
+	.buttonsContainer {
+		align-self: flex-end;
+		padding-bottom: 3px;
+	}
+
+	.magContainer {
+		margin-right: 10px;
+	}
+
+	.magIcon {
+		font-size: 3em;
 	}
 }
