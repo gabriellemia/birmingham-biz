@@ -1,13 +1,13 @@
 "use client";
 import { v4 as uuidv4 } from "uuid";
-import styles from "../page.module.css";
+import styles from "../../news/page.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import MostPopularAside from "../../components/MostPopularAside/MostPopularAside";
 import ChangingAd from "../../components/ChangingAd/ChangingAd";
-import { getArticles, getArticleById } from "../../request/request";
+import { getNewsArticles, getInsightsArticleById } from "../../request/request";
 
-const Story = ({ params: { slug } }) => {
+const Insights = ({ params: { slug } }) => {
   const [article, setArticle] = useState(null);
   const [articles, setArticles] = useState([]);
   const [recentArticleOne, setRecentArticleOne] = useState({});
@@ -19,7 +19,7 @@ const Story = ({ params: { slug } }) => {
     const fetchData = async () => {
       try {
         const timer = setTimeout(async () => {
-          const data = await getArticleById(slug);
+          const data = await getInsightsArticleById(slug);
           if (data) {
             console.log("Fetched article:", data);
             setArticle(data);
@@ -37,14 +37,14 @@ const Story = ({ params: { slug } }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getArticles();
+        const data = await getNewsArticles();
         if (data) {
           console.log("Fetched articles:", data);
           setArticles(data);
-
-          const recentArticleFirst = data.filter((obj) => obj.id === data.length);
-          const recentArticleSecond = data.filter((obj) => obj.id === data.length - 1);
-          const recentArticleThird = data.filter((obj) => obj.id === data.length - 2);
+          console.log(data[data.length - 3]);
+          const recentArticleFirst = data[data.length - 1];
+          const recentArticleSecond = data[data.length - 2];
+          const recentArticleThird = data[data.length - 3];
           setRecentArticleOne(recentArticleFirst);
           setRecentArticleTwo(recentArticleSecond);
           setRecentArticleThree(recentArticleThird);
@@ -85,7 +85,11 @@ const Story = ({ params: { slug } }) => {
               fill={true}
               className={styles.image}
               sizes="max-width: 100%"
-              alt="Picture of Ian Burns"
+              alt={
+                content.image.data.attributes.alternativeText
+                  ? content.image.data.attributes.alternativeText
+                  : "Featured image"
+              }
               priority={true}
             />
           </div>
@@ -123,50 +127,28 @@ const Story = ({ params: { slug } }) => {
 
             <MostPopularAside
               src={
-                recentArticleOne.length > 0 &&
-                recentArticleOne[0].attributes &&
-                recentArticleOne[0].attributes.image.data.attributes.url
+                recentArticleOne && recentArticleOne.attributes && recentArticleOne.attributes.image.data.attributes.url
               }
-              heading={
-                recentArticleOne.length > 0 && recentArticleOne[0].attributes && recentArticleOne[0].attributes.headline
-              }
-              subheading={
-                recentArticleOne.length > 0 &&
-                recentArticleOne[0].attributes &&
-                recentArticleOne[0].attributes.subheading
-              }
+              heading={recentArticleOne && recentArticleOne.attributes && recentArticleOne.attributes.headline}
+              subheading={recentArticleOne && recentArticleOne.attributes && recentArticleOne.attributes.subheading}
             />
 
             <MostPopularAside
               src={
-                recentArticleTwo.length > 0 &&
-                recentArticleTwo[0].attributes &&
-                recentArticleTwo[0].attributes.image.data.attributes.url
+                recentArticleTwo && recentArticleTwo.attributes && recentArticleTwo.attributes.image.data.attributes.url
               }
-              heading={
-                recentArticleTwo.length > 0 && recentArticleTwo[0].attributes && recentArticleTwo[0].attributes.headline
-              }
-              subheading={
-                recentArticleTwo.length > 0 &&
-                recentArticleTwo[0].attributes &&
-                recentArticleTwo[0].attributes.subheading
-              }
+              heading={recentArticleTwo && recentArticleTwo.attributes && recentArticleTwo.attributes.headline}
+              subheading={recentArticleTwo && recentArticleTwo.attributes && recentArticleTwo.attributes.subheading}
             />
             <MostPopularAside
               src={
-                recentArticleThree.length > 0 &&
-                recentArticleThree[0].attributes &&
-                recentArticleThree[0].attributes.image.data.attributes.url
+                recentArticleThree &&
+                recentArticleThree.attributes &&
+                recentArticleThree.attributes.image.data.attributes.url
               }
-              heading={
-                recentArticleThree.length > 0 &&
-                recentArticleThree[0].attributes &&
-                recentArticleThree[0].attributes.headline
-              }
+              heading={recentArticleThree && recentArticleThree.attributes && recentArticleThree.attributes.headline}
               subheading={
-                recentArticleThree.length > 0 &&
-                recentArticleThree[0].attributes &&
-                recentArticleThree[0].attributes.subheading
+                recentArticleThree && recentArticleThree.attributes && recentArticleThree.attributes.subheading
               }
             />
           </div>
@@ -176,4 +158,4 @@ const Story = ({ params: { slug } }) => {
   );
 };
 
-export default Story;
+export default Insights;

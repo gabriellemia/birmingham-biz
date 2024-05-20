@@ -16,32 +16,44 @@
 .cardContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 530px;
 }
 
-.stories {
-  width: 315px;
-}
-
 .archive {
-  position: absolute;
-  right: 0;
-  top: 500px;
   font-size: 24px;
   font-weight: 600;
   text-decoration: underline;
-}
-.topStoriesHead {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 8px 0 8px 0;
+  justify-content: center;
+  color: #2c506d;
 }
 
-.h3 {
-  font-size: 12px;
-  font-weight: 500;
+.archiveDiv {
+  width: 530px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.storyDescription {
-  font-size: 12px;
+
+@media (max-width: 510px) {
+  .h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .MagazineContainer {
+    width: 100%;
+    height: unset;
+    margin-bottom: 15px;
+  }
+
+  .cardContainer {
+    width: 100%;
+  }
+
+  .archiveDiv {
+    width: 100%;
+    height: 50px;
+  }
 }

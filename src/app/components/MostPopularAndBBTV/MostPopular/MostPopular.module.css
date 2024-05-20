@@ -2,7 +2,6 @@
   width: 530px;
   height: 539px;
   margin-bottom: 0;
-
 }
 
 .h1 {
@@ -17,5 +16,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 470px
+  height: 470px;
+}
+
+@media (max-width: 510px) {
+  .MostPopularContainer {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .cardContainer {
+    width: 100%;
+  }
+
+  .h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
 }

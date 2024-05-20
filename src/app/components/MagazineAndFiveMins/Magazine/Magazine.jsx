@@ -1,95 +1,67 @@
+"use client";
+import Link from "next/link";
+
 import styles from "./Magazine.module.css";
 import MagazineCard from "./MagazineCard/MagazineCard";
-import Story from "./Story/Story";
+import { useState, useEffect } from "react";
 
 const dummyData = [
   {
     id: "1",
     magazineCover: "/cover1.png",
     date: "Mar/Apr 2024",
-    topStories: [
-      {
-        title: "Title 1",
-        description: "This provides a short summary description of the title.",
-      },
-      {
-        title: "Title 2",
-        description: "This provides a short summary description of the title.",
-      },
-      {
-        title: "Title 3",
-        description: "This provides a short summary description of the title.",
-      },
-    ],
   },
   {
     id: "2",
     magazineCover: "/cover2.png",
     date: "Jan/Feb 2024",
-    topStories: [
-      {
-        title: "Title 1",
-        description: "This provides a short summary description of the title.",
-      },
-      {
-        title: "Title 1",
-        description: "This provides a short summary description of the title.",
-      },
-      {
-        title: "Title 1",
-        description: "This provides a short summary description of the title.",
-      },
-    ],
   },
   {
     id: "3",
     magazineCover: "/cover3.png",
     date: "Nov/Dec 2024",
-    topStories: [
-      {
-        title: "Title 1",
-        description: "This provides a short summary description of the title.",
-      },
-      {
-        title: "Title 1",
-        description: "This provides a short summary description of the title.",
-      },
-      {
-        title: "Title 1",
-        description: "This provides a short summary description of the title.",
-      },
-    ],
   },
 ];
 
 export default function Magazine() {
+  const [itemCount, setItemCount] = useState(2);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 510) {
+        setItemCount(1);
+      } else {
+        setItemCount(2);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className={styles.MagazineContainer}>
+    <section className={styles.MagazineContainer}>
       <h1 className={styles.h1}>Magazine</h1>
-      <div className={styles.cardContainer}>
-        {dummyData.map((magazine) => {
+      <section className={styles.cardContainer}>
+        {dummyData.slice(0, itemCount).map((magazine) => {
           return (
             <MagazineCard
               key={magazine.id}
+              alt={`Magazine cover for ${magazine.date}`}
               imgUrl={magazine.magazineCover}
               date={magazine.date}
             />
           );
         })}
-      </div>
-      <div className={styles.stories}>
-        <h2 className={styles.topStoriesHead}>Top Stories</h2>
-        {dummyData[0].topStories.map((story) => {
-          return (
-            <Story
-              key={story.title}
-              title={story.title}
-              description={story.description}
-            />
-          );
-        })}
-      </div>
-      <h2 className={styles.archive}>View the archive</h2>
-    </div>
+      </section>
+      <section className={styles.archiveDiv} aria-label="View the archive">
+        <Link href={"/story"}>
+          <h2 className={styles.archive}>View the archive</h2>
+        </Link>
+      </section>
+    </section>
   );
 }

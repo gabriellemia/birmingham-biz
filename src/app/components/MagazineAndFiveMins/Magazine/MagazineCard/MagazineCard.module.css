@@ -1,11 +1,14 @@
 .dateDiv {
-  width: 155px;
+  width: 243px;
+  height: 40px;
   background-color: #7e9fb8;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
   padding: 3px;
   margin-top: 15px;
+  border: none;
 }
 
 .dateText {
@@ -13,14 +16,38 @@
 }
 
 .MagazineCardContainer {
-  width: 155px;
+  width: 243px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.faDownload{
+.faDownload {
   margin-top: 3px;
 }
-.imgStyle{
+
+.faDownload:visited {
+  color: #2c506d;
+  background-color: #7e9fb8;
+}
+
+.faDownload:hover {
+  color: #fff;
+}
+
+.dateDiv:visited {
+  color: #2c506d;
+  background-color: #7e9fb8;
+}
+
+.dateDiv:hover {
+  background-color: #d4a20d;
+}
+.imgStyle {
   object-fit: cover;
+}
+
+@media (max-width: 510px) {
+  .MagazineCardContainer {
+    width: 100%;
+  }
 }

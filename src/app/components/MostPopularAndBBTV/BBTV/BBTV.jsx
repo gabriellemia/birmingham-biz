@@ -15,13 +15,11 @@ export default function BBTV({ episodeNumber, date, description, videoTitle }) {
       <h1 className={styles.bbtv}>BBTV</h1>
 
       <iframe
-
         src={videoUrl}
         title={videoTitle}
-        width="525"
-        height="315"
         frameborder="0"
         allowfullscreen
+        className={styles.iframe}
       ></iframe>
 
       <section className={styles.content}>
