@@ -21,6 +21,12 @@
 	display: flex;
 	justify-content: space-between;
 	align-self: end;
+	font-size: 0.9em;
+}
+
+.bottomNavBar {
+	display: flex;
+	justify-content: space-between;
 }
 
 .logoBB {
@@ -29,13 +35,13 @@
 
 .navBarContainer {
 	display: flex;
-	column-gap: 20px;
+	column-gap: 15px;
 	padding: 0;
 	padding-bottom: 3px;
 	margin: 0;
 	list-style: none;
 	color: #2c506d;
-	align-items: end;
+	align-items: flex-end;
 }
 
 .navLinks {
@@ -59,15 +65,26 @@
 	font-size: 32px;
 }
 
+.buttonsContainer {
+	align-self: flex-end;
+	padding-bottom: 3px;
+}
+
 .magContainer {
 	height: 20px;
 	width: 20px;
-	align-self: end;
-	margin-bottom: 6px;
+}
+
+.magContainer:hover {
+	cursor: pointer;
 }
 
 .magIcon {
 	color: #2c506d;
+}
+
+.magIcon:hover {
+	color: #d4a20d;
 }
 
 .navBtn {
@@ -82,11 +99,62 @@
 	color: #2c506d;
 }
 
+.searchBtn {
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+.searchBox {
+	width: 30vw;
+	box-sizing: border-box;
+	margin-top: 8px;
+	background-color: #f6f6f7;
+	padding: 0.3em;
+	border: 1.5px solid #7e9fb8;
+	border-radius: 4px;
+}
+
+.searchBox:focus {
+	outline:3px solid #d4a20d;
+	border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.responsive_search {
+	visibility: none;
+	opacity: 0;
+}
+
 .burgerIcon {
 	font-size: 2.5em;
 }
 
 @media only screen and (max-width: 1090px) {
+	.header {
+	grid-template-rows: 50px 50px;
+	grid-template-columns: 100px auto;
+	}
+
+	.headerBackground {
+		height: 50px;
+	}
+
+	.logoBB {
+		height: 100px;
+		width: 100px;
+	}
+
+	.birmingham, .business {
+		font-size: 28px;
+		margin-left: 3px;
+	}
+
+	.birmingham {
+		padding-top: 10px;
+	}
+
+	
 	.navBtn {
 		position: static;
 		visibility: visible;
@@ -120,5 +188,18 @@
 
 	.responsive_nav {
 		transform: none;
+	}
+
+	.buttonsContainer {
+		align-self: flex-end;
+		padding-bottom: 3px;
+	}
+
+	.magContainer {
+		margin-right: 10px;
+	}
+
+	.magIcon {
+		font-size: 3em;
 	}
 }

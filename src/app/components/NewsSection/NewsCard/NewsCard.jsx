@@ -1,7 +1,8 @@
 import Image from "next/image";
 import styles from "./NewsCard.module.css";
+import Link from "next/link";
 
-const NewsCard = ({ imgUrl, headline, description }) => {
+const NewsCard = ({ imgUrl, headline, description, id }) => {
   return (
     <section className={styles.cardContainer}>
       <div className={styles.imgDiv}>
@@ -14,7 +15,9 @@ const NewsCard = ({ imgUrl, headline, description }) => {
         />
       </div>
       <div className={styles.newsCardText}>
-        <h2 className={styles.headline}>{headline}</h2>
+        <Link href={`/news/${id}`}>
+          <h2 className={styles.headline}>{headline}</h2>
+        </Link>
         <p className={styles.description}>{description}</p>
       </div>
     </section>

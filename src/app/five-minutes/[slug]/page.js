@@ -10,9 +10,7 @@ import { getNewsArticles, getFiveArticleById } from "../../request/request";
 const Five = ({ params: { slug } }) => {
   const [article, setArticle] = useState(null);
   const [articles, setArticles] = useState([]);
-  const [recentArticleOne, setRecentArticleOne] = useState({});
-  const [recentArticleTwo, setRecentArticleTwo] = useState({});
-  const [recentArticleThree, setRecentArticleThree] = useState({});
+  const [reducedArticles, setReducedArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -41,13 +39,7 @@ const Five = ({ params: { slug } }) => {
         if (data) {
           console.log("Fetched articles:", data);
           setArticles(data);
-          console.log(data[data.length - 3]);
-          const recentArticleFirst = data[data.length - 1];
-          const recentArticleSecond = data[data.length - 2];
-          const recentArticleThird = data[data.length - 3];
-          setRecentArticleOne(recentArticleFirst);
-          setRecentArticleTwo(recentArticleSecond);
-          setRecentArticleThree(recentArticleThird);
+          setReducedArticles(data.reverse().slice(0, 3));
         }
       } catch (error) {
         console.error("Error fetching articles:", error);
@@ -55,12 +47,6 @@ const Five = ({ params: { slug } }) => {
     };
     fetchData();
   }, []);
-
-  // Call the getArticles function to retrieve all articles
-  // Find the article with the ID number that matches the array length
-  // Find the article with the ID number that matches the array length -1
-  // Find the article with the ID number that matches the array length -2
-  // Locate the image, headline, and subheading
 
   if (!article) {
     return (
@@ -125,32 +111,16 @@ const Five = ({ params: { slug } }) => {
             <h2 className={styles.mostpopularhead}>Most Popular</h2>
             <hr className={styles.mostpopularhr}></hr>
 
-            <MostPopularAside
-              src={
-                recentArticleOne && recentArticleOne.attributes && recentArticleOne.attributes.image.data.attributes.url
-              }
-              heading={recentArticleOne && recentArticleOne.attributes && recentArticleOne.attributes.headline}
-              subheading={recentArticleOne && recentArticleOne.attributes && recentArticleOne.attributes.subheading}
-            />
-
-            <MostPopularAside
-              src={
-                recentArticleTwo && recentArticleTwo.attributes && recentArticleTwo.attributes.image.data.attributes.url
-              }
-              heading={recentArticleTwo && recentArticleTwo.attributes && recentArticleTwo.attributes.headline}
-              subheading={recentArticleTwo && recentArticleTwo.attributes && recentArticleTwo.attributes.subheading}
-            />
-            <MostPopularAside
-              src={
-                recentArticleThree &&
-                recentArticleThree.attributes &&
-                recentArticleThree.attributes.image.data.attributes.url
-              }
-              heading={recentArticleThree && recentArticleThree.attributes && recentArticleThree.attributes.headline}
-              subheading={
-                recentArticleThree && recentArticleThree.attributes && recentArticleThree.attributes.subheading
-              }
-            />
+            {reducedArticles.map((article) => {
+              return (
+                <MostPopularAside
+                  src={article?.attributes?.image?.data?.attributes?.url}
+                  heading={article?.attributes?.headline}
+                  subheading={article?.attributes?.subheading}
+                  key={article?.id}
+                />
+              );
+            })}
           </div>
         </aside>
       </main>
