@@ -13,7 +13,7 @@ export default function ContactPage() {
 
     emailjs
       .sendForm("service_0dsfnbb", "contact_form", form.current, {
-        publicKey: "-B-4BrapJL2beWDBH",
+        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
       })
       .then(
         () => {
