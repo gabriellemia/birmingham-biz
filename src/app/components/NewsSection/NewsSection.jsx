@@ -93,6 +93,7 @@ const NewsSection = () => {
             headline={article.attributes.headline}
             description={article.attributes.subheading}
             key={article.id}
+            id={article.id}
           />
         ))}
       </section>

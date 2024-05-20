@@ -37,6 +37,7 @@ export default function FiveMinsWith() {
             headline={article?.attributes?.headline}
             description={article?.attributes?.subheading}
             key={article?.id}
+            id={article?.id}
             />
           );
         })}

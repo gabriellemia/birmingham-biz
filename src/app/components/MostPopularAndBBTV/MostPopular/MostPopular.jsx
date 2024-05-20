@@ -42,18 +42,21 @@ export default function MostPopular() {
           headline={recentArticleOne?.attributes?.headline}
           description={recentArticleOne?.attributes?.subheading}
           key={recentArticleOne?.id}
+          id={recentArticleOne?.id}
         />
         <MostPopularCard
           imgUrl={recentArticleTwo?.attributes?.image?.data?.attributes?.url}
           headline={recentArticleTwo?.attributes?.headline}
           description={recentArticleTwo?.attributes?.subheading}
           key={recentArticleTwo?.id}
+          id={recentArticleTwo?.id}
         />
         <MostPopularCard
           imgUrl={recentArticleThree?.attributes?.image?.data?.attributes?.url}
           headline={recentArticleThree?.attributes?.headline}
           description={recentArticleThree?.attributes?.subheading}
           key={recentArticleThree?.id}
+          id={recentArticleThree?.id}
         />
       </div>
     </div>
