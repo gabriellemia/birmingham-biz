@@ -38,27 +38,27 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a className={styles.navLinks} href="/story">
+              <a className={styles.navLinks} href="/news">
                 News
               </a>
             </li>
             <li>
-              <a className={styles.navLinks} href="/story">
+              <a className={styles.navLinks} href="/features">
                 Features and Analysis
               </a>
             </li>
             <li>
-              <a className={styles.navLinks} href="/story">
+              <a className={styles.navLinks} href="/five-minutes">
                 Five Minutes With
               </a>
             </li>
             <li>
-              <a className={styles.navLinks} href="/story">
+              <a className={styles.navLinks} href="/insights">
                 Insights
               </a>
             </li>
             <li>
-              <a className={styles.navLinks} href="/story">
+              <a className={styles.navLinks} href="/archive">
                 Magazine Archive
               </a>
             </li>

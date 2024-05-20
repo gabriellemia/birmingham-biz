@@ -110,8 +110,10 @@
 	width: 30vw;
 	box-sizing: border-box;
 	margin-top: 8px;
-	border-radius: 45px;
-	background-color: #eef0f3;
+	background-color: #f6f6f7;
+	padding: 0.3em;
+	border: 1.5px solid #7e9fb8;
+	border-radius: 4px;
 }
 
 .searchBox:focus {
