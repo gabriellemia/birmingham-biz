@@ -1,7 +1,8 @@
 .cardContainer {
   width: 290px;
-  height: 370px;
+  /* height: 370px; */
   flex: 0 0 auto;
+  box-shadow: 0px 0px 13px 0px #a8adb1;
   box-shadow: 0px 0px 13px 0px #a8adb1;
   margin-bottom: 15px;
 }
@@ -15,25 +16,52 @@
 .description {
   color: #2c506d;
   font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 45px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-width: 300px;
 }
 
 .newsCardText {
   padding: 0px;
   margin: 12px;
+  /* border: solid green; */
 }
 .imgStyle {
   object-fit: cover;
+  width: 100%;
+  position: relative;
+  height: unset;
+}
+
+.imgDiv {
+  max-width: 290px;
+  height: 272px;
+  position: relative;
 }
 
 @media (max-width: 510px) {
   .cardContainer {
     width: 100%;
-    height: 540px;
+    /* height: 500px; */
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    box-shadow: unset;
   }
 
   .imgStyle {
     object-fit: cover;
     width: 100%;
+    position: relative;
+    height: unset;
+  }
+
+  .imgDiv {
+    max-width: 100%;
     aspect-ratio: 1.1 / 1;
     height: auto;
   }
@@ -44,5 +72,6 @@
 
   .description {
     font-size: 16px;
+    max-width: 100%;
   }
 }

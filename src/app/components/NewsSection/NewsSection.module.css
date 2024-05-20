@@ -60,19 +60,20 @@
   .newsCardWrapper {
     width: 100%;
     margin-top: 0px;
-    height: 540px;
+    margin-bottom: 0;
   }
 
   .arrowIcon1 {
-    top: 250px;
+    top: 150px;
   }
 
   .arrowIcon2 {
-    top: 250px;
+    top: 150px;
   }
 
   .h1 {
     margin-top: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
   }
 }

@@ -1,6 +1,9 @@
+"use client";
 import Link from "next/link";
+
 import styles from "./Magazine.module.css";
 import MagazineCard from "./MagazineCard/MagazineCard";
+import { useState, useEffect } from "react";
 
 const dummyData = [
   {
@@ -21,11 +24,29 @@ const dummyData = [
 ];
 
 export default function Magazine() {
+  const [itemCount, setItemCount] = useState(2);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 510) {
+        setItemCount(1);
+      } else {
+        setItemCount(2);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className={styles.MagazineContainer}>
       <h1 className={styles.h1}>Magazine</h1>
       <section className={styles.cardContainer}>
-        {dummyData.slice(0, 2).map((magazine) => {
+        {dummyData.slice(0, itemCount).map((magazine) => {
           return (
             <MagazineCard
               key={magazine.id}
@@ -37,9 +58,10 @@ export default function Magazine() {
         })}
       </section>
       <section className={styles.archiveDiv} aria-label="View the archive">
-        <Link href={'/story'}>
-        <h2 className={styles.archive}>View the archive</h2>
-      </Link></section>
+        <Link href={"/story"}>
+          <h2 className={styles.archive}>View the archive</h2>
+        </Link>
+      </section>
     </section>
   );
 }
