@@ -7,7 +7,12 @@ import { FaBars, FaTimes, faBars, faTimes } from "react-icons/fa";
 import { useRef } from "react";
 
 export default function Header() {
+  const searchRef = useRef();
   const navRef = useRef();
+
+  const showSearchBox = () => {
+    searchRef.current.classList.toggle(styles.responsive_search);
+  };
 
   const showNavbar = () => {
     navRef.current.classList.toggle(styles.responsive_nav);
@@ -49,7 +54,7 @@ export default function Header() {
             </li>
             <li>
               <a className={styles.navLinks} href="/story">
-                Insight
+                Insights
               </a>
             </li>
             <li>
@@ -64,23 +69,42 @@ export default function Header() {
               <FaTimes />
             </button>
           </ul>
+          <div className={styles.buttonsContainer}>
+            <button
+              className={`${styles.magContainer} ${styles.searchBtn} ${styles.searchCloseBtn}`}
+              onClick={showSearchBox}
+            >
+              <FontAwesomeIcon
+                icon={faMagnifyingGlass}
+                className={styles.magIcon}
+              />
+            </button>
 
-          {/* <div className={styles.magContainer}>
-						<FontAwesomeIcon
-							icon={faMagnifyingGlass}
-							className={styles.magIcon}
-						/>
-					</div> */}
-          <button
-            className={`${styles.navBtn} ${styles.navCloseBtn} ${styles.burgerIcon}`}
-            onClick={showNavbar}
-          >
-            <FaBars />
-          </button>
+            <button
+              className={`${styles.navBtn} ${styles.navCloseBtn} ${styles.burgerIcon}`}
+              onClick={showNavbar}
+            >
+              <FaBars />
+            </button>
+          </div>
         </nav>
 
         <nav className={styles.bottomNavBar}>
           <h1 className={styles.business}>Business</h1>
+          <div className={styles.searchContainer}>
+            <input
+              className={styles.searchBox}
+              ref={searchRef}
+              type="text"
+              placeholder="   Search"
+            ></input>
+            {/* <button
+							className={`${styles.searchBtn} ${styles.searchCloseBtn} ${styles.searchCross}`}
+							onClick={showSearchBox}
+						>
+							<FaTimes />
+						</button> */}
+          </div>
         </nav>
       </header>
     </>

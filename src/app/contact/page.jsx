@@ -3,6 +3,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { useState } from "react";
+// import { SMTPClient } from "emailjs";
+// import emailjs from "@emailjs/browser";
 
 export default function ContactPage() {
 	const defaultState = {
