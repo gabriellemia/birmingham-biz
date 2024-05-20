@@ -1,38 +1,71 @@
+"use client";
+import React, { useState, useEffect } from "react";
+import { getBbtvEpisodes } from "../../../request/request";
+import styles from "./BBTV.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import styles from "./BBTV.module.css";
 
-const videoUrl =
-  "https://player.vimeo.com/video/889425912?color&autopause=0&loop=0&muted=0&title=1&portrait=1&byline=1&h=88c00148cf#t=";
+export default function BBTV() {
+  const [bbtvEpisode, setBbtvEpisode] = useState({});
+  const [videoPlaying, setVideoPlaying] = useState(true);
 
-//fetch the current/latest/index[0] episode from bbtv website
-//get properties/value of episode number, date, description, video title
-//add keystroke functionality
+  useEffect(() => {
+    const fetchEpisode = async () => {
+      try {
+        const episodes = await getBbtvEpisodes();
+        console.log(episodes);
+        if (episodes && episodes.length > 0) {
+          const latestEpisode = episodes[episodes.length -1].attributes;
+          setBbtvEpisode({
+            link: latestEpisode.link,
+            title: latestEpisode.title,
+            date: latestEpisode.date,
+            description: latestEpisode.description,
+          });
+        }
+      } catch (error) {
+        console.error("Error fetching episodes:", error);
+      }
+    };
+    fetchEpisode();
+  }, []);
 
-export default function BBTV({ episodeNumber, date, description, videoTitle }) {
+  const handleVideoClick = () => {
+    setVideoPlaying(!videoPlaying);
+  };
+
   return (
-    <section className={styles.BBTVContainer}>
-      <h1 className={styles.bbtv}>BBTV</h1>
-
-      <iframe
-
-        src={videoUrl}
-        title={videoTitle}
-        width="525"
-        height="315"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
+    <article className={styles.BBTVContainer} aria-labelledby="bbtv-title">
+      <h1 id="bbtv-title" className={styles.bbtv}>
+        BBTV
+      </h1>
+      {bbtvEpisode.link && (
+        <iframe
+          src={bbtvEpisode.link}
+          title={`BBTV ${bbtvEpisode.title}`}
+          width="525"
+          height="315"
+          frameborder="0"
+          allowFullScreen
+          loading="lazy"
+          aria-describedby="bbtv-description"
+          onClick={handleVideoClick}
+        ></iframe>
+      )}
 
       <section className={styles.content}>
-        <h2 className={styles.episodeTitle} aria-live="polite">
-          Episode 10{episodeNumber}
-        </h2>
-        <p className={styles.date}>{date}Friday 1st December, 2023</p>
-        <p className={styles.description}>
-          {description} Some information about the episode, key stories, key
-          guests and things.
-        </p>
+        {bbtvEpisode.title && (
+          <h2 className={styles.episodeTitle} aria-live="polite">
+            {bbtvEpisode.title}
+          </h2>
+        )}
+        {bbtvEpisode.date && <p className={styles.date}>{bbtvEpisode.date}</p>}
+        {bbtvEpisode.description && (
+          <p id="bbtv-description" className={styles.description}>
+            {bbtvEpisode.description}
+          </p>
+        )}
+
         <p className={styles.watchNow}>
           <a
             href="https://bbtv.live/"
@@ -45,11 +78,11 @@ export default function BBTV({ episodeNumber, date, description, videoTitle }) {
             <FontAwesomeIcon
               icon={faArrowRight}
               className={styles.arrowRightIcon}
-              aria-hidden="true" // Hide decorative icons from screen readers
-            ></FontAwesomeIcon>
+              aria-hidden="true"
+            />
           </a>
         </p>
       </section>
-    </section>
+    </article>
   );
 }
