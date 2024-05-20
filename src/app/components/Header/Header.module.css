@@ -129,6 +129,30 @@
 }
 
 @media only screen and (max-width: 1090px) {
+	.header {
+	grid-template-rows: 50px 50px;
+	grid-template-columns: 100px auto;
+	}
+
+	.headerBackground {
+		height: 50px;
+	}
+
+	.logoBB {
+		height: 100px;
+		width: 100px;
+	}
+
+	.birmingham, .business {
+		font-size: 28px;
+		margin-left: 3px;
+	}
+
+	.birmingham {
+		padding-top: 10px;
+	}
+
+	
 	.navBtn {
 		position: static;
 		visibility: visible;
