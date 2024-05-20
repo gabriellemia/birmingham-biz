@@ -53,9 +53,10 @@ export default function Magazine() {
           return (
             <MagazineCard
               key={magazine?.id}
-              alt={`Magazine cover for`}
-              imgUrl={magazine?.attributes?.magazine?.data?.attributes?.url}
-              date={`A date`}
+              alt={`Magazine cover for ${magazine?.attributes?.issue}`}
+              imgUrl={magazine?.attributes?.magazinecover?.data?.attributes?.url}
+              date={magazine?.attributes?.issue}
+              pdfUrl={magazine?.attributes?.magazinePDF?.data?.attributes?.url}
             />
           );
         })}
