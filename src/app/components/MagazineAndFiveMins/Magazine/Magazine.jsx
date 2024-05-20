@@ -4,26 +4,12 @@ import Link from "next/link";
 import styles from "./Magazine.module.css";
 import MagazineCard from "./MagazineCard/MagazineCard";
 import { useState, useEffect } from "react";
-
-const dummyData = [
-  {
-    id: "1",
-    magazineCover: "/cover1.png",
-    date: "Mar/Apr 2024",
-  },
-  {
-    id: "2",
-    magazineCover: "/cover2.png",
-    date: "Jan/Feb 2024",
-  },
-  {
-    id: "3",
-    magazineCover: "/cover3.png",
-    date: "Nov/Dec 2024",
-  },
-];
+import { getArchive } from "@/app/request/request";
 
 export default function Magazine() {
+  const [archive, setArchive] = useState([]);
+  const [reducedArchive, setReducedArchive] = useState([]);
+
   const [itemCount, setItemCount] = useState(2);
 
   useEffect(() => {
@@ -42,17 +28,35 @@ export default function Magazine() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getArchive();
+        if (data) {
+          console.log("Fetched articles:", data);
+          setArchive(data);
+          setReducedArchive(data.reverse().slice(0, 2));
+        }
+      } catch (error) {
+        console.error("Error fetching articles:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+
   return (
     <section className={styles.MagazineContainer}>
       <h1 className={styles.h1}>Magazine</h1>
       <section className={styles.cardContainer}>
-        {dummyData.slice(0, itemCount).map((magazine) => {
+        {reducedArchive.map((magazine) => {
           return (
             <MagazineCard
-              key={magazine.id}
-              alt={`Magazine cover for ${magazine.date}`}
-              imgUrl={magazine.magazineCover}
-              date={magazine.date}
+              key={magazine?.id}
+              alt={`Magazine cover for ${magazine?.attributes?.issue}`}
+              imgUrl={magazine?.attributes?.magazinecover?.data?.attributes?.url}
+              date={magazine?.attributes?.issue}
+              pdfUrl={magazine?.attributes?.magazinePDF?.data?.attributes?.url}
             />
           );
         })}

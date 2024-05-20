@@ -13,6 +13,7 @@
 
 .dateText {
   justify-content: center;
+  text-decoration: none;
 }
 
 .MagazineCardContainer {
@@ -21,6 +22,11 @@
   flex-direction: column;
   align-items: center;
 }
+
+.downloadLink {
+  text-decoration: none;
+}
+
 .faDownload {
   margin-top: 3px;
 }
