@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Birmingham Business Magazine
 
-## Getting Started
+<img width="132" alt="Screenshot 2024-05-19 at 17 59 31" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/674ec3d1-d19c-494c-9dee-65c95e42be67">
 
-First, run the development server:
+### **Team CodeyMcCodeface:** 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Chari Cruz, Erin Smith, Gaby Mia, Josh Foston, Pete Faretra, Ravi Kataria
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+As part of our final project at School of Code, Codey McCodeface have been partnered with Birmingham Business Magazine to help them find a solution to optimising their online presence.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Initial brief
+<img width="587" alt="Screenshot 2024-05-19 at 12 50 55" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/dda71ffb-da65-4d43-870f-634fa10f0284">
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## The problem
+<img width="1200" alt="Screenshot 2024-05-19 at 12 51 35" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/6e730310-cb98-4f80-83b5-96075f35a87d">
 
-To learn more about Next.js, take a look at the following resources:
+### Refined problem statement
+Birmingham Business magazine’s website is outdated and not engaging, which means they are not maximising traffic to their site and stories. It is also difficult to manage from the editors’ side.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### The solution
+A revamped platform that prioritises user engagement,  accessibility, and content management efficiency while also optimising SEO to drive more traffic, transforming the digital experience.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## MVP 1
+<img width="428" alt="Screenshot 2024-05-19 at 13 59 25" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/1a9a9652-99ae-4035-b7f3-50af183d6703">
 
-## Deploy on Vercel
+## User flow 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+We created a user flow diagram to help visualise how a user would navigate the different sections of the website and actions they are able to take on each page, ensuring seemless flow throughout our MVP.  This would help us with the bulid stages later on.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img width="618" alt="Screenshot 2024-05-19 at 14 26 17" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/e0571e87-108c-48b9-9ff6-9d4d319da803">
+
+## Wireframing
+
+After initial ideation and user research stages we began work on the design of the website using the research we had gathered.  We created wireframes in Figma for the three pages of our first MVP.
+
+<img width="673" alt="Screenshot 2024-05-19 at 15 20 10" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/d941240a-b5d8-4e32-bfa5-fbf607e821b7">
+
+
+## Tech stack
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+
+![Strapi](https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white)
+![Railway](https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white)
+![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=Cloudinary&logoColor=white)
+
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+
+## How we worked
+
+We created a ticketing system in GitHub projects to assign jobs to team members.  We also split off into smaller groups of either 2 or 3 in order to cover more ground.  We rotated our pairs regularly so that each of us was able to work with every other member and also to get a holistic understanding of the project and broaden our skillset in all areas of the software development process.
+
+![Screenshot 2024-05-16 at 13 23 29](https://github.com/gabriellemia/birmingham-biz/assets/78322726/52010aca-86e7-4fe8-9d83-0a62411b5be1)
+
+<img width="1154" alt="Screenshot 2024-05-19 at 15 36 02" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/82fd4b46-7e25-40ec-9b6b-2a38aa38d3d2">
+
+
+
+
+
+
+
+
+
+

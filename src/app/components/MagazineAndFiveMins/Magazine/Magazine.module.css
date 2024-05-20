@@ -3,7 +3,7 @@
   height: 539px;
   position: relative;
   color: #2c506d;
-  border-bottom: solid 1.5px;
+  border-bottom: solid 2px;
 }
 
 .h1 {
@@ -25,6 +25,7 @@
   font-weight: 600;
   text-decoration: underline;
   justify-content: center;
+  color: #2c506d;
 }
 
 .archiveDiv {

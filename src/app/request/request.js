@@ -125,11 +125,6 @@ export async function getInsightsArticles() {
   }
 }
 
-//   const data = await response.json();
-//   console.log(data.data[1].attributes);
-
-// getArticles();
-
 export async function getArticleById(id) {
   try {
     const response = await fetch(
@@ -154,4 +149,98 @@ export async function getArticleById(id) {
   }
 }
 
-// getArticleById();
+export async function getNewsArticleById(id) {
+  try {
+    const response = await fetch(
+      `https://strapi-production-9d37.up.railway.app/api/news/${id}?populate[0]=image&populate[1]=ad1&populate[2]=ad2&populate[3]=ad3&populate[4]=ad4&populate[5]=ad5`,
+      {
+        headers: {
+          Authorization: `Bearer ${TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.data;
+  } catch (error) {
+    console.error("Error fetching articles:", error.message);
+    return null;
+  }
+}
+
+export async function getFeaturesArticleById(id) {
+  try {
+    const response = await fetch(
+      `https://strapi-production-9d37.up.railway.app/api/features/${id}?populate[0]=image&populate[1]=ad1&populate[2]=ad2&populate[3]=ad3&populate[4]=ad4&populate[5]=ad5`,
+      {
+        headers: {
+          Authorization: `Bearer ${TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.data;
+  } catch (error) {
+    console.error("Error fetching articles:", error.message);
+    return null;
+  }
+}
+
+export async function getFiveArticleById(id) {
+  try {
+    const response = await fetch(
+      `https://strapi-production-9d37.up.railway.app/api/five-minutes-withs/${id}?populate[0]=image&populate[1]=ad1&populate[2]=ad2&populate[3]=ad3&populate[4]=ad4&populate[5]=ad5`,
+      {
+        headers: {
+          Authorization: `Bearer ${TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.data;
+  } catch (error) {
+    console.error("Error fetching articles:", error.message);
+    return null;
+  }
+}
+
+export async function getInsightsArticleById(id) {
+  try {
+    const response = await fetch(
+      `https://strapi-production-9d37.up.railway.app/api/insights/${id}?populate[0]=image&populate[1]=ad1&populate[2]=ad2&populate[3]=ad3&populate[4]=ad4&populate[5]=ad5`,
+      {
+        headers: {
+          Authorization: `Bearer ${TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.data;
+  } catch (error) {
+    console.error("Error fetching articles:", error.message);
+    return null;
+  }
+}

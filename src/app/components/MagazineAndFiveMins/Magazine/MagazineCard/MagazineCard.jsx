@@ -5,22 +5,22 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 export default function MagazineCard({ imgUrl, date }) {
   return (
-    <div className={styles.MagazineCardContainer}>
+    <article className={styles.MagazineCardContainer}>
       <Image
         src={imgUrl}
-        alt={date}
+        alt={`Magazine Cover - ${date}`}
         width={243}
         height={336}
         className={styles.imgStyle}
       />
-      <div className={styles.dateDiv}>
+      <button className={styles.dateDiv} aria-label="Download Magazine">
         <p className={styles.dateText}>{date}</p>
         <FontAwesomeIcon
           icon={faDownload}
           className={styles.faDownload}
           aria-hidden={true}
         ></FontAwesomeIcon>
-      </div>
-    </div>
+      </button>
+    </article>
   );
 }

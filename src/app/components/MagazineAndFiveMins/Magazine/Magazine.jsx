@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import styles from "./Magazine.module.css";
 import MagazineCard from "./MagazineCard/MagazineCard";
@@ -42,22 +43,25 @@ export default function Magazine() {
   }, []);
 
   return (
-    <div className={styles.MagazineContainer}>
+    <section className={styles.MagazineContainer}>
       <h1 className={styles.h1}>Magazine</h1>
-      <div className={styles.cardContainer}>
+      <section className={styles.cardContainer}>
         {dummyData.slice(0, itemCount).map((magazine) => {
           return (
             <MagazineCard
               key={magazine.id}
+              alt={`Magazine cover for ${magazine.date}`}
               imgUrl={magazine.magazineCover}
               date={magazine.date}
             />
           );
         })}
-      </div>
-      <div className={styles.archiveDiv}>
-        <h2 className={styles.archive}>View the archive</h2>
-      </div>
-    </div>
+      </section>
+      <section className={styles.archiveDiv} aria-label="View the archive">
+        <Link href={"/story"}>
+          <h2 className={styles.archive}>View the archive</h2>
+        </Link>
+      </section>
+    </section>
   );
 }
