@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+// import svg from "../../public/birmingham_background.svg";
 
 export default function ContactPage() {
 	const form = useRef();
@@ -106,92 +107,94 @@ export default function ContactPage() {
 	};
 
 	return (
-		<div className={styles.contactForm}>
-			<h1 className={styles.pageHeading}>Contact Us</h1>
-			<p>
-				Birmingham Business is an editorially-led magazine and we are keen to
-				hear from you, though the inclusion of articles or comment columns
-				cannot be guaranteed and is always at the Editor’s discretion.
-			</p>
-			{successMessage}
-			<form ref={form} onSubmit={sendEmail} className={styles.formElement}>
-				<label className={styles.labelField} htmlFor="name">
-					Name
-					<input
-						className={styles.inputField}
-						type="text"
-						id="name"
-						name="name"
-						value={formData.name}
-						onChange={handleInputChange}
-					/>
-					{errors.name && (
-						<span className={styles.errorMessage}>{errors.name}</span>
-					)}
-				</label>
-				<label className={styles.labelField} htmlFor="email">
-					Email
-					<input
-						className={styles.inputField}
-						type="email"
-						id="email"
-						name="email"
-						value={formData.email}
-						onChange={handleInputChange}
-					/>
-					{errors.email && (
-						<span className={styles.errorMessage}>{errors.email}</span>
-					)}
-				</label>
-				<label className={styles.labelField} htmlFor="subject">
-					Subject
-					<select
-						className={styles.inputField}
-						name="subject"
-						id="subject"
-						value={formData.subject}
-						onChange={handleInputChange}
-					>
-						<option value="dropdown">Select...</option>
-						<option value="editor">Editor</option>
-						<option value="webContent">Website Content</option>
-						<option value="advert">Advertising</option>
-						<option value="general">General Enquiries</option>
-						<option value="other">Other</option>
-					</select>
-					{errors.subject && (
-						<span className={styles.errorMessage}>{errors.subject}</span>
-					)}
-				</label>
-				<label className={styles.labelField} from="message">
-					Message
-					<textarea
-						className={styles.inputField}
-						name="message"
-						rows="10"
-						cols="40"
-						value={formData.message}
-						onChange={handleInputChange}
-					></textarea>
-					{errors.message && (
-						<span className={styles.errorMessage}>{errors.message}</span>
-					)}
-				</label>
-				<div className={styles.buttonContainer}>
-					<button className={styles.button} onClick={sendEmail} type="submit">
-						Send
-					</button>
-				</div>
-			</form>
-			<div className={styles.imageContainer}>
-				{/* <Image
-          src={"/birmingham_background.svg"}
-          width={100}
-          height={100}
-          layout="fixed"
-          className={styles.contactImage}
-          alt="Birmingham skyline background image"
-        /> */}
+		<div className={styles.backgroundContainer}>
+			<div className={styles.contactForm}>
+				<h1 className={styles.pageHeading}>Contact Us</h1>
+				<p>
+					Birmingham Business is an editorially-led magazine and we are keen to
+					hear from you, though the inclusion of articles or comment columns
+					cannot be guaranteed and is always at the Editor’s discretion.
+				</p>
+				{successMessage}
+				<form ref={form} onSubmit={sendEmail} className={styles.formElement}>
+					<label className={styles.labelField} htmlFor="name">
+						Name
+						<input
+							className={styles.inputField}
+							type="text"
+							id="name"
+							name="name"
+							value={formData.name}
+							onChange={handleInputChange}
+						/>
+						{errors.name && (
+							<span className={styles.errorMessage}>{errors.name}</span>
+						)}
+					</label>
+					<label className={styles.labelField} htmlFor="email">
+						Email
+						<input
+							className={styles.inputField}
+							type="email"
+							id="email"
+							name="email"
+							value={formData.email}
+							onChange={handleInputChange}
+						/>
+						{errors.email && (
+							<span className={styles.errorMessage}>{errors.email}</span>
+						)}
+					</label>
+					<label className={styles.labelField} htmlFor="subject">
+						Subject
+						<select
+							className={styles.inputField}
+							name="subject"
+							id="subject"
+							value={formData.subject}
+							onChange={handleInputChange}
+						>
+							<option value="dropdown">Select...</option>
+							<option value="editor">Editor</option>
+							<option value="webContent">Website Content</option>
+							<option value="advert">Advertising</option>
+							<option value="general">General Enquiries</option>
+							<option value="other">Other</option>
+						</select>
+						{errors.subject && (
+							<span className={styles.errorMessage}>{errors.subject}</span>
+						)}
+					</label>
+					<label className={styles.labelField} from="message">
+						Message
+						<textarea
+							className={styles.inputField}
+							name="message"
+							rows="10"
+							cols="40"
+							value={formData.message}
+							onChange={handleInputChange}
+						></textarea>
+						{errors.message && (
+							<span className={styles.errorMessage}>{errors.message}</span>
+						)}
+					</label>
+					<div className={styles.buttonContainer}>
+						<button className={styles.button} onClick={sendEmail} type="submit">
+							Send
+						</button>
+					</div>
+				</form>
+				{/* <div className={styles.imageContainer}>
+				<Image
+					src={"/birmingham_background.svg"}
+					width={100}
+					height={100}
+					layout="fixed"
+					className={styles.contactImage}
+					alt="Birmingham skyline background image"
+				/>
+			</div> */}
 			</div>
 		</div>
 	);
