@@ -14,6 +14,7 @@ export default function ContactPage() {
     message: "",
   });
   const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const [errors, setErrors] = useState({});
 
   const handleInputChange = (e) => {
