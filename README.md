@@ -9,7 +9,7 @@
 
 </div>
 
-### **Team CodeyMcCodeface:** 
+### **Team Codey McCodeface:** 
 
 Chari Cruz, Erin Smith, Gaby Mia, Josh Foston, Pete Faretra, Ravi Kataria
 
