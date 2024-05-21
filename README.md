@@ -43,6 +43,10 @@ As part of our final project at School of Code, Codey McCodeface have been partn
       <a href="#the-plan">The Build</a>
       <ul>
         <li><a href="#how-we-worked">How We Worked</a></li>
+        <li><a href="#api">API</a></li>
+          <ul>
+            <li><a href="#requirements-table">Requirements Table</a></li>
+          </ul>
       </ul>
     </li>
   </ol>
