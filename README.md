@@ -36,6 +36,7 @@ As part of our final project at School of Code, Codey McCodeface have been partn
       <ul>
         <li><a href="#user-flow">User Flow</a></li>
         <li><a href="#wireframing">Wireframing</a></li>
+        <li><a href="#component-tree">Component Tree</a></li>
       </ul>
     </li>
     <li>
@@ -92,6 +93,12 @@ After initial ideation and user research stages we began work on the design of t
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Component Tree
+
+We created a component tree of all of the pages within our file structure and their components. Please note this has been split into two diagrams to fit on the page.
+
+
+
 # The Build
 
 ## How We Worked
@@ -101,6 +108,30 @@ We created a ticketing system in GitHub projects to assign jobs to team members.
 ![Screenshot 2024-05-16 at 13 23 29](https://github.com/gabriellemia/birmingham-biz/assets/78322726/52010aca-86e7-4fe8-9d83-0a62411b5be1)
 
 <img width="1154" alt="Screenshot 2024-05-19 at 15 36 02" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/82fd4b46-7e25-40ec-9b6b-2a38aa38d3d2">
+
+## API
+
+### Requirements Table
+
+| HTTP Method | Path            | Request Body (JSON) | Response Body (JSON)    | Status Code | Description                               |
+| ----------- | --------------- | ------------------- | ----------------------- | ----------- | ----------------------------------------- |
+| GET         | /news           | N/A                 | List of articles      | 200         | Retrieve all News articles                   |
+| GET         | /features | N/A                 | List of articles    | 200         | Retrieve all Features and Analysis articles
+| GET        | //five-minutes-withs     | N/A                 | List of articles | 200         | Retrieve all Five Minutes With articles           |
+| GET       | /insights | N/A                 | List of articles       | 200         | Retrieve all Insights articles    |
+| GET      | /news/:id | N/A                 | A specific article       | 200         | Retrieve a specific News article          |
+| GET      | /features/:id | N/A                 | A specific article       | 200         | Retrieve a specific Features and Analysis article         |
+| GET      | /five-minutes-withs/:id | N/A                 | A specific article       | 200         | Retrieve a specific Five Minutes With article            |
+| GET      | /insights/:id | N/A                 | A specific article       | 200         | Retrieve a specific Insights article         |
+| GET      | /bbtvs | N/A                 | List of BBTV episodes       | 200         | Retrieve all BBTV episodes            |
+| GET      | /archives | N/A                 | List of magazines      | 200         | Retrieve all Birmingham Business magazines            |
+
+**Additional Queries**
+
+<p>Retrieve articles with image files and ad images:</p>
+<p>?populate[0]=image&populate[1]=ad1&populate[2]=ad2&populate[3]=ad3&populate[4]=ad4&populate[5]=ad5</p>
+<p>Retrieve magazines with images:</p>
+<p>?populate=*</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
