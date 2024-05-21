@@ -82,6 +82,20 @@
   color: red;
 }
 
+.sendFail {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 3px;
+  font-size: 14px;
+  background-color: rgb(230, 168, 161);
+}
+
+.sendFail span {
+  padding-left: 10px;
+}
+
 @media (min-width: 379px) {
   .contactForm {
     max-width: 380px;

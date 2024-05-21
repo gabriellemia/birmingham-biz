@@ -5,7 +5,6 @@ import styles from "./page.module.css";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-
 export default function ContactPage() {
   const form = useRef();
   const [formData, setFormData] = useState({
@@ -82,6 +81,13 @@ export default function ContactPage() {
           setErrors({});
         },
         (error) => {
+          setSuccessMessage("");
+          setErrorMessage(
+            <div className={styles.sendFail}>
+              <Image src="/icons8-cross-40.png" alt="Error" width={24} height={24} />
+              <span>Failed to send message. Please try again later.</span>
+            </div>
+          );
           console.log("FAILED...", error.text);
         }
       );
