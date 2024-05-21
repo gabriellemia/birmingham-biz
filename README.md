@@ -1,6 +1,13 @@
+<a name="readme-top"></a>
+
+<div align="center">
+  
+<img width="132" alt="Screenshot 2024-05-19 at 17 59 31" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/674ec3d1-d19c-494c-9dee-65c95e42be67">
+
 # Birmingham Business Magazine
 
-<img width="132" alt="Screenshot 2024-05-19 at 17 59 31" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/674ec3d1-d19c-494c-9dee-65c95e42be67">
+
+</div>
 
 ### **Team CodeyMcCodeface:** 
 
@@ -8,23 +15,70 @@ Chari Cruz, Erin Smith, Gaby Mia, Josh Foston, Pete Faretra, Ravi Kataria
 
 As part of our final project at School of Code, Codey McCodeface have been partnered with Birmingham Business Magazine to help them find a solution to optimising their online presence.
 
-## Initial brief
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#initial-brief">Initial Brief</a></li>
+        <li><a href="#the-problem">The Problem</a></li>
+          <ul>
+            <li><a href="#refined-problem-statement">Refined Problem Statement</a></li>
+            <li><a href="#the-solution">The Solution</a></li>
+          </ul>
+        <li><a href="#mvp-1">MVP 1</a></li>
+        <li><a href="#tech-stack">Tech Stack</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#the-plan">The Plan</a>
+      <ul>
+        <li><a href="#user-flow">User Flow</a></li>
+        <li><a href="#wireframing">Wireframing</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#the-plan">The Build</a>
+      <ul>
+        <li><a href="#how-we-worked">How We Worked</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
+
+# About The Project
+
+## Initial Brief
 <img width="587" alt="Screenshot 2024-05-19 at 12 50 55" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/dda71ffb-da65-4d43-870f-634fa10f0284">
 
-
-## The problem
+## The Problem
 <img width="1200" alt="Screenshot 2024-05-19 at 12 51 35" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/6e730310-cb98-4f80-83b5-96075f35a87d">
 
-### Refined problem statement
+### Refined Problem Statement
 Birmingham Business magazine’s website is outdated and not engaging, which means they are not maximising traffic to their site and stories. It is also difficult to manage from the editors’ side.
 
-### The solution
+### The Solution
 A revamped platform that prioritises user engagement,  accessibility, and content management efficiency while also optimising SEO to drive more traffic, transforming the digital experience.
 
 ## MVP 1
 <img width="428" alt="Screenshot 2024-05-19 at 13 59 25" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/1a9a9652-99ae-4035-b7f3-50af183d6703">
 
-## User flow 
+## Tech Stack
+
+| Front End  |
+|:---|
+|![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)|
+| **Back End** |
+|![Strapi](https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white) ![Railway](https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white) ![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=Cloudinary&logoColor=white)|
+| **Deployment**  |
+|![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)|
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# The Plan
+
+## User Flow 
 
 We created a user flow diagram to help visualise how a user would navigate the different sections of the website and actions they are able to take on each page, ensuring seemless flow throughout our MVP.  This would help us with the bulid stages later on.
 
@@ -36,19 +90,11 @@ After initial ideation and user research stages we began work on the design of t
 
 <img width="673" alt="Screenshot 2024-05-19 at 15 20 10" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/d941240a-b5d8-4e32-bfa5-fbf607e821b7">
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Tech stack
-![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+# The Build
 
-![Strapi](https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white)
-![Railway](https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white)
-![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=Cloudinary&logoColor=white)
-
-![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
-
-## How we worked
+## How We Worked
 
 We created a ticketing system in GitHub projects to assign jobs to team members.  We also split off into smaller groups of either 2 or 3 in order to cover more ground.  We rotated our pairs regularly so that each of us was able to work with every other member and also to get a holistic understanding of the project and broaden our skillset in all areas of the software development process.
 
@@ -56,12 +102,5 @@ We created a ticketing system in GitHub projects to assign jobs to team members.
 
 <img width="1154" alt="Screenshot 2024-05-19 at 15 36 02" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/82fd4b46-7e25-40ec-9b6b-2a38aa38d3d2">
 
-
-
-
-
-
-
-
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
