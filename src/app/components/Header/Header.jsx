@@ -93,7 +93,7 @@ export default function Header() {
           <h1 className={styles.business}>Business</h1>
           <div className={styles.searchContainer}>
             <input
-              className={styles.searchBox}
+              className={`${styles.searchBox} ${styles.responsive_search}`}
               ref={searchRef}
               type="text"
               placeholder="   Search"

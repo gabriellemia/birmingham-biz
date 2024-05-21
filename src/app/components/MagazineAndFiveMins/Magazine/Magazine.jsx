@@ -57,13 +57,13 @@ export default function Magazine() {
                 magazine?.attributes?.magazinecover?.data?.attributes?.url
               }
               date={magazine?.attributes?.issue}
-              pdfUrl={magazine?.attributes?.magazinePDF?.data?.attributes?.url}
+              pdfUrl={magazine?.attributes?.magazinePDF}
             />
           );
         })}
       </section>
       <section className={styles.archiveDiv} aria-label="View the archive">
-        <Link href={"/story"}>
+        <Link href={"/archive"}>
           <h2 className={styles.archive}>View the archive</h2>
         </Link>
       </section>
