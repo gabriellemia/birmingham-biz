@@ -2,18 +2,17 @@
 
 /* @import url("../../../public/birmingham_background.svg"); */
 .backgroundContainer {
-	width: 100%;
-	height: 80%;
+	--footer-height: 100px;
+	--header-height: 100px;
+	--viewport-height: calc(100vh - var(--header-height) - var(--footer-height));
+	/* width: 100%;
+	height: 80%; */
 	background: url("https://i.imgur.com/U9sdsv8.jpg");
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: bottom;
 }
 .contactForm {
-	--footer-height: 67px;
-	--header-height: 143px;
-
-	--viewport-height: calc(100vh - var(--header-height) - var(--footer-height));
 	padding: 16px;
 	font-size: 12px;
 	min-height: var(--viewport-height);
@@ -111,6 +110,8 @@
 
 @media (min-width: 379px) {
 	.contactForm {
+		--header-height: 150px;
+		--footer-height: 63px;
 		max-width: 380px;
 		margin: 0 auto;
 	}
@@ -123,5 +124,11 @@
 	.contactImage {
 		margin: 0 auto;
 		max-width: 1000px;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1090px) {
+	.contactForm {
+		min-height: calc(100vh - 160px);
 	}
 }
