@@ -44,17 +44,18 @@ export default function Magazine() {
     fetchData();
   }, []);
 
-
   return (
     <section className={styles.MagazineContainer}>
       <h1 className={styles.h1}>Magazine</h1>
       <section className={styles.cardContainer}>
-        {reducedArchive.map((magazine) => {
+        {reducedArchive.slice(0, itemCount).map((magazine) => {
           return (
             <MagazineCard
               key={magazine?.id}
               alt={`Magazine cover for ${magazine?.attributes?.issue}`}
-              imgUrl={magazine?.attributes?.magazinecover?.data?.attributes?.url}
+              imgUrl={
+                magazine?.attributes?.magazinecover?.data?.attributes?.url
+              }
               date={magazine?.attributes?.issue}
               pdfUrl={magazine?.attributes?.magazinePDF?.data?.attributes?.url}
             />
