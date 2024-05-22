@@ -15,7 +15,7 @@ export default function BBTV() {
         const episodes = await getBbtvEpisodes();
         console.log(episodes);
         if (episodes && episodes.length > 0) {
-          const latestEpisode = episodes[episodes.length -1].attributes;
+          const latestEpisode = episodes[episodes.length - 1].attributes;
           setBbtvEpisode({
             link: latestEpisode.link,
             title: latestEpisode.title,
@@ -30,7 +30,6 @@ export default function BBTV() {
     fetchEpisode();
   }, []);
 
-
   const handleVideoClick = () => {
     setVideoPlaying(!videoPlaying);
   };
@@ -42,10 +41,11 @@ export default function BBTV() {
       </h1>
       {bbtvEpisode.link && (
         <iframe
+          className={styles.iframe}
           src={bbtvEpisode.link}
           title={`BBTV ${bbtvEpisode.title}`}
-          width="525"
-          height="315"
+          // width="525"
+          // height="315"
           frameborder="0"
           allowFullScreen
           loading="lazy"
@@ -53,8 +53,6 @@ export default function BBTV() {
           onClick={handleVideoClick}
         ></iframe>
       )}
-    
-
 
       <section className={styles.content}>
         {bbtvEpisode.title && (
