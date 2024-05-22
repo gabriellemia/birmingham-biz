@@ -244,3 +244,53 @@ export async function getInsightsArticleById(id) {
     return null;
   }
 }
+
+//BBTV episode request
+export async function getBbtvEpisodes() {
+  try {
+    const response = await fetch(
+      "https://strapi-production-9d37.up.railway.app/api/bbtvs/",
+      {
+        headers: {
+          Authorization: `Bearer ${TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.data;
+  } catch (error) {
+    console.error("Error fetching BBTV Episodes :", error.message);
+    return null;
+  }
+}
+
+// Magazine Archive Request
+export async function getArchive() {
+  try {
+    const response = await fetch(
+      `https://strapi-production-9d37.up.railway.app/api/archives?populate=*`,
+      {
+        headers: {
+          Authorization: `Bearer ${TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.data;
+  } catch (error) {
+    console.error("Error fetching articles:", error.message);
+    return null;
+  }
+}
