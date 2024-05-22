@@ -95,13 +95,16 @@ After initial ideation and user research stages we began work on the design of t
 
 <img width="673" alt="Screenshot 2024-05-19 at 15 20 10" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/d941240a-b5d8-4e32-bfa5-fbf607e821b7">
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## Component Tree
 
 We created a component tree of all of the pages within our file structure and their components. Please note this has been split into two diagrams to fit on the page.
 
+![ComponentTree1](https://github.com/gabriellemia/birmingham-biz/assets/148550963/93930cce-f19f-4bf9-b6d5-2a59b91df326)
 
+![ComponentTree2](https://github.com/gabriellemia/birmingham-biz/assets/148550963/6a59c4be-e4e9-4c57-986b-c74e3523d1df)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # The Build
 
