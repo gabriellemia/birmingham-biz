@@ -1,4 +1,15 @@
 .footerContainer {
+	background-color: #d5dce2;
+	display: flex;
+	flex-direction: row;
+	border-top: 3px solid #2c506d;
+	justify-content: center;
+	align-items: center;
+	height: 67px;
+	color: #2c506d;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 	position: static;
 	bottom: 0;
 	background-color: #d5dce2;
@@ -79,6 +90,9 @@
 	.footerContainer {
 		padding: 10px;
 		height: 100px;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
 	}
 	.footerContent {
 		display: grid;
@@ -114,8 +128,10 @@
 
 @media (max-width: 510px) {
 	.footerContainer {
-		padding: 10px 0 10px 10px;
-		width: 100vw;
+		padding: 10px;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
 	}
 	.footerContent {
 		display: grid;
