@@ -5,30 +5,6 @@ dotenv.config({ path: ".env.local" });
 
 const TOKEN = process.env.NEXT_PUBLIC_API_TOKEN;
 
-export async function getArticles() {
-  try {
-    const response = await fetch(
-      "https://strapi-production-9d37.up.railway.app/api/articles/?populate[0]=image&populate[1]=ad1&populate[2]=ad2&populate[3]=ad3&populate[4]=ad4&populate[5]=ad5",
-      {
-        headers: {
-          Authorization: `Bearer ${TOKEN}`,
-          "Content-Type": "application/json",
-        },
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    return data.data;
-  } catch (error) {
-    console.error("Error fetching articles:", error.message);
-    return null;
-  }
-}
-
 export async function getNewsArticles() {
   try {
     const response = await fetch(
@@ -105,30 +81,6 @@ export async function getInsightsArticles() {
   try {
     const response = await fetch(
       "https://strapi-production-9d37.up.railway.app/api/insights/?populate[0]=image&populate[1]=ad1&populate[2]=ad2&populate[3]=ad3&populate[4]=ad4&populate[5]=ad5",
-      {
-        headers: {
-          Authorization: `Bearer ${TOKEN}`,
-          "Content-Type": "application/json",
-        },
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    return data.data;
-  } catch (error) {
-    console.error("Error fetching articles:", error.message);
-    return null;
-  }
-}
-
-export async function getArticleById(id) {
-  try {
-    const response = await fetch(
-      `https://strapi-production-9d37.up.railway.app/api/articles/${id}?populate[0]=image&populate[1]=ad1&populate[2]=ad2&populate[3]=ad3&populate[4]=ad4&populate[5]=ad5`,
       {
         headers: {
           Authorization: `Bearer ${TOKEN}`,
