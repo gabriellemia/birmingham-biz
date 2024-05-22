@@ -44,8 +44,6 @@ export default function BBTV() {
           className={styles.iframe}
           src={bbtvEpisode.link}
           title={`BBTV ${bbtvEpisode.title}`}
-          // width="525"
-          // height="315"
           frameborder="0"
           allowFullScreen
           loading="lazy"
