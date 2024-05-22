@@ -11,8 +11,10 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: bottom;
+	flex-grow: 1;
 	/* height: 100vh; */
 }
+
 .contactForm {
 	padding: 16px;
 	font-size: 12px;
@@ -110,6 +112,12 @@
 }
 
 @media (min-width: 379px) {
+	/* #bgContainer {
+		align-self: flex-end;
+		height: 100vh;
+		background: blue;
+	} */
+
 	.contactForm {
 		--header-height: 150px;
 		--footer-height: 63px;
