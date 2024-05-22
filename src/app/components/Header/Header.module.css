@@ -203,3 +203,41 @@
 		font-size: 3em;
 	}
 }
+
+@media only screen and (max-width: 400px) {
+	.header {
+		grid-template-rows: 38px 38px;
+		grid-template-columns: 76px auto;
+	}
+
+	.headerBackground {
+		height: 38px;
+	}
+
+	.birmingham,
+	.business {
+		font-size: 18px;
+		margin-left: 3px;
+	}
+
+	.birmingham {
+		padding-bottom: 3px;
+	}
+
+	.magIcon {
+		font-size: 18px;
+	}
+
+	.burgerIcon {
+		font-size: 20px;
+	}
+
+	.navBtn {
+		padding-bottom: 0;
+	}
+
+	.logoBB {
+		height: 76px;
+		width: 76px;
+	}
+}
