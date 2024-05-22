@@ -118,6 +118,7 @@ const Features = ({ params: { slug } }) => {
                   heading={article?.attributes?.headline}
                   subheading={article?.attributes?.subheading}
                   key={article?.id}
+                  id={article?.id}
                 />
               );
             })}
