@@ -128,8 +128,8 @@
 	}
 }
 
-@media (min-width: 769px) and (max-width: 1090px) {
+/* @media (min-width: 769px) and (max-width: 1090px) {
 	.contactForm {
-		/* min-height: calc(100vh - 160px); */
+		min-height: calc(100vh - 160px);
 	}
-}
+} */
