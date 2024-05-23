@@ -7,12 +7,15 @@
 	--viewport-height: calc(100vh - var(--header-height) - var(--footer-height)); */
   /* width: 100%;
 	height: 80%; */
-  background: url("https://i.imgur.com/U9sdsv8.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  /* height: 100vh; */
+
+	background: url("https://i.imgur.com/U9sdsv8.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	flex-grow: 1;
+	/* height: 100vh; */
 }
+
 .contactForm {
   padding: 16px;
   font-size: 12px;
@@ -111,14 +114,20 @@
 }
 
 @media (min-width: 379px) {
-  .contactForm {
-    --header-height: 150px;
-    --footer-height: 63px;
-    max-width: 380px;
-    margin: 0 auto;
-  }
+	/* #bgContainer {
+		align-self: flex-end;
+		height: 100vh;
+		background: blue;
+	} */
 
-  /* .formElement {
+	.contactForm {
+		--header-height: 150px;
+		--footer-height: 63px;
+		max-width: 380px;
+		margin: 0 auto;
+	}
+
+	/* .formElement {
 		max-width: 380px;
 		margin: 0 auto;
 	} */
