@@ -59,7 +59,7 @@ export default function Header() {
             <button
               className={`${styles.navBtn} ${styles.navCloseBtn} ${styles.navCross}`}
               onClick={showNavbar}
-              aria-label="Close navigation"
+              aria-label="close navigation"
             >
               <FaTimes />
             </button>
@@ -68,7 +68,7 @@ export default function Header() {
             <button
               className={`${styles.magContainer} ${styles.searchBtn} ${styles.searchCloseBtn} `}
               onClick={showSearchBox}
-              aria-label="Toggle search box"
+              aria-label="toggle search box"
             >
               <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.magIcon} />
             </button>
@@ -76,7 +76,7 @@ export default function Header() {
             <button
               className={`${styles.navBtn} ${styles.navCloseBtn} ${styles.burgerIcon}`}
               onClick={showNavbar}
-              aria-label="Open navigation"
+              aria-label="open navigation"
             >
               <FaBars />
             </button>
