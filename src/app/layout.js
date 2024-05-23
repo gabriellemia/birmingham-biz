@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
@@ -17,6 +18,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
+			<Script
+				strategy="afterInteractive"
+				src="https://plausible.io/js/script.js"
+				defer
+				data-domain="birmingham-biz-kappa.vercel.app"
+			/>
 			<link rel="icon" href="/BBLogo.png" sizes="any" />
 			<body className={poppins.className} id="bodyId">
 				<Header />
