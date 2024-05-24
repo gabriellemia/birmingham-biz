@@ -31,6 +31,7 @@ const NewsSection = () => {
 
   const handleTouchStart = (e) => {
     setTouchStart(e.touches[0].clientX);
+    setTouchEnd(null);
   };
 
   const handleTouchMove = (e) => {
@@ -38,11 +39,22 @@ const NewsSection = () => {
   };
 
   const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 50) {
-      handleClickRight();
-    } else if (touchEnd - touchStart > 50) {
-      handleClickLeft();
+    if (touchStart !== null && touchEnd !== null) {
+      const touchDifference = touchStart - touchEnd;
+
+      if (Math.abs(touchDifference) > 50) {
+        if (touchDifference > 0) {
+          handleClickRight();
+        } else {
+          handleClickLeft();
+        }
+      }
     }
+    // if (touchStart - touchEnd > 50) {
+    //   handleClickRight();
+    // } else if (touchEnd - touchStart > 50) {
+    //   handleClickLeft();
+    // }
     setTouchStart(null);
     setTouchEnd(null);
   };
