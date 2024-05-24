@@ -42,6 +42,14 @@
 
 @media (max-width: 510px) {
   .headline {
-    font-size: 15px;
+    font-size: 12px;
+  }
+
+  .description {
+    font-size: 10px;
+  }
+
+  .headline {
+    margin-bottom: 10px;
   }
 }
