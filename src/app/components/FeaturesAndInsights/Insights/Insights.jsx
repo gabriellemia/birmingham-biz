@@ -26,21 +26,23 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className={styles.insightsContainer}>
-      <h1 className={styles.h1}>Insights</h1>
-      <div className={styles.cardContainer}>
+    <section className={styles.insightsContainer} aria-labelledby="insights-heading">
+      <h1 id="insights-heading" className={styles.h1}>Insights</h1>
+      <section className={styles.cardContainer} role="list">
         {reducedArticles.map((article) => {
           return (
-            <InsightsCard
-            imgUrl={article?.attributes?.image?.data?.attributes?.url}
-            headline={article?.attributes?.headline}
-            description={article?.attributes?.subheading}
-            key={article?.id}
-            id={article?.id}
-            />
+            <article key={article.id} role="listitem">
+              <InsightsCard
+              imgUrl={article?.attributes?.image?.data?.attributes?.url}
+              headline={article?.attributes?.headline}
+              description={article?.attributes?.subheading}
+              key={article?.id}
+              id={article?.id}
+              />
+            </article>
           );
         })}
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }

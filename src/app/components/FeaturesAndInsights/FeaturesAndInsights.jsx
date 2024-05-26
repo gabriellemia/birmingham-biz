@@ -4,9 +4,9 @@ import Insights from "./Insights/Insights";
 
 export default function FeaturesAndInsights() {
   return (
-    <div className={styles.featuresAndInsightsContainer}>
+    <section className={styles.featuresAndInsightsContainer}>
       <FeaturesAndAnalysis />
       <Insights />
-    </div>
+    </section>
   );
 }

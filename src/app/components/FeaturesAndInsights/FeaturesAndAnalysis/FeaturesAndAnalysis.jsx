@@ -26,21 +26,23 @@ export default function FeaturesAndAnalysis() {
   }, []);
 
   return (
-    <div className={styles.featuresContainer}>
-      <h1 className={styles.h1}>Features & Analysis</h1>
-      <div className={styles.cardContainer}>
+    <section className={styles.featuresContainer}  aria-labelledby="features-heading">
+      <h1 id="features-heading" className={styles.h1}>Features & Analysis</h1>
+      <section className={styles.cardContainer} role="list">
         {reducedArticles.map((article) => {
           return (
-            <FeaturesCard
-              imgUrl={article?.attributes?.image?.data?.attributes?.url}
-              headline={article?.attributes?.headline}
-              description={article?.attributes?.subheading}
-              key={article?.id}
-              id={article?.id}
-            />
+            <article key={article.id} role="listitem">
+              <FeaturesCard
+                imgUrl={article?.attributes?.image?.data?.attributes?.url}
+                headline={article?.attributes?.headline}
+                description={article?.attributes?.subheading}
+                key={article?.id}
+                id={article?.id}
+              />
+            </article>  
           );
         })}
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }
