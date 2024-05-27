@@ -74,7 +74,7 @@ const Insights = ({ params: { slug } }) => {
               alt={
                 content.image.data.attributes.alternativeText
                   ? content.image.data.attributes.alternativeText
-                  : "Featured image"
+                  : ""
               }
               priority={true}
             />

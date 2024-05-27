@@ -8,7 +8,7 @@ export default function InsightsCard({ imgUrl, headline, description, id }) {
       <figure>
         <Image
           src={imgUrl}
-          alt={headline}
+          alt=""
           width={190}
           height={140}
           className={styles.imgStyle}

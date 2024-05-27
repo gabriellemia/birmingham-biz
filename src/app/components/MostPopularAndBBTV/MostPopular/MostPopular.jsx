@@ -34,9 +34,9 @@ export default function MostPopular() {
   }, []);
 
   return (
-    <div className={styles.MostPopularContainer}>
+    <section className={styles.MostPopularContainer}>
       <h1 className={styles.h1}>Most Popular</h1>
-      <div className={styles.cardContainer}>
+      <section className={styles.cardContainer}>
         <MostPopularCard
           imgUrl={recentArticleOne?.attributes?.image?.data?.attributes?.url}
           headline={recentArticleOne?.attributes?.headline}
@@ -58,7 +58,7 @@ export default function MostPopular() {
           key={recentArticleThree?.id}
           id={recentArticleThree?.id}
         />
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }

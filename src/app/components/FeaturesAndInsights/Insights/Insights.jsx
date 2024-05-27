@@ -28,10 +28,10 @@ useEffect(() => {
   return (
     <section className={styles.insightsContainer} aria-labelledby="insights-heading">
       <h1 id="insights-heading" className={styles.h1}>Insights</h1>
-      <section className={styles.cardContainer} role="list">
+      <section className={styles.cardContainer}>
         {reducedArticles.map((article) => {
           return (
-            <article key={article.id} role="listitem">
+            <article key={article.id} >
               <InsightsCard
               imgUrl={article?.attributes?.image?.data?.attributes?.url}
               headline={article?.attributes?.headline}

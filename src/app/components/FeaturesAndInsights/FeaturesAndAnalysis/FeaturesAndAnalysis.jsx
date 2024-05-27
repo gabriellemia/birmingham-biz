@@ -28,10 +28,10 @@ export default function FeaturesAndAnalysis() {
   return (
     <section className={styles.featuresContainer}  aria-labelledby="features-heading">
       <h1 id="features-heading" className={styles.h1}>Features & Analysis</h1>
-      <section className={styles.cardContainer} role="list">
+      <section className={styles.cardContainer}>
         {reducedArticles.map((article) => {
           return (
-            <article key={article.id} role="listitem">
+            <article key={article.id}>
               <FeaturesCard
                 imgUrl={article?.attributes?.image?.data?.attributes?.url}
                 headline={article?.attributes?.headline}

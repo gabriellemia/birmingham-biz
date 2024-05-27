@@ -5,15 +5,15 @@ import Link from "next/link";
 const NewsCard = ({ imgUrl, headline, description, id }) => {
   return (
     <section className={styles.cardContainer}>
-      <div className={styles.imgDiv}>
+      <figure className={styles.imgDiv}>
         <Image
           src={imgUrl}
-          alt={headline}
+          alt=""
           size="max-width: 100%"
           fill={true}
           className={styles.imgStyle}
         />
-      </div>
+      </figure>
       <div className={styles.newsCardText}>
         <Link href={`/news/${id}`}>
           <h2 className={styles.headline}>{headline}</h2>
