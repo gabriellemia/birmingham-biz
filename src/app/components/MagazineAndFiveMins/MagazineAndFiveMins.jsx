@@ -4,9 +4,9 @@ import FiveMinsWith from "./FiveMinsWith/FiveMinsWith";
 
 export default function MagazineAndFiveMins() {
   return (
-    <div className={styles.MagazineAndFiveMinsContainer}>
+    <section className={styles.MagazineAndFiveMinsContainer}>
       <Magazine />
       <FiveMinsWith />
-    </div>
+    </section>
   );
 }
