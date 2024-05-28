@@ -22,8 +22,14 @@ export default function Header() {
     <>
       <div className={styles.headerBackground}></div>
       <header className={styles.header}>
-        <Image className={styles.logoBB} src="/BBLogo.png" width={147} height={150} alt="Birmingham Business logo" />
-        <nav className={styles.topNavBar}>
+        <Image
+          className={styles.logoBB}
+          src="/BBLogo.png"
+          width={147}
+          height={150}
+          alt="Birmingham Business logo"
+        />
+        <nav className={styles.topNavBar} aria-label="Main navigation">
           <h1 className={styles.birmingham}>Birmingham</h1>
           <ul className={styles.navBarContainer} ref={navRef}>
             <li>
@@ -64,13 +70,16 @@ export default function Header() {
               <FaTimes />
             </button>
           </ul>
-          <div className={styles.buttonsContainer}>
+          <section className={styles.buttonsContainer}>
             <button
-              className={`${styles.magContainer} ${styles.searchBtn} ${styles.searchCloseBtn} `}
+              className={`${styles.magContainer} ${styles.searchBtn} ${styles.searchCloseBtn}`}
               onClick={showSearchBox}
               aria-label="toggle search box"
             >
-              <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.magIcon} />
+              <FontAwesomeIcon
+                icon={faMagnifyingGlass}
+                className={styles.magIcon}
+              />
             </button>
 
             <button
@@ -80,17 +89,18 @@ export default function Header() {
             >
               <FaBars />
             </button>
-          </div>
+          </section>
         </nav>
 
-        <nav className={styles.bottomNavBar}>
+        <nav className={styles.bottomNavBar} aria-label="Bottom navigation">
           <h1 className={styles.business}>Business</h1>
-          <div className={styles.searchContainer}>
+          <form className={styles.searchContainer} role="search">
             <input
               className={`${styles.searchBox} ${styles.responsive_search}`}
               ref={searchRef}
-              type="text"
+              type="search"
               placeholder=" Search"
+              aria-label="Search story"
             ></input>
             {/* <button
 							className={`${styles.searchBtn} ${styles.searchCloseBtn} ${styles.searchCross}`}
@@ -98,7 +108,7 @@ export default function Header() {
 						>
 							<FaTimes />
 						</button> */}
-          </div>
+          </form>
         </nav>
       </header>
     </>

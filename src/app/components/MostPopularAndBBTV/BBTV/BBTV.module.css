@@ -25,7 +25,7 @@
   bottom: 10px;
 }
 .watchNowText {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   margin-right: 8px;
 }
 .date {

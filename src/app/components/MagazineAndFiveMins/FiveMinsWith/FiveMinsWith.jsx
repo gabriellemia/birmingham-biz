@@ -27,9 +27,9 @@ export default function FiveMinsWith() {
   }, []);
 
   return (
-    <div className={styles.FiveMinsWithContainer}>
+    <section className={styles.FiveMinsWithContainer}>
       <h1 className={styles.h1}>Five Minutes With</h1>
-      <div className={styles.cardContainer}>
+      <section className={styles.cardContainer}>
         {reducedArticles.map((article) => {
           return (
             <FiveMinsWithCard
@@ -41,7 +41,7 @@ export default function FiveMinsWith() {
             />
           );
         })}
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }

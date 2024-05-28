@@ -1,8 +1,8 @@
 "use client";
 
-import styles from './ChangingAd.module.css'
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import styles from "./ChangingAd.module.css";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const ChangingAd = ({ images }) => {
   const [currentImage, setCurrentImage] = useState(images[0]);
@@ -20,16 +20,21 @@ const ChangingAd = ({ images }) => {
   }, [images]);
 
   return (
-    <a href={currentImage.url} target="_blank" rel="noopener noreferrer">
-      <div className={styles.imagecontainer}>
-        <Image 
-          src={currentImage.src} 
-          alt="Advertisement"
+    <a
+      href={currentImage.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Learn more about our product"
+    >
+      <figure className={styles.imagecontainer}>
+        <Image
+          src={currentImage.src}
+          alt="Advertisement for our product"
           className={styles.image}
           fill={true}
           sizes="max-width: 300px"
         />
-      </div>
+      </figure>
     </a>
   );
 };

@@ -4,9 +4,9 @@ import BBTV from "./BBTV/BBTV.jsx";
 
 export default function MostPopularAndBBTV() {
   return (
-    <div className={styles.MostPopularAndBBTVContainer}>
+    <section className={styles.MostPopularAndBBTVContainer}>
       <MostPopular />
       <BBTV />
-    </div>
+    </section>
   );
 }
