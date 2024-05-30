@@ -17,6 +17,12 @@
 .storyLink {
 	color: #2c506d;
 	font-size: 1.25em;
+	transition: all 0.1s ease;
+}
+
+.storyLink:hover {
+	color: #d4a20d;
+	cursor: pointer;
 }
 
 @media (max-width: 510px) {
