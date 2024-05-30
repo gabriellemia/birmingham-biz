@@ -4,6 +4,10 @@ import UnderConstruction from "../components/UnderConstruction/UnderConstruction
 
 export default function News() {
   return (
-    <UnderConstruction />
+    <UnderConstruction 
+      section="news"
+      number="10"
+      title="News"
+    />
   )
 }

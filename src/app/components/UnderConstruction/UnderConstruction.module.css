@@ -1,7 +1,7 @@
 .newspage {
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: flex-start;
 	align-items: center;
 	width: 100vw;
 	height: 80vh;
@@ -10,9 +10,19 @@
 .animation {
 	border: 0;
 	margin: 0;
-	width: 35rem;
-	height: 35rem;
-	padding-bottom: 50px;
+	width: 25rem;
+	height: 25rem;
+}
+
+.storyLink {
+	color: #2c506d;
+	font-size: 1.25em;
+	transition: all 0.1s ease;
+}
+
+.storyLink:hover {
+	color: #d4a20d;
+	cursor: pointer;
 }
 
 @media (max-width: 510px) {

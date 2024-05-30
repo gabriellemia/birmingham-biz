@@ -4,6 +4,10 @@ import UnderConstruction from "../components/UnderConstruction/UnderConstruction
 
 export default function Features() {
   return (
-    <UnderConstruction />
+    <UnderConstruction 
+      section="features"
+      number="5"
+      title="Features and Analysis"
+    />
   )
 }

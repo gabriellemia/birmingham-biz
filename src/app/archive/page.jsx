@@ -4,6 +4,10 @@ import UnderConstruction from "../components/UnderConstruction/UnderConstruction
 
 export default function Archive() {
   return (
-    <UnderConstruction />
+    <UnderConstruction 
+      section={null}
+      number={null}
+      title={null}
+    />
   )
 }
