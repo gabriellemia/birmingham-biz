@@ -1,6 +1,7 @@
 import styles from "./UnderConstruction.module.css";
+import Link from "next/link";
 
-export default function UnderConstruction() {
+export default function UnderConstruction(props) {
   return (
     <section className={styles.newspage}>
       <iframe
@@ -11,6 +12,9 @@ export default function UnderConstruction() {
         aria-label="Lively animation showing builder painting a wall"
         loading="lazy"
       ></iframe>
+      {props.section && props.number ? (
+        <Link className={styles.storyLink} href={`/${props.section}/${props.number}`}><h3>View the latest {props.title} story</h3></Link>
+      ) : null}
     </section>
   );
 }
