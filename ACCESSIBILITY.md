@@ -40,7 +40,9 @@ _Description_: We tested our project with screen readers, we used the tools NVDA
 
 ### Test 4: Responsive Design
 
-<!-- add screenshot of mobile and desktop -->
+![alt text](public/assets/images/responsive-desktop.png)
+<video controls src="public/assets/images/responsive-mobile.mp4" title="Title"></video>
+<video controls src="public/assets/images/responsive-tablet.mp4" title="Title"></video>
 
 _Description_: Our project was tested across various screen sizes and devices such as desktop, tablet and mobile. The screenshot illustrates how the layout adapts responsively on different screens.
 
@@ -50,17 +52,21 @@ _Description_: Our project was tested across various screen sizes and devices su
 
 - **Lighthouse**
 
-*Results*: Our application scored an average of **96%** in accessibility audits, indicating strong adherence to WCAG guidelines.
+*Results*: Our application scored **96%** in accessibility audits, indicating strong adherence to WCAG guidelines.
+
 
 ![Lighthouse report](public/assets/images/lighthouseDesktop.png)
 
 - **WAVE (Web Accessibility Evaluation Tool)**
+
 *Results*: No critical errors detected, minor issues addressed.
+
 
 ![Wave](public/assets/images/waveFixed.png)
 
 
 - **BrowserStack**
+
 *Results*: No accessibility issues found on website scan.
 
 ![accessibility test](public/assets/images/websiteScanAccessibilityTesting.png)
@@ -81,6 +87,7 @@ Accessibility of our project relies on the following technologies to work with t
 - WAI-ARIA
 - CSS
 - JavaScript
+- React
 
 These technologies are relied upon for conformance with the accessibility standards used.
 
@@ -88,16 +95,40 @@ These technologies are relied upon for conformance with the accessibility standa
 
 We have used the following tools to evaluate accessibility:
 
-- **WAVE** (Web Accessibility Evaluation Tool): A suite of evaluation tools that helps authors make their web content more accessible to individuals with disabilities.
-- **Lighthouse**: An open-source, automated tool for improving the quality of web pages, including performance, SEO, and accessibility.
-- **BrowserStack**: A platform for testing web applications across different browsers and operating systems, ensuring compatibility and accessibility.
-- **Accessibility Insights for Web**: An extension for Chrome and Edge that enables developers to test web applications for accessibility issues.
+- **[WAVE](https://wave.webaim.org/extension/)** (Web Accessibility Evaluation Tool): A suite of evaluation tools that helps authors make their web content more accessible to individuals with disabilities.
+- **[Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en)**: An open-source, automated tool for improving the quality of web pages, including performance, SEO, and accessibility.
+- **[BrowserStack](https://www.browserstack.com/accessibility-testing)**: A platform for testing web applications across different browsers and operating systems, ensuring compatibility and accessibility.
+- **[Accessibility Insights for Web](https://accessibilityinsights.io/docs/web/overview/)**: An extension for Chrome and Edge that enables developers to test web applications for accessibility issues.
+- **[Open CC Checker](https://colourcontrast.cc/)**: This is a tool used to calculate the contrast ratio of text and background colors to ensure they meet the Web Content Accessibility Guidelines (WCAG) for readability. These tool is essential for designers and developers to make sure that their websites are accessible to users with visual impairments.
+
+
+
+<section>
 
 ## Limitations and Alternatives
 
-Despite our best efforts to ensure accessibility of our project, there may be some limitations. Below is a description of known limitations, and potential solutions.
+Despite our best efforts to ensure accessibility of our project, there may be some limitations. Below are a description of known limitations, and potential solutions.
 
-- **Known limitation 1**: Uploaded images may not have text alternatives because we cannot ensure the quality of contributions. 
+
+- **Known limitation**: 
+     1. Uploaded images may not have text alternatives because we cannot ensure the quality of contributions. 
+     2. The business color scheme may not meet the color contrast ratio requirements for accessibility due to design.
+
+
+- **Potential Solutions**: 
+     1. The lack of text alternatives (such as alt text) for uploaded images can significantly impact accessibility. To address this issue:
+      * Automated Alt Text Generation: Consider implementing an automated system that generates basic alt text for images based on their content. 
+      User-Provided Alt Text: Encourage contributors to provide descriptive alt text when uploading images. Include clear instructions or prompts during the upload process.
+      Manual Review: Regularly review uploaded images and add or improve alt text where necessary. 
+      Education and Awareness: Educate contributors about the importance of alt text and its impact on accessibility. Provide resources or guidelines on writing effective alt text.
+
+     2. Inaccessible color contrast can make it difficult for users with visual impairments to read content. To improve color contrast:
+     Evaluate Color Choices: Review the color scheme used in the design. Ensure that text and background colors have sufficient contrast (according to WCAG guidelines).
+     Use Color Contrast Tools: Utilize online tools or browser extensions that check color contrast ratios. These tools can highlight problematic areas and suggest adjustments.
+     Adjust Color Pairings: If certain color combinations fail the contrast ratio requirements, consider adjusting either the text color or the background color to improve readability.
+     Test Across Devices: Test color contrast on various devices (desktop, mobile, etc.) and under different lighting conditions to ensure readability for all users.
+
+</section>
 
 
 ## Further Information
@@ -109,6 +140,5 @@ For further information and resources on web accessibility, please visit:
 
 ## Feedback
 
-We welcome your feedback on the accessibility of our project. Please let us know if you encounter accessibility barriers:
+We welcome your [feedback](https://soc-hackathon-feedback.netlify.app/) on the accessibility of our project. Please let us know if you encounter accessibility barriers.
 
-- **Email**: CodeyMcCodeFace@email.com
