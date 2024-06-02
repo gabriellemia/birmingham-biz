@@ -62,13 +62,16 @@ export default function Header() {
                 Magazine Archive
               </a>
             </li>
-            <button
+            <li>
+              <button
               className={`${styles.navBtn} ${styles.navCloseBtn} ${styles.navCross}`}
               onClick={showNavbar}
               aria-label="close navigation"
             >
               <FaTimes />
             </button>
+            </li>
+            
           </ul>
           <section className={styles.buttonsContainer}>
             <button
@@ -99,15 +102,10 @@ export default function Header() {
               className={`${styles.searchBox} ${styles.responsive_search}`}
               ref={searchRef}
               type="search"
+              id="search"
               placeholder=" Search"
               aria-label="Search story"
             ></input>
-            {/* <button
-							className={`${styles.searchBtn} ${styles.searchCloseBtn} ${styles.searchCross}`}
-							onClick={showSearchBox}
-						>
-							<FaTimes />
-						</button> */}
           </form>
         </nav>
       </header>
