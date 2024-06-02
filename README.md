@@ -146,3 +146,23 @@ We created a ticketing system in GitHub projects to assign jobs to team members.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## EmailJS
+
+To send messages via the contact form:
+
+**Configuration**
+
+Created Birmingham Business dummy gmail account to receive messages sent from contact form.
+
+Set up a Service ID, Template ID and API key within emailJS.  
+
+Set up the send template and automatic replies to sender.
+
+<img width="598" alt="Screenshot 2024-06-01 at 20 01 31" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/bca4b6ac-f7af-4c8d-bd50-e91a5409af6c"><img width="1169" alt="Screenshot 2024-06-01 at 20 02 33" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/fc36b424-ccd1-4fde-961f-ed35ee59e5ba"><img width="1168" alt="Screenshot 2024-06-01 at 20 02 56" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/7fab6d42-bbbe-418f-ac3b-377d970c8751">
+
+Code set up:
+
+<img width="591" alt="Screenshot 2024-06-01 at 19 55 49" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/e2d7d86b-78a4-434c-8e0c-1700b483ddea">
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
