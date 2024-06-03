@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 # Accessibility
 
 Our project is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.
@@ -12,13 +14,16 @@ In this section, we provide visual evidence of the accessibility tests conducted
 
 ### Test 1: Contrast Ratio Check
 
-![Contrast Ratio Check](public/assets/images/colorContrastChecker.png)
+<img width="598" alt="Contrast Ratio Check" src="public/assets/images/colorContrastChecker.png">
+
 
 _Description_: We tested the contrast ratio of text elements against their background colors using tools like Open CC Checker and WAVE chrome extension. The screenshot above shows an example of a successful test where the contrast ratio meets WCAG guidelines.
 
 ### Test 2: Keyboard Navigation
 
 **Homepage**
+
+<img width="598" alt="Homepage" src="public/assets/images/colorContrastChecker.png">
 
 ![Homepage](public/assets/images/keytabbingHomepage.png)
 
@@ -34,9 +39,9 @@ _Description_: We verified that all interactive elements (buttons, links, form f
 
 ### Test 3: Screen Reader Compatibility
 
-<!-- add a short clip of the screen reader -->
+<video controls src="public/assets/images/screen reader.mp4" title="screen reader"></video>
 
-_Description_: We tested our project with screen readers, we used the tools NVDA and BrowserStack  to ensure proper announcements, semantic markup, and ARIA roles. The short clip shows the screen reader reading out a navigation menu.
+_Description_: We tested our project with screen readers, we used the tools NVDA and BrowserStack  to ensure proper announcements, semantic markup, and ARIA roles. The short video clip shows the screen reader reading out a navigation menu.
 
 ### Test 4: Responsive Design
 
@@ -44,7 +49,7 @@ _Description_: We tested our project with screen readers, we used the tools NVDA
 <video controls src="public/assets/images/responsive-mobile.mp4" title="Title"></video>
 <video controls src="public/assets/images/responsive-tablet.mp4" title="Title"></video>
 
-_Description_: Our project was tested across various screen sizes and devices such as desktop, tablet and mobile. The screenshot illustrates how the layout adapts responsively on different screens.
+_Description_: Our project was tested across various screen sizes and devices such as desktop, tablet and mobile. The screenshot and short video clips illustrates how the layout adapts responsively on different screens.
 
 ### Test 5: Accessibility Testing Results
 
@@ -117,7 +122,7 @@ Despite our best efforts to ensure accessibility of our project, there may be so
 
 - **Potential Solutions**: 
      1. The lack of text alternatives (such as alt text) for uploaded images can significantly impact accessibility. To address this issue:
-      * Automated Alt Text Generation: Consider implementing an automated system that generates basic alt text for images based on their content. 
+      Automated Alt Text Generation: Consider implementing an automated system that generates basic alt text for images based on their content. 
       User-Provided Alt Text: Encourage contributors to provide descriptive alt text when uploading images. Include clear instructions or prompts during the upload process.
       Manual Review: Regularly review uploaded images and add or improve alt text where necessary. 
       Education and Awareness: Educate contributors about the importance of alt text and its impact on accessibility. Provide resources or guidelines on writing effective alt text.
@@ -142,3 +147,5 @@ For further information and resources on web accessibility, please visit:
 
 We welcome your [feedback](https://soc-hackathon-feedback.netlify.app/) on the accessibility of our project. Please let us know if you encounter accessibility barriers.
 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
