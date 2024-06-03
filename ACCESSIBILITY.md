@@ -100,7 +100,7 @@ _Description_: Our project was tested across various screen sizes and devices su
 
 *Results*: No accessibility issues found on website scan.
 
-<img width="400" alt="accessibility test" src="public/assets/images/websiteScanAccessibilityTesting.png">
+<img width="600" alt="accessibility test" src="public/assets/images/websiteScanAccessibilityTesting.png">
 
 ## Compatibility with Browsers and Assistive Technology
 
