@@ -50,7 +50,8 @@ _Description_: We verified that all interactive elements (buttons, links, form f
 ### Test 3: Screen Reader Compatibility
 
 
-<video width="600" controls src="public/assets/images/screen reader.mp4" title="screen reader" ></video>
+https://github.com/gabriellemia/birmingham-biz/assets/116744496/5754c816-4c3f-40d1-a4a8-b970991daa94
+
 
 _Description_: We tested our project with screen readers, we used the tools NVDA and BrowserStack  to ensure proper announcements, semantic markup, and ARIA roles. The short video clip shows the screen reader reading out a navigation menu.
 
@@ -63,15 +64,14 @@ _Description_: We tested our project with screen readers, we used the tools NVDA
 <img width="300" alt="Desktop viewport" src="public/assets/images/responsive-desktop.png">
 
 
-
 **Mobile view**
 
-<video controls src="public/assets/images/responsive-mobile.mp4" title="Title"></video>
+https://github.com/gabriellemia/birmingham-biz/assets/116744496/63d11021-0606-4e9e-b0d4-b9da1be49be2
 
 
 **Tablet view**
 
-<video controls src="public/assets/images/responsive-tablet.mp4" title="Title"></video>
+https://github.com/gabriellemia/birmingham-biz/assets/116744496/a94c3a8f-81d1-425a-9b66-454ba6d4aa60
 
 _Description_: Our project was tested across various screen sizes and devices such as desktop, tablet and mobile. The screenshot and short video clips illustrates how the layout adapts responsively on different screens.
 
