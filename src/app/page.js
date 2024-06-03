@@ -7,7 +7,7 @@ import MagazineAndFiveMins from "./components/MagazineAndFiveMins/MagazineAndFiv
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className={styles.main} id="maincontent">
       <NewsSection />
       <MostPopularAndBBTV />
       <FeaturesAndInsights />

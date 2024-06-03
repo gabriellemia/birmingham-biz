@@ -126,6 +126,7 @@ export default function ContactPage() {
 							name="name"
 							value={formData.name}
 							onChange={handleInputChange}
+							autocomplete="name"
 						/>
 						{errors.name && (
 							<span className={styles.errorMessage}>{errors.name}</span>
@@ -140,6 +141,7 @@ export default function ContactPage() {
 							name="email"
 							value={formData.email}
 							onChange={handleInputChange}
+							autocomplete="email"
 						/>
 						{errors.email && (
 							<span className={styles.errorMessage}>{errors.email}</span>
@@ -153,6 +155,8 @@ export default function ContactPage() {
 							id="subject"
 							value={formData.subject}
 							onChange={handleInputChange}
+							aria-label="Select a subject"
+							
 						>
 							<option value="dropdown">Select...</option>
 							<option value="editor">Editor</option>
@@ -185,16 +189,6 @@ export default function ContactPage() {
 						</button>
 					</div>
 				</form>
-				{/* <div className={styles.imageContainer}>
-				<Image
-					src={"/birmingham_background.svg"}
-					width={100}
-					height={100}
-					layout="fixed"
-					className={styles.contactImage}
-					alt="Birmingham skyline background image"
-				/>
-			</div> */}
 			</div>
 		</div>
 	);

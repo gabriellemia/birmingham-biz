@@ -4,6 +4,7 @@ import Script from "next/script";
 
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import SkipLink from "./components/SkipLink/SkipLink.jsx";
 
 const poppins = Poppins({
 	weight: ["300", "400", "500", "600", "700"],
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
 			/>
 			<link rel="icon" href="/BBLogo.png" sizes="any" />
 			<body className={poppins.className} id="bodyId">
+				<SkipLink targetId="maincontent"/>
 				<Header />
 				{children}
 				<Footer />
