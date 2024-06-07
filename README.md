@@ -6,10 +6,9 @@
 
 # Birmingham Business Magazine
 
-
 </div>
 
-### **Team Codey McCodeface:** 
+### **Team Codey McCodeface:**
 
 Chari Cruz, Erin Smith, Gaby Mia, Josh Foston, Pete Faretra, Ravi Kataria
 
@@ -62,18 +61,23 @@ As part of our final project at School of Code, Codey McCodeface have been partn
 # About The Project
 
 ## Initial Brief
+
 <img width="587" alt="Screenshot 2024-05-19 at 12 50 55" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/dda71ffb-da65-4d43-870f-634fa10f0284">
 
 ## The Problem
+
 <img width="1200" alt="Screenshot 2024-05-19 at 12 51 35" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/6e730310-cb98-4f80-83b5-96075f35a87d">
 
 ### Refined Problem Statement
+
 Birmingham Business magazine’s website is outdated and not engaging, which means they are not maximising traffic to their site and stories. It is also difficult to manage from the editors’ side.
 
 ### The Solution
-A revamped platform that prioritises user engagement,  accessibility, and content management efficiency while also optimising SEO to drive more traffic, transforming the digital experience.
+
+A revamped platform that prioritises user engagement, accessibility, and content management efficiency while also optimising SEO to drive more traffic, transforming the digital experience.
 
 ## MVP 1
+
 <img width="428" alt="Screenshot 2024-05-19 at 13 59 25" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/1a9a9652-99ae-4035-b7f3-50af183d6703">
 
 ## Tech Stack
@@ -94,15 +98,15 @@ A revamped platform that prioritises user engagement,  accessibility, and conten
 
 # The Plan
 
-## User Flow 
+## User Flow
 
-We created a user flow diagram to help visualise how a user would navigate the different sections of the website and actions they are able to take on each page, ensuring seemless flow throughout our MVP.  This would help us with the bulid stages later on.
+We created a user flow diagram to help visualise how a user would navigate the different sections of the website and actions they are able to take on each page, ensuring seemless flow throughout our MVP. This would help us with the bulid stages later on.
 
 <img width="618" alt="Screenshot 2024-05-19 at 14 26 17" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/e0571e87-108c-48b9-9ff6-9d4d319da803">
 
 ## Wireframing
 
-After initial ideation and user research stages we began work on the design of the website using the research we had gathered.  We created wireframes in Figma for the three pages of our first MVP.
+After initial ideation and user research stages we began work on the design of the website using the research we had gathered. We created wireframes in Figma for the three pages of our first MVP.
 
 <img width="673" alt="Screenshot 2024-05-19 at 15 20 10" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/d941240a-b5d8-4e32-bfa5-fbf607e821b7">
 
@@ -126,7 +130,7 @@ We created an application architecture diagram that illustrates how the various 
 
 ## How We Worked
 
-We created a ticketing system in GitHub projects to assign jobs to team members.  We also split off into smaller groups of either 2 or 3 in order to cover more ground.  We rotated our pairs regularly so that each of us was able to work with every other member and also to get a holistic understanding of the project and broaden our skillset in all areas of the software development process.
+We created a ticketing system in GitHub projects to assign jobs to team members. We also split off into smaller groups of either 2 or 3 in order to cover more ground. We rotated our pairs regularly so that each of us was able to work with every other member and also to get a holistic understanding of the project and broaden our skillset in all areas of the software development process.
 
 ![Screenshot 2024-05-16 at 13 23 29](https://github.com/gabriellemia/birmingham-biz/assets/78322726/52010aca-86e7-4fe8-9d83-0a62411b5be1)
 
@@ -266,18 +270,18 @@ The API does not support POST, PUT, PATCH, or DELETE requests, as these actions 
 
 ### Requirements Table
 
-| HTTP Method | Path            | Request Body (JSON) | Response Body (JSON)    | Status Code | Description                               |
-| ----------- | --------------- | ------------------- | ----------------------- | ----------- | ----------------------------------------- |
-| GET         | /news           | N/A                 | List of articles      | 200         | Retrieve all News articles                   |
-| GET         | /features | N/A                 | List of articles    | 200         | Retrieve all Features and Analysis articles
-| GET        | //five-minutes-withs     | N/A                 | List of articles | 200         | Retrieve all Five Minutes With articles           |
-| GET       | /insights | N/A                 | List of articles       | 200         | Retrieve all Insights articles    |
-| GET      | /news/:id | N/A                 | A specific article       | 200         | Retrieve a specific News article          |
-| GET      | /features/:id | N/A                 | A specific article       | 200         | Retrieve a specific Features and Analysis article         |
-| GET      | /five-minutes-withs/:id | N/A                 | A specific article       | 200         | Retrieve a specific Five Minutes With article            |
-| GET      | /insights/:id | N/A                 | A specific article       | 200         | Retrieve a specific Insights article         |
-| GET      | /bbtvs | N/A                 | List of BBTV episodes       | 200         | Retrieve all BBTV episodes            |
-| GET      | /archives | N/A                 | List of magazines      | 200         | Retrieve all Birmingham Business magazines            |
+| HTTP Method | Path                    | Request Body (JSON) | Response Body (JSON)  | Status Code | Description                                       |
+| ----------- | ----------------------- | ------------------- | --------------------- | ----------- | ------------------------------------------------- |
+| GET         | /news                   | N/A                 | List of articles      | 200         | Retrieve all News articles                        |
+| GET         | /features               | N/A                 | List of articles      | 200         | Retrieve all Features and Analysis articles       |
+| GET         | //five-minutes-withs    | N/A                 | List of articles      | 200         | Retrieve all Five Minutes With articles           |
+| GET         | /insights               | N/A                 | List of articles      | 200         | Retrieve all Insights articles                    |
+| GET         | /news/:id               | N/A                 | A specific article    | 200         | Retrieve a specific News article                  |
+| GET         | /features/:id           | N/A                 | A specific article    | 200         | Retrieve a specific Features and Analysis article |
+| GET         | /five-minutes-withs/:id | N/A                 | A specific article    | 200         | Retrieve a specific Five Minutes With article     |
+| GET         | /insights/:id           | N/A                 | A specific article    | 200         | Retrieve a specific Insights article              |
+| GET         | /bbtvs                  | N/A                 | List of BBTV episodes | 200         | Retrieve all BBTV episodes                        |
+| GET         | /archives               | N/A                 | List of magazines     | 200         | Retrieve all Birmingham Business magazines        |
 
 **Additional Queries**
 
@@ -296,7 +300,7 @@ To send messages via the contact form:
 
 Created Birmingham Business dummy gmail account to receive messages sent from contact form.
 
-Set up a Service ID, Template ID and API key within emailJS.  
+Set up a Service ID, Template ID and API key within emailJS.
 
 Set up the send template and automatic replies to sender.
 
@@ -308,6 +312,105 @@ Code set up:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Strapi Deployment and Configuration
+
+To start deploying Strapi to Railway, download or fork the Railway’s starter Strapi repository on Github to Your local machine.
+
+https://github.com/railwayapp-templates/strapi
+
+1. **Now, using Railway’s platform, you can deploy your Strapi application.**
+
+https://railway.app/new/template/strapi?referralCode=milo
+
+Railway swiftly creates a Postgres database with a Docker image, seamlessly builds the Strapi user interface, and efficiently links it to the database via API.
+
+After deployment, you can log into the Strapi UI to create your first user using the provided URL and add `/admin` endpoint to the address.
+
+👉 Railway's filesystem is ephemeral, so changes to it are not persisted between deployments. This template uses Cloudinary for media storage.
+Head over to Cloudinary to make a free account and then enter the details during or after deployment.
+https://cloudinary.com/
+
+1. **Install the Command Line Interface**
+
+The Railway Command Line Interface (CLI) lets you interact with your Railway project from the command line to run developer mode and start creating new content types.
+
+You can then make changes and redeploy your site from your local machine. Alternatively, you can set up a CI / CD pipeline from your GitHub repository using GitHub Actions to redeploy your application every time you commit to the main.
+
+Follow the documentation to get started.
+
+https://docs.railway.app/guides/cli
+
+1. Connect to Railway from your local machine.
+
+- Install the dependencies `yarn install` or `npm install`
+- If this is the first time using the CLI login with `railway login`
+- Run `railway link` to link the local repository to the Strapi service on Railway
+- Start Strapi for development with `railway run yarn run develop` or `railway run npm run develop` This command runs Strapi in development mode and allows you to start building content types locally.
+- Open your browser to `http://127.0.0.1:1337/admin`
+
+### Creating new content types
+
+Creating content types will begin building database tables where you can store your data. You can then make the data available on the pre-made API.
+
+For more detailed instructions, head over to the Strapi docs. https://docs.strapi.io/dev-docs/quick-start
+
+### Step 1: Create a "Article" collection type[](https://docs.strapi.io/dev-docs/quick-start#step-1-create-a-restaurant-collection-type)
+
+Your article directory will eventually include many articles, so we need to create an "Article" collection type. Then, we can describe the fields to display when adding a new restaurant entry:
+
+1. Click on the **Create your first Content type** button.If it's not showing up, go to  [Content-type Builder](http://localhost:1337/admin/plugins/content-type-builder) in the main navigation.
+2. Click on **Create new collection type**.
+3. Type `Article` for the *Display name*, and click **Continue**.
+4. Click the Text field.
+5. Type `Title` in the *Name* field.
+6. Switch to the *Advanced Settings* tab and check the **`Required` field.**
+7. Click on **Add another field**.
+8. Choose the Rich text (Blocks) field in the list.
+9. Type `Description` under the *Name* field, then click **Finish**.
+10. Finally, click **Save** and wait for Strapi to restart.
+
+### Step 2: Create an entry for the "Article" collection type[](https://docs.strapi.io/dev-docs/quick-start#step-2-create-an-entry-for-the-restaurant-collection-type)
+
+1. Go to  *Content Manager > Collection types - Article* in the navigation.
+2. Click on **Create new entry**.
+3. Type the title of your new article in the _Title_ field. Let's say it's `How to get ahead in advertising.`
+4. In the *Description* field, write a few words about it. If you're lacking some inspiration, you can use `Welcome to Advertising! We offer a fresh new approach for passionate producers.`
+5. Click **Save**.
+
+The Article is now listed in the *Collection types.*
+
+### Step 4: Set API token, Roles & Permissions[](https://docs.strapi.io/dev-docs/quick-start#step-4-set-roles--permissions)
+
+We have just added an article. Now, we need to make sure that the content is accessible through the API and protect it with an API token:
+
+1. Click on  *Settings* at the bottom of the main navigation.
+2. Under _Global Settings,_ click _API Tokens._
+3. Click _Create New API Token._
+4. Fill out the _Name_ and *Description. A*dd _Unlimited_ for the duration and _Read-only_ for the _Token type_
+5. Under _Permissions,_ select Article and select _find_ and _findOne_
+6. Now Under the _Users & Permissions Plugin_, choose *Roles*.
+7. Click the Authenticated role.
+8. Scroll down under *Permissions*.
+9. In the *Permissions* tab, find *Article* and click on it.
+10. Click the checkboxes next to **find** and **findOne**.
+11. Finally, click **Save**.
+
+### Deploy to your Railway application
+
+Open a new terminal window in your local repository and run `railway up` to deploy the production site.
+
+### Test your API is running with Postman
+
+https://www.postman.com/
+
+1. In a new workspace, send a `GET` request using your public address for your API - you can find this in your Railway dashboard. It should look something like [`https://strapi-production-XXXX.up.railway.app/`](https://strapi-production-****.up.railway.app)
+2. Add the `api/article` endpoint to the URL
+3. Under _Authorizations > Auth Type,_ select _Bearer Token_
+4. Paste your newly created API token into the _Token_ area
+5. Hit send, and you should see the JSON object of your article.
+
+Congratulations! You can now use your API to connect to the front end.
+
 ## Accessibility
 
 Our project is committed to ensuring digital accessibility for all, and we aimed to conform to the Web Content Accessibilty Guidelines 2.1, level AA. For more information on the tools and methods we used, please refer to our [Accessibility Docs](https://github.com/gabriellemia/birmingham-biz/blob/main/ACCESSIBILITY.md).
@@ -317,3 +420,4 @@ Our project is committed to ensuring digital accessibility for all, and we aimed
 SEO was a major focus of our stakeholders. While much of the app's SEO and web performance was addressed during the build, we also produced an [SEO Plan](https://github.com/gabriellemia/birmingham-biz/blob/main/SEO-PLAN.md) to help our stakeholders boost traffic to their site from their side.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
