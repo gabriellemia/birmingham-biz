@@ -138,7 +138,102 @@ We created a ticketing system in GitHub projects to assign jobs to team members.
 
 ## Strapi Content Management System
 
+To start deploying Strapi to Railway, download or fork the Railway’s starter Strapi repository on Github to Your local machine.
 
+https://github.com/railwayapp-templates/strapi
+
+1. **Now, using Railway’s platform, you can deploy your Strapi application.**
+
+https://railway.app/new/template/strapi?referralCode=milo
+
+Railway swiftly creates a Postgres database with a Docker image, seamlessly builds the Strapi user interface, and efficiently links it to the database via API.
+
+After deployment, you can log into the Strapi UI to create your first user using the provided URL and add `/admin` endpoint to the address.
+
+👉 Railway's filesystem is ephemeral, so changes to it are not persisted between deployments. This template uses Cloudinary for media storage.
+Head over to Cloudinary to make a free account and then enter the details during or after deployment.
+https://cloudinary.com/
+
+1. **Install the Command Line Interface**
+
+The Railway Command Line Interface (CLI) lets you interact with your Railway project from the command line to run developer mode and start creating new content types.
+
+You can then make changes and redeploy your site from your local machine. Alternatively, you can set up a CI / CD pipeline from your GitHub repository using GitHub Actions to redeploy your application every time you commit to the main.
+
+Follow the documentation to get started.
+
+https://docs.railway.app/guides/cli
+
+1. Connect to Railway from your local machine.
+
+- Install the dependencies `yarn install` or `npm install`
+- If this is the first time using the CLI login with `railway login`
+- Run `railway link` to link the local repository to the Strapi service on Railway
+- Start Strapi for development with `railway run yarn run develop` or `railway run npm run develop` This command runs Strapi in development mode and allows you to start building content types locally.
+- Open your browser to `http://127.0.0.1:1337/admin`
+
+### Creating new content types
+
+Creating content types will begin building database tables where you can store your data. You can then make the data available on the pre-made API.
+
+For more detailed instructions, head over to the Strapi docs. https://docs.strapi.io/dev-docs/quick-start
+
+### Step 1: Create a "Article" collection type[](https://docs.strapi.io/dev-docs/quick-start#step-1-create-a-restaurant-collection-type)
+
+Your article directory will eventually include many articles, so we need to create an "Article" collection type. Then, we can describe the fields to display when adding a new restaurant entry:
+
+1. Click on the **Create your first Content type** button.If it's not showing up, go to  [Content-type Builder](http://localhost:1337/admin/plugins/content-type-builder) in the main navigation.
+2. Click on **Create new collection type**.
+3. Type `Article` for the *Display name*, and click **Continue**.
+4. Click the Text field.
+5. Type `Title` in the *Name* field.
+6. Switch to the *Advanced Settings* tab and check the **`Required` field.**
+7. Click on **Add another field**.
+8. Choose the Rich text (Blocks) field in the list.
+9. Type `Description` under the *Name* field, then click **Finish**.
+10. Finally, click **Save** and wait for Strapi to restart.
+
+### Step 2: Create an entry for the "Article" collection type[](https://docs.strapi.io/dev-docs/quick-start#step-2-create-an-entry-for-the-restaurant-collection-type)
+
+1. Go to  *Content Manager > Collection types - Article* in the navigation.
+2. Click on **Create new entry**.
+3. Type the title of your new article in the _Title_ field. Let's say it's `How to get ahead in advertising.`
+4. In the *Description* field, write a few words about it. If you're lacking some inspiration, you can use `Welcome to Advertising! We offer a fresh new approach for passionate producers.`
+5. Click **Save**.
+
+The Article is now listed in the *Collection types.*
+
+### Step 4: Set API token, Roles & Permissions[](https://docs.strapi.io/dev-docs/quick-start#step-4-set-roles--permissions)
+
+We have just added an article. Now, we need to make sure that the content is accessible through the API and protect it with an API token:
+
+1. Click on  *Settings* at the bottom of the main navigation.
+2. Under _Global Settings,_ click _API Tokens._
+3. Click _Create New API Token._
+4. Fill out the _Name_ and *Description. A*dd _Unlimited_ for the duration and _Read-only_ for the _Token type_
+5. Under _Permissions,_ select Article and select _find_ and _findOne_
+6. Now Under the _Users & Permissions Plugin_, choose *Roles*.
+7. Click the Authenticated role.
+8. Scroll down under *Permissions*.
+9. In the *Permissions* tab, find *Article* and click on it.
+10. Click the checkboxes next to **find** and **findOne**.
+11. Finally, click **Save**.
+
+### Deploy to your Railway application
+
+Open a new terminal window in your local repository and run `railway up` to deploy the production site.
+
+### Test your API is running with Postman
+
+https://www.postman.com/
+
+1. In a new workspace, send a `GET` request using your public address for your API - you can find this in your Railway dashboard. It should look something like [`https://strapi-production-XXXX.up.railway.app/`](https://strapi-production-****.up.railway.app)
+2. Add the `api/article` endpoint to the URL
+3. Under _Authorizations > Auth Type,_ select _Bearer Token_
+4. Paste your newly created API token into the _Token_ area
+5. Hit send, and you should see the JSON object of your article.
+
+Congratulations! You can now use your API to connect to the front end.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -311,105 +406,6 @@ Code set up:
 <img width="591" alt="Screenshot 2024-06-01 at 19 55 49" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/e2d7d86b-78a4-434c-8e0c-1700b483ddea">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Strapi Deployment and Configuration
-
-To start deploying Strapi to Railway, download or fork the Railway’s starter Strapi repository on Github to Your local machine.
-
-https://github.com/railwayapp-templates/strapi
-
-1. **Now, using Railway’s platform, you can deploy your Strapi application.**
-
-https://railway.app/new/template/strapi?referralCode=milo
-
-Railway swiftly creates a Postgres database with a Docker image, seamlessly builds the Strapi user interface, and efficiently links it to the database via API.
-
-After deployment, you can log into the Strapi UI to create your first user using the provided URL and add `/admin` endpoint to the address.
-
-👉 Railway's filesystem is ephemeral, so changes to it are not persisted between deployments. This template uses Cloudinary for media storage.
-Head over to Cloudinary to make a free account and then enter the details during or after deployment.
-https://cloudinary.com/
-
-1. **Install the Command Line Interface**
-
-The Railway Command Line Interface (CLI) lets you interact with your Railway project from the command line to run developer mode and start creating new content types.
-
-You can then make changes and redeploy your site from your local machine. Alternatively, you can set up a CI / CD pipeline from your GitHub repository using GitHub Actions to redeploy your application every time you commit to the main.
-
-Follow the documentation to get started.
-
-https://docs.railway.app/guides/cli
-
-1. Connect to Railway from your local machine.
-
-- Install the dependencies `yarn install` or `npm install`
-- If this is the first time using the CLI login with `railway login`
-- Run `railway link` to link the local repository to the Strapi service on Railway
-- Start Strapi for development with `railway run yarn run develop` or `railway run npm run develop` This command runs Strapi in development mode and allows you to start building content types locally.
-- Open your browser to `http://127.0.0.1:1337/admin`
-
-### Creating new content types
-
-Creating content types will begin building database tables where you can store your data. You can then make the data available on the pre-made API.
-
-For more detailed instructions, head over to the Strapi docs. https://docs.strapi.io/dev-docs/quick-start
-
-### Step 1: Create a "Article" collection type[](https://docs.strapi.io/dev-docs/quick-start#step-1-create-a-restaurant-collection-type)
-
-Your article directory will eventually include many articles, so we need to create an "Article" collection type. Then, we can describe the fields to display when adding a new restaurant entry:
-
-1. Click on the **Create your first Content type** button.If it's not showing up, go to  [Content-type Builder](http://localhost:1337/admin/plugins/content-type-builder) in the main navigation.
-2. Click on **Create new collection type**.
-3. Type `Article` for the *Display name*, and click **Continue**.
-4. Click the Text field.
-5. Type `Title` in the *Name* field.
-6. Switch to the *Advanced Settings* tab and check the **`Required` field.**
-7. Click on **Add another field**.
-8. Choose the Rich text (Blocks) field in the list.
-9. Type `Description` under the *Name* field, then click **Finish**.
-10. Finally, click **Save** and wait for Strapi to restart.
-
-### Step 2: Create an entry for the "Article" collection type[](https://docs.strapi.io/dev-docs/quick-start#step-2-create-an-entry-for-the-restaurant-collection-type)
-
-1. Go to  *Content Manager > Collection types - Article* in the navigation.
-2. Click on **Create new entry**.
-3. Type the title of your new article in the _Title_ field. Let's say it's `How to get ahead in advertising.`
-4. In the *Description* field, write a few words about it. If you're lacking some inspiration, you can use `Welcome to Advertising! We offer a fresh new approach for passionate producers.`
-5. Click **Save**.
-
-The Article is now listed in the *Collection types.*
-
-### Step 4: Set API token, Roles & Permissions[](https://docs.strapi.io/dev-docs/quick-start#step-4-set-roles--permissions)
-
-We have just added an article. Now, we need to make sure that the content is accessible through the API and protect it with an API token:
-
-1. Click on  *Settings* at the bottom of the main navigation.
-2. Under _Global Settings,_ click _API Tokens._
-3. Click _Create New API Token._
-4. Fill out the _Name_ and *Description. A*dd _Unlimited_ for the duration and _Read-only_ for the _Token type_
-5. Under _Permissions,_ select Article and select _find_ and _findOne_
-6. Now Under the _Users & Permissions Plugin_, choose *Roles*.
-7. Click the Authenticated role.
-8. Scroll down under *Permissions*.
-9. In the *Permissions* tab, find *Article* and click on it.
-10. Click the checkboxes next to **find** and **findOne**.
-11. Finally, click **Save**.
-
-### Deploy to your Railway application
-
-Open a new terminal window in your local repository and run `railway up` to deploy the production site.
-
-### Test your API is running with Postman
-
-https://www.postman.com/
-
-1. In a new workspace, send a `GET` request using your public address for your API - you can find this in your Railway dashboard. It should look something like [`https://strapi-production-XXXX.up.railway.app/`](https://strapi-production-****.up.railway.app)
-2. Add the `api/article` endpoint to the URL
-3. Under _Authorizations > Auth Type,_ select _Bearer Token_
-4. Paste your newly created API token into the _Token_ area
-5. Hit send, and you should see the JSON object of your article.
-
-Congratulations! You can now use your API to connect to the front end.
 
 ## Accessibility
 
