@@ -36,16 +36,23 @@ As part of our final project at School of Code, Codey McCodeface have been partn
         <li><a href="#user-flow">User Flow</a></li>
         <li><a href="#wireframing">Wireframing</a></li>
         <li><a href="#component-tree">Component Tree</a></li>
+        <li><a href="#architecture-diagram">Architecture Diagram</a></li>
       </ul>
     </li>
     <li>
       <a href="#the-plan">The Build</a>
       <ul>
         <li><a href="#how-we-worked">How We Worked</a></li>
+        <li><a href="#strapi-content-management-system">Strapi Content Management System</a></li>
         <li><a href="#api">API</a></li>
           <ul>
+            <li><a href="#api-url">API URL</a></li>
+            <li><a href="#helper-functions">Helper Functions</a></li>
             <li><a href="#requirements-table">Requirements Table</a></li>
           </ul>
+        <li><a href="#emailjs">EmailJS</a></li>
+        <li><a href="#accessibility">Accessibility</a></li>
+        <li><a href="#search-engine-optimisation">Search Engine Optimisation</a></li>
       </ul>
     </li>
   </ol>
@@ -75,17 +82,17 @@ A revamped platform that prioritises user engagement, accessibility, and content
 
 ## Tech Stack
 
-| **Design**                                                                                                                                                                                                                                                                                                                              |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)                                                                                                                                                                                                                               |
-| **Front End**                                                                                                                                                                                                                                                                                                                           |
-| ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)               |
-| **Back End**                                                                                                                                                                                                                                                                                                                            |
-| ![Strapi](https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white)                                                                                                                                                                                                                            |
-| **Testing**                                                                                                                                                                                                                                                                                                                             |
-| ![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)                                                                                                                                                                                                                                         |
-| **Deployment**                                                                                                                                                                                                                                                                                                                          |
-| ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Railway](https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white) ![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=Cloudinary&logoColor=white) |
+| **Design**  |
+|:---|
+| ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) |
+| **Front End**  |
+|![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)|
+| **Back End** |
+|![Strapi](https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white) ![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=Cloudinary&logoColor=white)|
+| **Testing**  |
+| ![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white) |
+| **Deployment**  |
+|![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Railway](https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white)|
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,6 +118,12 @@ We created a component tree of all of the pages within our file structure and th
 
 ![ComponentTree2](https://github.com/gabriellemia/birmingham-biz/assets/148550963/6a59c4be-e4e9-4c57-986b-c74e3523d1df)
 
+## Architecture Diagram
+
+We created an application architecture diagram that illustrates how the various aspects of the build connect.
+
+<img width="1790" alt="Screenshot 2024-06-06 at 12 01 11" src="https://github.com/gabriellemia/birmingham-biz/assets/148550963/c8a5bdb8-e820-4372-89e1-91441c14e19d">
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # The Build
@@ -123,7 +136,137 @@ We created a ticketing system in GitHub projects to assign jobs to team members.
 
 <img width="1154" alt="Screenshot 2024-05-19 at 15 36 02" src="https://github.com/gabriellemia/birmingham-biz/assets/78322726/82fd4b46-7e25-40ec-9b6b-2a38aa38d3d2">
 
+## Strapi Content Management System
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## API
+
+### API URL
+
+The following URL is used to access the API: [https://strapi-production-9d37.up.railway.app/api](https://strapi-production-9d37.up.railway.app/api)
+
+### Helper Functions
+
+All API helper functions can be found in the `request.js` file. These contain helper functions for the following requests:
+
+**GET ARTICLES - Retrieve all articles from a specific news section.**
+
+A get request can be made to retrieve all articles from a specific section. Each article JSON object includes the following data:
+
+<ul>
+  <li>Headline (the title of the article)</li>
+  <li>Subheading (the subheading that appears on the home page under each title)</li>
+  <li>Image</li>
+  <li>Description (the leading paragraph of the article)</li>
+  <li>Copy (the rest of the written article)</li>
+  <li>Advertisement (up to 5, each with an image file and a link)</li>
+</ul>
+
+These are the available sections and their API endpoints:
+
+<ul>
+  <li>News: /news</li>
+  <li>Features and Analysis: /features</li>
+  <li>Five Minutes With: /five-minutes-withs</li>
+  <li>Insights: /insights</li>
+</ul>
+
+Using these endpoints will retrieve all articles from the specified section, however in order to include article image files and advertisement image files in the payload, the following query must be added to the endpoint:
+
+`?populate[0]=image&populate[1]=ad1&populate[2]=ad2&populate[3]=ad3&populate[4]=ad4&populate[5]=ad5`
+
+For example, to request all articles from the News section including their article images and advertisement images, the following API URL is used:
+
+`https://strapi-production-9d37.up.railway.app/api/insights/?populate[0]=image&populate[1]=ad1&populate[2]=ad2&populate[3]=ad3&populate[4]=ad4&populate[5]=ad5`
+
+These API requests are made to retrieve the most recent articles, in order to populate the website homepage.
+
+The following components make use of the Get Articles API helper functions:
+
+<ul>
+  <li>/NewsSection.jsx - getNewsArticles</li>
+  <li>/MostPopular.jsx - getNewsArticles</li>
+  <li>/FeaturesAndAnalysis.jsx - getFeaturesArticles</li>
+  <li>/FiveMinsWith.jsx - getFiveArticles</li>
+  <li>/Insights.jsx - getInsightsArticles</li>
+  <li>/news/[slug]/page.js - getNewsArticles</li>
+  <li>/features/[slug]/page.js - getNewsArticles</li>
+  <li>/five-minutes/[slug]/page.js - getNewsArticles</li>
+  <li>/insights/[slug]/page.js - getNewsArticles</li>
+</ul>
+
+**GET ARTICLE BY ID - Retrieve a specific article from a specific news section.**
+
+A get request can be made to retrieve a specific article from a specific section by using its ID number. The id immediately follows the section endpoint, for example:
+
+`https://strapi-production-9d37.up.railway.app/api/news/1`
+
+The same query must be added to the endpoint in order to include the article images and advertisement images in the payload. For example to retrieve the News article with the ID number 1, including its article images and advertisement images, the following API URL is used:
+
+`https://strapi-production-9d37.up.railway.app/api/news/1?populate[0]=image&populate[1]=ad1&populate[2]=ad2&populate[3]=ad3&populate[4]=ad4&populate[5]=ad5`
+
+These API requests are made to retrieve a specific article when a hyperlink to that article is clicked on the homepage. The article has already been fetched to display on the homepage, so the ID is retrieved from the JSON data and fed into the API request to display the story page of that particular article. 
+
+The ID is also used as the slug for the article’s URL on the website. For example, the News article with the ID number 1 will be linked to using the following URL:
+
+`https://birmingham-biz-kappa.vercel.app/news/1`
+
+The following components make use of the Get Article By ID API helper functions:
+
+<ul>
+  <li>/news/[slug]/page.js - getNewsArticleById</li>
+  <li>/features/[slug]/page.js - getFeaturesArticleById</li>
+  <li>/five-minutes/[slug]/page.js - getFiveArticleById</li>
+  <li>/insights/[slug]/page.js - getInsightsArticleById</li>
+</ul>
+
+**GET BBTV EPISODES - Retrieve all BBTV episodes.**
+
+A get request can be made to retrieve all BBTV episode data at the following endpoint: `/bbtvs`
+
+Each episode JSON object contains the following data:
+
+<ul>
+  <li>Link (a link to the episode on YouTube/Vimeo)</li>
+  <li>Title (the episode title)</li>
+  <li>Date (the date that the episode was released)</li>
+  <li>Description (a short description of the featured guests)</li>
+</ul>
+
+This API request is made to retrieve all BBTV episodes, in order to populate the website homepage with the most recent episode.
+
+The following component makes use of the Get BBTV Episodes helper function:
+
+<ul>
+  <li>/BBTV.jsx - getBbtvEpisodes</li>
+</ul>
+
+**GET MAGAZINE ARCHIVE - Retrieve all magazines.**
+
+A get request can be made to retrieve all Birmingham Business magazine data at the following endpoint: `/archives`
+
+Each magazine JSON object contains the following data:
+
+<ul>
+  <li>MagazinePDF (a link to the PDF for download)</li>
+  <li>MagazineCover (an image of the front cover)</li>
+  <li>Issue (the months of the magazine’s issue e.g. Nov/Dec 2023)</li>
+</ul>
+
+This API request is made to retrieve all magazines, in order to populate the website homepage with the two most recent magazines for download.
+
+The following component makes use of the Get Magazine Archive helper function:
+
+<ul>
+  <li>/Magazine.jsx - getArchive</li>
+</ul>
+
+**Other API Requests**
+
+The API does not support POST, PUT, PATCH, or DELETE requests, as these actions are performed manually by the authorised user through Strapi.
 
 ### Requirements Table
 
@@ -267,3 +410,14 @@ https://www.postman.com/
 5. Hit send, and you should see the JSON object of your article.
 
 Congratulations! You can now use your API to connect to the front end.
+
+## Accessibility
+
+Our project is committed to ensuring digital accessibility for all, and we aimed to conform to the Web Content Accessibilty Guidelines 2.1, level AA. For more information on the tools and methods we used, please refer to our [Accessibility Docs](https://github.com/gabriellemia/birmingham-biz/blob/main/ACCESSIBILITY.md).
+
+## Search Engine Optimisation
+
+SEO was a major focus of our stakeholders. While much of the app's SEO and web performance was addressed during the build, we also produced an [SEO Plan](https://github.com/gabriellemia/birmingham-biz/blob/main/SEO-PLAN.md) to help our stakeholders boost traffic to their site from their side.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
